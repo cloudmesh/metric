@@ -8,9 +8,9 @@ Project can be viewed live at: https://jsfiddle.net/whitstd/epL60myp
 Data
 ^^^^
 
-Dataset: https://sciimp.ccr.xdmod.org/xdportalpub/byorg
+Dataset: `data.csv <data.csv>`_ https://sciimp.ccr.xdmod.org/xdportalpub/byorg
 
-Geo data from: National Center for Education Statistics https://nces.ed.gov/ipeds/Home/UseTheData
+Geo data from: National Center for Education Statistics `hd2015.csv <hd2015.csv>`_ https://nces.ed.gov/ipeds/Home/UseTheData
 
 Method
 ^^^^^^
@@ -20,7 +20,7 @@ Step 1: Obtain Geographical Data
 
 The dataset did not come with any geographical data. I was not able to find an API to add to the data, so I used the data provided from the National Center for Education Statistics.
 
-I wrote `add_location.py <add_location.py>`_ to merge the datasets.
+I wrote `add_location.py <add_location.py>`_ to merge the datasets. Final dataset: `data-coords.csv <data-coords.csv>`_
 
 Step 2: Visualize
 -----------------
@@ -31,3 +31,5 @@ Future
 ^^^^^^
 
 Currently, the project uses Google Sheets (supported natively by Highcharts). This will need to be replaced with actual data from the database.
+
+Different map types can be added. The dataset now also contains new information, such as state and zip code, which could also be used instead of latitude and longitude.
