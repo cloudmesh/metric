@@ -1,6 +1,6 @@
 import csv
 
-class BiblioUpdate:
+class AddLocation:
     biblio_file = 'data.csv'
     stats_file = 'hd2015.csv'
     
@@ -74,4 +74,4 @@ class BiblioUpdate:
         
         return set(a_list) == set(b_list)
         
-BiblioUpdate()       
+AddLocation()       

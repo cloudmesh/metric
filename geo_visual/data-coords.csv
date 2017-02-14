@@ -1,477 +1,477 @@
-i10-index,location_city,i10-index (recent),location_state,location_latitude,H-index (m),# of Pubs,lon,location_longitude,G-index (recent),H-index,location_zip,location_street,# of Pubs (recent),Cited by (recent),Organization,G-index,Cited by,H-index (recent)
-0,,0,,,0,1,,,0,0,,,0,0,Space Telescope Science Institute,0,0,0
-7,Syracuse,1,NY,43.040005,0.875,23,,-76.136633,4,7,13244,900 South Crouse Ave.,16,50,Syracuse University,21,427,4
-1,Houghton,1,MI,47.1183,1,4,,-88.546403,0,2,49931-1295,1400 Townsend Drive,4,26,Michigan Technological University,4,26,2
-0,,0,,,0,1,,,,0,,,1,0,National Oceanic and Atmospheric Administration,0,0,0
-4,Lewisburg,3,PA,40.954489,1,8,,-76.886275,7,4,17837,One Dent Drive,7,71,Bucknell University,8,81,3
-0,,0,,,1,3,,,3,3,,,3,12,University of Alabama,3,12,3
-1,,0,,,0.2,2,,,0,1,,,1,0,Southwest Research Institute,2,10,0
-15,Los Angeles,11,CA,34.068892,1.625,59,,-118.443901,19,13,90095-1405,405 Hilgard Ave,53,409,"University of California, Los Angeles",23,590,10
-14,Irvine,12,CA,33.648434,0.929,25,,-117.841248,22,13,92697,501 Aldrich Hall,22,611,"University of California, Irvine",25,705,12
-1,,0,,,0.143,2,,,0,1,,,1,0,Stockholm University,2,39,0
-0,Dahlonega,0,GA,34.530527,1,1,,-83.986574,1,1,30597,82 College Circle,1,4,University of North Georgia,1,4,1
-0,Claremont,0,CA,34.106137,0.333,2,,-117.710594,1,1,91711,301 Platt Blvd.,2,1,Harvey Mudd College,1,1,1
-1,Lincoln,1,NE,40.822272,0.5,12,,-96.702177,6,4,68588,14th and R St,11,33,"University of Nebraska, Lincoln",7,40,4
-1,Cleveland,1,OH,41.500812,0.75,5,,-81.605769,4,3,44106,10900 Euclid Ave,4,16,Case Western Reserve University,5,24,2
-0,,0,,,0,1,,,0,0,,,1,0,Julich Supercomputing Centre,0,0,0
-0,,0,,,1,1,,,1,1,,,1,8,University of Warmia and Mazury in Olsztyn,1,8,1
-0,,0,,,0,1,,,0,0,,,1,0,COPRO,0,0,0
-8,,8,,,1.333,30,,,16,8,,,27,234,University of South Florida,16,245,8
-13,,9,,,1.5,41,,,21,12,,,33,438,University of Pittsburgh,32,969,9
-0,,0,,,2,2,,,2,2,,,2,13,University of Maryland School of Medicine,2,13,2
-2,Rochester,0,NY,43.126437,0.364,6,,-77.631042,3,4,14627-0011,Wilson Blvd. - Wallis Hall,3,14,University of Rochester,6,83,2
-1,,1,,,0.4,3,,,3,2,,,3,22,Arkansas State University,3,22,2
-0,,0,,,0,1,,,0,0,,,1,0,Paris Institue of Astrophysics,0,0,0
-5,,4,,,1.143,10,,,8,8,,,8,84,Perimeter Institute for Theoretical Physics,10,114,7
-1,Rolla,1,MO,37.955853,1.667,9,,-91.7759,7,5,65409,1870 Miner Circle,9,38,Missouri University of Science and Technology,7,38,5
-0,,0,,,1,2,,,1,1,,,2,1,King Abdullah University of Science and Technology,1,1,1
-1,,1,,,1,1,,,1,1,,,1,41,Freiberg University of Mining and Technology,1,41,1
-1,,0,,,1,1,,,0,1,,,0,0,Max Planck Society,1,101,0
-2,Tulsa,1,OK,36.151887,0.429,7,,-95.945175,6,3,74104-3189,800 South Tucker Drive,6,39,University of Tulsa,7,63,3
-0,Grand Forks,0,ND,47.919774,0.2,3,,-97.073451,2,1,58202-8193,"264 Centennial Drive, Stop 8193",2,2,University of North Dakota,2,2,1
-0,Winston-Salem,0,NC,36.135301,0.333,2,,-80.279004,2,1,27106,1834 Wake Forest Road,2,5,Wake Forest University,2,5,1
-0,Melbourne,0,FL,28.064503,1,1,,-80.624628,1,1,32901-6975,150 West University Boulevard,1,9,Florida Institute of Technology,1,9,1
-4,New York,1,NY,40.729452,0.6,14,,-73.997264,7,6,10012-1091,70 Washington Sq South,11,47,New York University,13,167,4
-1,,0,,,1,1,,,0,1,,,0,0,Ohio Supercomputer Center,1,24,0
-0,,0,,,1,1,,,1,1,,,1,4,Jefferson Medical College,1,4,1
-0,,0,,,1,1,,,1,1,,,1,2,University of North Carolina System Office,1,2,1
-0,Atlanta,0,GA,33.748772,1,1,,-84.412818,1,1,30314-4391,"223 James P Brawley Drive, SW",1,2,Clark Atlanta University,1,2,1
-1,,0,,,1,1,,,0,1,,,0,0,Monash University,1,19,0
-0,,0,,,0,1,,,0,0,,,1,0,Tel Aviv University,0,0,0
-0,,0,,,1,1,,,1,1,,,1,9,The Chinese University of Hong Kong,1,9,1
-0,Chestnut Hill,0,MA,42.337688,0,1,,-71.171488,0,0,2467,140 Commonwealth Avenue,1,0,Boston College,0,0,0
-0,Richardson,0,TX,32.989432,0,2,,-96.748371,0,0,75080-3021,800 West Campbell  Road,2,0,The University of Texas at Dallas,0,0,0
-1,Detroit,0,MI,42.35861,0.333,3,,-83.072864,2,2,48202,656 West Kirby Street,2,9,Wayne State University,3,34,1
-0,,0,,,0,1,,,0,0,,,0,0,Naval Research Laboratory,0,0,0
-0,Rohnert Park,0,CA,38.341023,1,1,,-122.673261,1,1,94928-3609,1801 E Cotati Ave,1,4,Sonoma State University,1,4,1
-1,,1,,,1,4,,,4,3,,,4,23,"University of Colorado, Denver",4,23,3
-6,Waltham,5,MA,42.364947,0.75,13,,-71.254716,11,6,02454-9110,415 South St,11,120,Brandeis University,12,135,5
-4,Nashville,4,TN,36.14443,0.714,15,,-86.804875,11,5,37240,2101 West End Avenue,13,120,Vanderbilt University,11,120,5
-17,,13,,,0.812,53,,,26,13,,,48,671,Georgia Institute of Technology,31,930,11
-0,,0,,,0.25,2,,,1,1,,,2,1,Brigham Young University,1,1,1
-1,Houston,0,TX,29.763831,1,4,,-95.35953,3,2,77002-1014,1 Main Street,3,5,University of Houston-Downtown,4,25,1
-0,,0,,,1,1,,,1,1,,,1,3,Max Planck Institute for Solar System Research,1,3,1
-0,,0,,,0,1,,,0,0,,,1,0,J Craig Venter Institute,0,0,0
-1,,0,,,1,1,,,0,1,,,0,0,National Autonomous University of Mexico,1,36,0
-2,,1,,,0.375,6,,,4,3,,,4,16,University of New Hampshire,6,39,2
-2,,1,,,0.5,2,,,1,2,,,1,25,Nagoya University,2,127,1
-0,Albany,0,NY,42.686917,0,1,,-73.825014,0,0,12222,1400 Washington Avenue,1,0,SUNY at Albany,0,0,0
-9,,5,,,0.391,26,,,20,9,,,20,653,Washington University in St. Louis,26,956,7
-1,,1,,,0.5,3,,,3,2,,,3,22,University of Liverpool,3,22,2
-0,,0,,,1,1,,,1,1,,,1,1,Masaryk University,1,1,1
-0,Toledo,0,OH,41.65795,0.333,3,,-83.615225,2,1,43606-3390,2801 W Bancroft,3,4,University of Toledo,2,4,1
-0,,0,,,1,1,,,1,1,,,1,2,Rutgers University,1,2,1
-0,,0,,,0,2,,,0,0,,,2,0,Julich Research Centre,0,0,0
-0,Saint Paul,0,MN,44.936709,1,1,,-93.169855,1,1,55105-1899,1600 Grand Ave,1,3,Macalester College,1,3,1
-1,,1,,,0.667,13,,,7,4,,,12,38,University of South Carolina,7,41,4
-0,,0,,,0.667,7,,,3,2,,,7,8,SUNY at Buffalo,3,8,2
-1,,0,,,0.333,4,,,3,2,,,3,8,Max Planck Institute for Astronomy,4,27,2
-0,Denton,0,TX,33.210958,0.5,2,,-97.151211,2,2,76203-1277,1501 W.Chestnut Ave.,2,5,University of North Texas,2,5,2
-0,Chicago,0,IL,41.999161,0,2,,-87.657399,0,0,60660,1032 W. Sheridan Rd,2,0,Loyola University Chicago,0,0,0
-0,,0,,,1,1,,,1,1,,,1,3,Ponce Health Sciences University,1,3,1
-1,,1,,,0.667,2,,,2,2,,,2,30,NASA Goddard Space Flight Center,2,30,2
-0,Columbia,0,MO,38.941015,0.333,2,,-92.326429,1,2,65211,105 Jesse Hall,1,3,"University of Missouri, Columbia",2,6,1
-28,Pasadena,23,CA,34.139275,1.778,58,,-118.12574,31,16,91125,1200 E California Blvd,52,967,California Institute of Technology,38,1398,15
-10,,3,,,0.769,26,,,8,10,,,14,54,Argonne National Laboratory,24,540,4
-0,,0,,,1,1,,,0,1,,,0,0,Virginia Institute of Marine Science,1,3,0
-1,,0,,,1,1,,,0,1,,,0,0,University of Nebraska at Lincoln,1,32,0
-0,,0,,,0,1,,,0,0,,,1,0,The Ohio State University,0,0,0
-6,New York,5,NY,40.764738,1,10,,-73.954839,9,6,10065,"1300 York Ave, C-118",9,126,Weill Cornell Medical College,10,136,5
-2,Worcester,2,MA,42.275067,1,3,,-71.808792,3,2,01609-2280,100 Institute Road,3,78,Worcester Polytechnic Institute,3,78,2
-0,,0,,,0,1,,,0,0,,,1,0,Centers for Disease Control and Prevention,0,0,0
-0,,0,,,1,1,,,1,1,,,1,7,North Carolina Museum of Natural Sciences,1,7,1
-9,Madison,7,WI,43.073858,1,34,,-89.405356,13,9,53706-1380,500 Lincoln Dr,31,198,University of Wisconsin-Madison,20,417,8
-1,,0,,,0.333,2,,,1,2,,,1,2,Jet Propulsion Laboratory,2,12,1
-10,,6,,,0.714,28,,,14,10,,,21,177,Louisiana State University,20,367,7
-1,Chicago,1,IL,41.833801,0.286,5,,-87.628346,4,2,60616,3300 S Federal St,4,13,Illinois Institute of Technology,5,17,2
-3,Washington,1,DC,38.89865,0.5,12,,-77.047871,5,4,20052,"2121 I Street, NW",9,23,George Washington University,10,92,2
-0,North Dartmouth,0,MA,41.628861,1,1,,-71.005528,0,1,02747-2300,285 Old Westport Rd,0,0,"University of Massachusetts, Dartmouth",1,2,0
-2,Fort Wayne,2,IN,41.115418,1.333,5,,-85.111747,5,4,46805-1499,2101 E Coliseum Blvd,5,37,Indiana University-Purdue University Fort Wayne,5,37,4
-2,Meadville,1,PA,41.648068,0.222,2,,-80.146922,1,2,16335-3902,520 N Main St,1,14,Allegheny College,2,57,1
-10,East Lansing,10,MI,42.73212,2,24,,-84.476111,21,10,48824-1046, ,24,435,Michigan State University,21,435,10
-2,,1,,,0.667,2,,,1,2,,,1,87,University of Cincinnati,2,97,1
-0,Utica,0,NY,43.095183,0.667,3,,-75.272407,2,2,13502-4892,1600 Burrstone Rd,2,2,Utica College,3,5,1
-0,,0,,,0,1,,,0,0,,,1,0,"Wadsworth Center, New York State Department of Health",0,0,0
-1,,1,,,0.333,2,,,2,1,,,2,10,Armstrong Atlantic State University,2,10,1
-0,,0,,,1,1,,,1,1,,,1,1,University of Science and Technology of China,1,1,1
-1,Manhattan,1,KS,39.188616,0.333,2,,-96.581077,2,1,66506,Anderson Hall,2,15,Kansas State University,2,15,1
-1,,1,,,2,2,,,2,2,,,2,19,Chosun University,2,19,2
-1,,0,,,0.167,2,,,1,1,,,1,1,ETH Zurich,2,37,1
-2,San Juan,2,PR,18.403027,0.667,2,,-66.045875,2,2,00931-0000,39 Ponce de Leon  Ave,2,52,"University of Puerto Rico, Rio Piedras",2,52,2
-0,,0,,,1,1,,,1,1,,,1,4,Stanford University School of Medicine,1,4,1
-0,,0,,,1,1,,,1,1,,,1,2,Center for Ocean-Land-Atmosphere Studies,1,2,1
-1,San Luis Obispo,1,CA,35.29889,1,1,,-120.65856,1,1,93407,1 Grand Ave.,1,13,"California Polytechnic State University, San Luis Obispo",1,13,1
-8,Evanston,7,IL,42.058377,0.818,16,,-87.673653,14,9,60208,633 Clark St,15,194,Northwestern University,16,237,8
-1,,0,,,1,1,,,0,1,,,0,0,Ecole Normale Superieure De Lyon,1,101,0
-0,,0,,,1,3,,,3,2,,,3,13,Bowling Green State University,3,13,2
-0,,0,,,1,1,,,1,1,,,1,1,Nationwide Childrens Hospital Research Institute,1,1,1
-7,Riverside,7,CA,33.97588,1.75,16,,-117.331098,16,7,92521,900 University Ave,16,239,"University of California, Riverside",16,239,7
-0,Ann Arbor,0,MI,42.276061,1,1,,-83.743121,1,1,48109,503 Thompson Street,1,5,"University of Michigan, Ann Arbor",1,5,1
-2,San Francisco,0,CA,37.721345,2,2,,-122.477905,0,2,94132,1600 Holloway Ave,0,0,San Francisco State University,2,35,0
-0,Murfreesboro,0,TN,35.849139,1,1,,-86.362094,1,1,37132,1301 East Main Street,1,9,Middle Tennessee State University,1,9,1
-0,,0,,,0.333,6,,,2,1,,,6,4,Wake Forest School of Medicine,2,4,1
-16,New York,16,NY,40.808286,2.333,49,,-73.961885,22,14,10027,West 116 St and Broadway,46,532,Columbia University in the City of New York,22,537,14
-1,,0,,,0.375,5,,,3,3,,,3,11,"University of Alabama, Huntsville",5,73,2
-2,,1,,,0.375,5,,,4,3,,,4,29,Pacific Northwest National Laboratory,5,56,2
-1,,1,,,1,2,,,2,2,,,2,19,Hebrew University of Jerusalem,2,19,2
-0,,0,,,0.25,3,,,2,1,,,3,4,University of Texas at San Antonio,2,4,1
-1,,0,,,1,1,,,0,1,,,0,0,SDSU,1,26,0
-0,,0,,,0.5,2,,,2,1,,,2,2,Curtin University,2,2,1
-0,,0,,,1,1,,,1,1,,,1,6,"Institute of Botany, CAS",1,6,1
-0,,0,,,1,2,,,2,1,,,2,2,University of Texas at Arlington,2,2,1
-9,Providence,7,RI,41.827605,1.286,20,,-71.404467,12,9,2912,One Prospect Street,16,140,Brown University,16,241,7
-0,Claremore,0,OK,36.319609,0,1,,-95.635739,0,0,74017-3252,1701 W Will Rogers Blvd,1,0,Rogers State University,0,0,0
-1,,0,,,1,1,,,0,1,,,0,0,Computational Science & Engineering,1,49,0
-1,Middletown,0,CT,41.55678,0.111,2,,-72.656755,0,1,6459,237 High St,1,0,Wesleyan University,2,163,0
-2,,1,,,0.625,12,,,6,5,,,9,28,None,8,61,3
-0,,0,,,0.5,3,,,3,1,,,3,6,Southeastern Universities Research Association,3,6,1
-0,,0,,,0.001,4,,,2,3,,,2,14,University of Waterloo,4,20,2
-0,,0,,,1,1,,,1,1,,,1,3,US Army Corps of Engineers,1,3,1
-0,,0,,,1,1,,,1,1,,,1,2,UTEP,1,2,1
-0,,0,,,1,1,,,1,1,,,1,3,Joseph Fourier University,1,3,1
-0,Normal,0,IL,40.509724,1,1,,-88.99234,0,1,61790-1000,North and School Streets,0,0,Illinois State University,1,6,0
-0,,0,,,1,1,,,1,1,,,1,1,University of Goettingen,1,1,1
-3,,3,,,0.857,15,,,12,6,,,12,129,Arizona State University,13,147,4
-0,Cambridge,0,MA,42.360095,1,2,,-71.092115,2,1,02139-4307,77 Massachusetts Avenue,2,2,Massachusetts Institute of Technology,2,2,1
-7,Raleigh,4,NC,35.785111,0.471,32,,-78.674517,11,8,27695-7001,2101 Hillsborough Street,28,118,North Carolina State University at Raleigh,15,218,7
-6,,5,,,0.667,13,,,11,6,,,11,101,National Center for Atmospheric Research,13,266,6
-3,Philadelphia,3,PA,39.951002,0.714,20,,-75.193618,9,5,19104-6303,34th & Spruce Street,19,70,University of Pennsylvania,9,77,4
-3,Richmond,2,VA,37.547631,0.833,11,,-77.453597,8,5,23284-2512,910 W Franklin St,10,55,Virginia Commonwealth University,9,79,4
-4,Philadelphia,3,PA,39.980943,0.857,10,,-75.158267,8,6,19122-6096,1801 North Broad Street,8,80,Temple University,10,98,5
-1,,1,,,1,1,,,1,1,,,1,251,"Q-Chem, Inc.",1,251,1
-0,,0,,,0.667,2,,,2,2,,,2,9,Goethe University Frankfurt,2,9,2
-2,Brooklyn,1,NY,40.631912,0.333,7,,-73.95312,6,4,11210,2900 Bedford Ave,6,32,CUNY Brooklyn College,7,131,3
-0,Lubbock,0,TX,33.580309,0.333,3,,-101.876917,3,1,79409-5005,Broadway and University Avenue,3,6,Texas Tech University,3,6,1
-0,,0,,,0,2,,,0,0,,,2,0,University of Wuppertal,0,0,0
-0,New York,0,NY,40.8508,0,1,,-73.928541,0,0,10033-3299,500 W 185th St,1,0,Yeshiva University,0,0,0
-0,,0,,,0,1,,,0,0,,,1,0,Southern University and A&M College,0,0,0
-0,Eau Claire,0,WI,44.798431,0.667,2,,-91.500432,2,2,54702-4004,105 Garfield Avenue,2,12,University of Wisconsin-Eau Claire,2,12,2
-0,Merced,0,CA,37.366237,0.8,8,,-120.424944,6,4,95343-5603,5200 North Lake Road,8,31,"University of California, Merced",6,31,4
-1,,1,,,1,1,,,1,1,,,1,13,Kwangwoon University,1,13,1
-0,,0,,,1,1,,,1,1,,,1,1,Kasetsart University,1,1,1
-0,Socorro,0,NM,34.066035,0.25,2,,-106.907491,2,1,87801,801 Leroy Place,2,5,New Mexico Institute of Mining and Technology,2,5,1
-0,,0,,,0,1,,,0,0,,,1,0,"Pennsylvania State University, Mont Alto",0,0,0
-3,,1,,,0.444,20,,,5,4,,,18,22,Ohio State University,14,182,2
-40,La Jolla,25,CA,32.876598,2,104,,-117.237793,33,24,92093,9500 Gilman Dr,83,1126,"University of California, San Diego",44,2006,18
-0,Boise,0,ID,43.604403,1,1,,-116.205789,1,1,83725,1910 University Dr,1,6,Boise State University,1,6,1
-0,,0,,,1,1,,,1,1,,,1,6,University of Granada,1,6,1
-1,,0,,,1,1,,,0,1,,,0,0,American Physical Society,1,416,0
-0,,0,,,0,1,,,0,0,,,1,0,Johns Hopkins University School of Medicine,0,0,0
-2,,2,,,2,2,,,2,2,,,2,30,Institute for Research in Computer Science and Automation,2,30,2
-4,,2,,,0.5,9,,,7,6,,,7,66,American Museum of Natural History,9,139,4
-2,,2,,,1.333,5,,,5,4,,,5,54,University of Akron,5,54,4
-1,Washington,1,DC,38.908809,1.5,5,,-77.073463,5,3,20057-0001,37th and O St NW,5,23,Georgetown University,5,23,3
-0,,0,,,1,1,,,1,1,,,1,1,University of Montana,1,1,1
-0,,0,,,0,1,,,0,0,,,1,0,RIKEN,0,0,0
-2,,2,,,1,2,,,2,2,,,2,88,University of the Balearic Islands,2,88,2
-0,,0,,,0,1,,,0,0,,,1,0,Indian Institute of Science,0,0,0
-18,,15,,,1.625,52,,,18,13,,,49,369,Pennsylvania State University,22,512,12
-2,Los Angeles,1,CA,34.066927,0.182,3,,-118.168965,2,2,90032,5151 State University Dr,2,12,California State University-Los Angeles,3,106,1
-2,,1,,,0.5,10,,,6,4,,,8,30,Scripps Institution of Oceanography,9,68,4
-0,Atlanta,0,GA,33.7527,0.25,7,,-84.38667,3,1,30303-3083,33 gilmer st,7,6,Georgia State University,3,6,1
-3,Fullerton,3,CA,33.883627,0.6,5,,-117.885349,5,3,92831-3599,800 N State College Blvd,5,132,California State University-Fullerton,5,132,3
-1,Houston,1,TX,29.705395,1,2,,-95.40079,2,2,77030-4009,1515 Holcombe Blvd.,2,12,The University of Texas MD Anderson Cancer Center,2,12,2
-9,Rochester,5,NY,43.090325,1.5,21,,-77.67521,14,9,14623-5603,1 Lomb Memorial Dr,15,173,Rochester Institute of Technology,18,308,6
-2,Las Vegas,2,NV,36.106994,1,2,,-115.141153,2,2,89154,4505 S Maryland Pky,2,74,University of Nevada-Las Vegas,2,74,2
-0,,0,,,1,1,,,1,1,,,1,2,University of Edinburgh,1,2,1
-0,Burlington,0,VT,44.479262,0.4,7,,-73.198128,4,2,05405-0160,85 S Prospect St,7,13,University of Vermont,4,13,2
-1,,1,,,0.667,2,,,2,2,,,2,26,UCSF,2,26,2
-0,,0,,,2,2,,,2,2,,,2,6,University of Oxford,2,6,2
-0,,0,,,0,1,,,0,0,,,0,0,Queen's University Belfast,0,0,0
-0,,0,,,0.333,4,,,2,1,,,4,2,North Dakota State University,2,2,1
-1,New York,1,NY,40.762927,1,1,,-73.954912,1,1,10065-6399,1230 York Avenue,1,10,Rockefeller University,1,10,1
-21,Stanford,12,CA,37.426967,1.364,52,,-122.168826,19,15,94305, ,41,377,Stanford University,34,1111,11
-0,,0,,,1,1,,,1,1,,,1,2,ISU,1,2,1
-0,Syracuse,0,NY,43.034355,0.5,2,,-76.139236,2,2,13210,One Forestry Dr.,2,10,SUNY College of Environmental Science and Forestry,2,10,2
-0,,0,,,1,1,,,1,1,,,1,6,Northwestern Polytechnical University,1,6,1
-26,Berkeley,22,CA,37.871969,2,67,,-122.260423,31,16,94720,200 California Hall,62,964,"University of California, Berkeley",33,1107,15
-1,,1,,,1,1,,,1,1,,,1,10,University of Texas at Dallas,1,10,1
-0,,0,,,1,1,,,1,1,,,1,4,University of Utah School of Medicine,1,4,1
-1,,1,,,1,1,,,1,1,,,1,13,"Institute for Research in Biomedicine, Barcelona",1,13,1
-1,Dearborn,0,MI,42.317287,0.231,7,,-83.231417,4,3,48128-1491,4901 Evergreen Rd,6,10,"University of Michigan, Dearborn",7,255,2
-0,,0,,,0,1,,,0,0,,,1,0,High Energy Accelerator Research Organization,0,0,0
-0,,0,,,1,2,,,2,1,,,2,4,US Army,2,4,1
-0,,0,,,1,1,,,1,1,,,1,8,University of Leoben,1,8,1
-0,Conway,0,SC,33.794722,0,2,,-79.012635,0,0,29526,103 Tom Trout Drive,2,0,Coastal Carolina University,0,0,0
-0,Loudonville,0,NY,42.718586,1,1,,-73.75153,1,1,12211-1462,515 Loudon Rd,1,6,Siena College,1,6,1
-5,,1,,,0.625,7,,,3,5,,,3,42,Los Alamos National Laboratory,7,539,1
-0,Beaumont,0,TX,30.044274,0.667,4,,-94.073389,3,2,77705,4400 MLK Blvd,4,8,Lamar University,3,8,2
-0,,0,,,1,1,,,1,1,,,1,3,Memorial Sloan Kettering Cancer Center,1,3,1
-0,,0,,,1,1,,,1,1,,,1,1,University of Exeter,1,1,1
-4,Los Angeles,1,CA,34.021058,0.625,19,,-118.283858,6,5,90089,University Park,14,34,University of Southern California,12,125,2
-1,Dallas,1,TX,32.819539,1,2,,-96.842311,1,2,75390-9096,5323 Harry Hines Blvd,1,12,University of Texas Southwestern Medical Center,2,15,1
-1,,1,,,1.5,3,,,3,3,,,3,23,Cambridge University,3,23,3
-0,,0,,,1,2,,,2,1,,,2,5,The George Washington University,2,5,1
-1,,0,,,1,1,,,0,1,,,0,0,National Optical Astronomy Observatory,1,10,0
-1,,0,,,1,1,,,0,1,,,0,0,Computation Institute,1,163,0
-0,Carbondale,0,IL,37.713239,0.333,4,,-89.218724,3,1,62901-4512,Lincoln Drive,4,6,"Southern Illinois University, Carbondale",3,6,1
-4,,3,,,0.778,19,,,13,7,,,16,147,Texas A&M University,19,571,6
-2,Morgantown,1,WV,39.63468,0.333,4,,-79.953926,3,2,26506-6201,"Stewart Hall, 1500 University Avenue",3,15,West Virginia University,4,25,1
-2,Iowa City,1,IA,41.660695,0.375,6,,-91.535698,5,3,52242-1316,101 Jessup Hall,5,31,University of Iowa,6,42,2
-0,Norfolk,0,VA,36.884919,0.25,5,,-76.309653,1,1,23529,5115 Hampton Blvd,5,1,Old Dominion University,1,1,1
-4,San Diego,1,CA,32.77525,0.308,6,,-117.071228,3,4,92182,5500 Campanile Dr,3,16,San Diego State University,6,94,2
-0,,0,,,1,1,,,1,1,,,1,8,Indiana University at Bloomington,1,8,1
-4,,1,,,0.5,12,,,5,4,,,7,23,Texas Advanced Computing Center,12,336,2
-15,Salt Lake City,7,UT,40.762484,1.625,36,,-111.846044,23,13,84112-9008,"201 Presidents Circle, ROOM 201",27,487,University of Utah,36,1276,8
-0,,0,,,1,1,,,1,1,,,1,3,"SC Solutions, Inc.",1,3,1
-0,,0,,,0.333,2,,,1,1,,,2,1,Sri Sathya Sai Institute of Higher Learning,1,1,1
-0,,0,,,1,1,,,0,1,,,0,0,Corning Incorporated,1,3,0
-0,,0,,,1,2,,,2,1,,,2,4,Central University of the Caribbean,2,4,1
-0,Danville,0,KY,37.645102,0.5,2,,-84.779175,2,1,40422-1394,625 W Walnut St,2,2,Centre College,2,2,1
-3,,1,,,0.5,7,,,3,4,,,3,152,Pittsburgh Supercomputing Center,7,348,1
-9,Pittsburgh,4,PA,40.444616,1,46,,-79.942914,13,9,15213-3890,5000 Forbes Avenue,39,167,Carnegie Mellon University,24,559,6
-0,Montgomery,0,AL,32.364317,1,1,,-86.295677,1,1,36104-0271,915 S Jackson Street,1,2,Alabama State University,1,2,1
-1,Newark,1,NJ,40.741997,0.25,4,,-74.177113,4,1,7102,University Heights,4,26,New Jersey Institute of Technology,4,26,1
-1,University,1,MS,34.362144,0.75,7,,-89.539377,7,3,38677-1848,"Oxford, Mississippi",7,95,University of Mississippi,7,95,3
-0,,0,,,0.5,4,,,2,1,,,4,2,The Methodist Hospital System,2,2,1
-13,,6,,,0.625,61,,,19,10,,,44,340,University of Texas at Austin,28,754,6
-17,College Park,12,MD,38.985379,0.929,36,,-76.939494,20,13,20742, ,29,382,"University of Maryland, College Park",28,785,11
-2,Troy,2,NY,42.728983,4,6,,-73.678768,6,4,12180-3590,110 8th St,6,175,Rensselaer Polytechnic Institute,6,175,4
-0,Milwaukee,0,WI,43.076848,0.429,5,,-87.880488,4,3,53201-0413,2200 E Kenwood Blvd,4,20,University of Wisconsin-Milwaukee,5,27,3
-1,,0,,,1,1,,,0,1,,,0,0,Allegheny-Singer Research Institute,1,10,0
-4,,3,,,0.667,4,,,3,4,,,3,101,National Science Foundation,4,264,3
-0,,0,,,1,1,,,1,1,,,1,3,Kyoto University,1,3,1
-0,,0,,,0,1,,,0,0,,,1,0,Univeristy of Michigan,0,0,0
-0,,0,,,1,1,,,1,1,,,1,5,Cedars-Sinai Medical Center,1,5,1
-5,Boca Raton,4,FL,26.372536,0.833,6,,-80.102293,5,5,33431-0991,777 Glades Rd,5,118,Florida Atlantic University,6,128,4
-22,Ithaca,14,NY,42.447199,1.455,50,,-76.483489,23,16,14853,300 Day Hall,42,498,Cornell University,41,1604,12
-0,Villanova,0,PA,40.039388,1,1,,-75.345457,1,1,19085-1699,800 Lancaster Avenue,1,8,Villanova University,1,8,1
-4,Blacksburg,2,VA,37.228572,0.714,10,,-80.423229,7,5,24061-0131,"210 Burruss Hall, 800 Drillfield Dr.",7,45,Virginia Polytechnic Institute and State University,10,129,2
-0,Reno,0,NV,39.545052,0.333,3,,-119.818424,2,2,89557,North Virginia Street,2,2,University of Nevada-Reno,3,5,1
-0,,0,,,0,1,,,0,0,,,1,0,Ludwig Maximilian University of Munich,0,0,0
-1,,1,,,1,1,,,1,1,,,1,16,Burnham Institute,1,16,1
-1,Fairfax,1,VA,38.83088,0.5,5,,-77.30794,5,2,22030-4444,4400 University Dr,5,171,George Mason University,5,171,2
-0,,0,,,1,1,,,0,1,,,0,0,University of Cordoba,1,9,0
-0,,0,,,0,1,,,0,0,,,1,0,National Energy Technology Laboratory,0,0,0
-5,,5,,,1.4,9,,,9,7,,,9,231,Max Planck Institute for Gravitational Physics Albert Einstein Institute,9,231,7
-13,,4,,,1,42,,,23,13,,,23,884,Indiana University,42,2216,5
-6,,6,,,1.4,14,,,14,7,,,14,180,University of Toronto,14,180,7
-0,Hanover,0,NH,43.70408,1,1,,-72.289951,1,1,03755-3529,207 Parkhurst Hall,1,3,Dartmouth College,1,3,1
-0,Hoboken,0,NJ,40.744776,1,1,,-74.025334,1,1,07030-5991,Castle Point On Hudson,1,9,Stevens Institute of Technology,1,9,1
-0,,0,,,1,1,,,1,1,,,1,6,Stanford University/ University of Cambridge,1,6,1
-0,,0,,,1,3,,,3,2,,,3,8,University of Texas Health Science Center at Houston,3,8,2
-1,,0,,,1,1,,,0,1,,,0,0,iPlant Collaborative,1,110,0
-2,,2,,,1,4,,,4,2,,,4,137,University of Trento,4,137,2
-0,Ypsilanti,0,MI,42.245751,0,1,,-83.624499,0,0,48197,202 Welch Hall,1,0,Eastern Michigan University,0,0,0
-0,Houston,0,TX,29.582523,0,2,,-95.098129,0,0,77058-1002,2700 Bay Area Blvd,2,0,University of Houston-Clear Lake,0,0,0
-0,,0,,,0.5,2,,,2,1,,,2,4,"Predictive Science, Inc.",2,4,1
-2,Gainesville,2,FL,29.649428,0.571,15,,-82.339958,8,4,32611, ,14,56,University of Florida,8,65,4
-0,,0,,,0,1,,,0,0,,,1,0,University of Reims Champagne-Ardenne,0,0,0
-0,Princess Anne,0,MD,38.211188,1,1,,-75.687227,1,1,21853-1299,J.T. Williams Hall,1,3,"University of Maryland, Eastern Shore",1,3,1
-1,,1,,,0.5,7,,,5,3,,,6,19,University of Texas Medical Branch at Galveston,5,25,2
-0,Coral Gables,0,FL,25.720406,0.5,2,,-80.27645,2,1,33146,University of Miami,2,6,Miami University,2,6,1
-0,North Andover,0,MA,42.668352,0.5,2,,-71.124216,2,1,1845,315 Turnpike St,2,2,Merrimack College,2,2,1
-0,,0,,,1,1,,,1,1,,,1,5,SUNY Health Science Center at Brooklyn,1,5,1
-7,,2,,,1,11,,,5,7,,,5,54,Brookhaven National Laboratory,11,755,2
-0,,0,,,1,1,,,1,1,,,1,6,Univerisity of the Virgin Islands,1,6,1
-0,University of Richmond,0,VA,37.577625,1,1,,-77.538702,1,1,23173,28 Westhampton Way,1,6,University of Richmond,1,6,1
-0,San Jose,0,CA,37.335201,2,2,,-121.881214,2,2,95192-0001,One Washington Square,2,8,San Jose State University,2,8,2
-11,,7,,,1,33,,,22,11,,,28,451,University of Washington,24,564,8
-0,,0,,,0,1,,,0,0,,,1,0,Fred Hutchinson Cancer Research Center,0,0,0
-0,,0,,,1,1,,,1,1,,,1,7,University of Hamburg,1,7,1
-2,,0,,,0.273,3,,,1,3,,,1,6,City University of New York,3,43,1
-6,Lexington,4,KY,38.035818,0.429,11,,-84.505653,9,6,40506-0032,South Limestone,9,75,University of Kentucky,11,114,4
-1,Dallas,1,TX,32.845254,1,1,,-96.784855,1,1,75275-0221,6425 Boaz St,1,11,Southern Methodist University,1,11,1
-0,,0,,,2,2,,,2,2,,,2,7,Jan Evangelista Purkyne University,2,7,2
-2,,1,,,0.222,5,,,3,2,,,3,154,National Institute for Computational Sciences,5,317,1
-0,,0,,,0,1,,,0,0,,,1,0,University of Erlangen-Nuremberg,0,0,0
-0,,0,,,0,1,,,0,0,,,1,0,Globus / University of chicago,0,0,0
-0,,0,,,0,1,,,0,0,,,1,0,Konkuk University,0,0,0
-0,Allendale,0,MI,42.965208,1,1,,-85.887519,1,1,49401-9403,1 Campus Dr,1,2,Grand Valley State University,1,2,1
-1,Orlando,1,FL,28.60106,0.75,10,,-81.198805,6,3,32816,4000 Central Florida Blvd,10,29,University of Central Florida,6,29,3
-0,,0,,,0.5,2,,,2,1,,,2,2,University of Texas MD Anderson Cancer Center,2,2,1
-1,,0,,,1,1,,,0,1,,,0,0,Dalhousie University,1,30,0
-2,,2,,,1.5,3,,,3,3,,,3,123,Oregon Health and Science University,3,123,3
-2,,1,,,0.286,2,,,1,2,,,1,152,"Shodor Education Foundation, Inc.",2,315,1
-0,Seattle,0,WA,47.610138,0,1,,-122.3197,0,0,98122-4340,900 Broadway,1,0,Seattle University,0,0,0
-1,,0,,,1,1,,,0,1,,,0,0,Polish Academy of Sciences,1,48,0
-11,Cambridge,10,MA,42.374429,0.909,28,,-71.118177,21,10,2138,Massachusetts Hall,27,406,Harvard University,21,417,10
-4,,1,,,0.19,9,,,4,4,,,4,21,Lawrence Livermore National Laboratory,9,518,2
-1,Milwaukee,1,WI,43.03903,0.333,3,,-87.927961,3,1,53233,1250 W Wisconsin Avenue,3,19,Marquette University,3,19,1
-2,,2,,,1,7,,,7,4,,,7,47,University of Pittsburgh School of Medicine,7,47,4
-1,,1,,,1,1,,,1,1,,,1,715,Jiangxi Agricultural University,1,715,1
-0,Tiffin,0,OH,41.114337,1,1,,-83.166581,1,1,44883-2462,310 E Market St,1,1,University of Heidelberg,1,1,1
-9,Boulder,5,CO,40.004415,1.125,25,,-105.267061,18,9,80309-0017,Regent Drive at Broadway,19,321,"University of Colorado, Boulder",21,403,6
-0,Wichita,0,KS,37.716484,0,1,,-97.296733,0,0,67260-0124,1845 N. Fairmount,1,0,Wichita State University,0,0,0
-1,,0,,,1,1,,,0,1,,,0,0,Renaissance Computing Institute,1,163,0
-0,,0,,,0.6,6,,,5,3,,,5,17,CUNY The City College of New York,5,20,3
-0,Louisville,0,KY,38.215752,0,1,,-85.758843,0,0,40292-0001,2301 S 3rd St,1,0,University of Louisville,0,0,0
-1,,0,,,2,2,,,0,2,,,0,0,university of michigan Medical School,2,13,0
-0,,0,,,1,1,,,1,1,,,1,1,National Center for Supercomputing Applications,1,1,1
-3,New York,2,NY,40.789801,0.75,12,,-73.953445,9,6,10029-6574,"One Gustave L Levy Place, Box 1217",11,77,Icahn School of Medicine at Mount Sinai,11,112,5
-0,,0,,,1,1,,,1,1,,,1,1,Chevron Corporation,1,1,1
-1,,0,,,1,1,,,0,1,,,0,0,St. John's University,1,27,0
-0,,0,,,1,1,,,1,1,,,1,2,The University of Melbourne,1,2,1
-2,,2,,,0.4,2,,,2,2,,,2,41,"Pennsylvania State University, University Park",2,41,2
-1,,1,,,0.667,2,,,2,2,,,2,719,USDA Agricultural Research Service,2,719,2
-4,Houston,4,TX,29.719988,1,11,,-95.344851,11,4,77204-2018,212 E. Cullen Building,11,104,University of Houston,11,104,4
-6,Baltimore,5,MD,39.256686,1.4,12,,-76.711607,10,7,21250,1000 Hilltop Circle,10,914,"University of Maryland, Baltimore County",12,1011,6
-1,,1,,,1,2,,,2,1,,,2,10,Harvard Medical School,2,10,1
-0,Macon,0,GA,32.831709,0,1,,-83.650114,0,0,31207,1501 Mercer University Drive,1,0,Mercer University,0,0,0
-1,,1,,,0.667,4,,,4,2,,,4,19,University of Texas at El Paso,4,19,2
-4,,1,,,1.667,6,,,3,5,,,3,66,Nvidia Corporation,6,165,2
-0,,0,,,1,1,,,0,1,,,0,0,"University of Puerto Rico, Medical Sciences Campus",1,7,0
-0,,0,,,0.667,2,,,2,2,,,2,9,Andritz Automation,2,9,2
-22,Santa Barbara,13,CA,34.416281,1.545,58,,-119.846404,26,17,93106,5221 Cheadle Hall,48,671,"University of California, Santa Barbara",36,1273,13
-1,,1,,,1,1,,,1,1,,,1,12,Idaho National Laboratory,1,12,1
-1,,0,,,0.2,2,,,1,2,,,1,3,University of L'Aquila,2,41,1
-9,,8,,,1.286,48,,,15,9,,,45,249,"Rutgers, the State University of New Jersey",16,289,9
-2,,2,,,0.75,5,,,5,3,,,5,50,Lawrence Berkeley National Laboratory,5,50,3
-0,,0,,,0,1,,,0,0,,,1,0,University of Tubingen,0,0,0
-2,Santa Cruz,2,CA,36.997258,1.5,3,,-122.067993,3,3,95064-1011,1156 High St,3,201,"University of California, Santa Cruz",3,201,3
-1,,1,,,0.333,2,,,2,1,,,2,715,Dresden University of Technology,2,715,1
-0,,0,,,1,1,,,1,1,,,1,1,"Texas A&M University, Commerce",1,1,1
-0,,0,,,0,1,,,0,0,,,1,0,"Institute of High Energy Physics, CAS",0,0,0
-1,Miami,1,FL,25.757111,1,1,,-80.377591,1,1,33199,11200 S. W. 8 Street,1,10,Florida International University,1,10,1
-17,Princeton,17,NJ,40.34853,2.6,33,,-74.663603,25,13,08544-0070,1 Nassau Hall,33,587,Princeton University,25,587,13
-3,,0,,,0.5,14,,,4,5,,,8,14,San Diego Supercomputer Center,14,229,2
-0,Indianapolis,0,IN,39.81534,1,1,,-86.204599,1,1,46222-1997,3200 Cold Spring Rd,1,3,Marian University,1,3,1
-0,,0,,,1,1,,,1,1,,,1,2,"University of Alabama, Birmingham",1,2,1
-1,Swarthmore,0,PA,39.904081,0.667,3,,-75.356066,2,2,19081,500 College Ave,2,6,Swarthmore College,3,30,1
-1,,1,,,1,1,,,1,1,,,1,257,Harvard-Smithsonian Center for Astrophysics,1,257,1
-0,,0,,,0.5,2,,,2,1,,,2,2,Long Island University,2,2,1
-0,Laramie,0,WY,41.311943,0,1,,-105.57204,0,0,82071,Corner of Ninth and Ivinson,1,0,University of Wyoming,0,0,0
-8,,4,,,0.533,40,,,22,8,,,28,451,Purdue University,28,765,6
-29,Cambridge,27,MA,42.360095,1.889,78,,-71.092115,30,17,02139-4307,77 Massachusetts Avenue,74,990,Massachusetts Institute of Technology,34,1267,16
-1,Notre Dame,1,IN,41.703058,0.75,14,,-86.238959,6,3,46556,400 Main Building,14,37,University of Notre Dame,6,37,3
-5,,0,,,0.625,11,,,2,5,,,4,3,Fermi National Accelerator Laboratory,11,493,1
-2,,2,,,0.4,4,,,3,2,,,3,85,University of Jena,4,87,2
-0,,0,,,0,1,,,0,0,,,1,0,Florida A&M University,0,0,0
-0,Kansas City,0,MO,39.035366,0,2,,-94.578039,0,0,64110,5100 Rockhill Rd,2,0,"University of Missouri, Kansas City",0,0,0
-5,Lawrence,4,KS,38.958551,1.167,23,,-95.247618,12,7,66045,"Strong Hall, 1450 Jayhawk Blvd, Room 230",22,148,University of Kansas,13,158,7
-0,,0,,,0,1,,,0,0,,,1,0,Swiss Federal Institute of Technology in Lausanne,0,0,0
-2,Haverford,2,PA,40.013368,0.75,3,,-75.302562,3,3,19041-1392,370  Lancaster Ave,3,159,Haverford College,3,159,3
-1,,0,,,1,1,,,0,1,,,0,0,Computational Infrastructure for Geodynamics,1,24,0
-0,,0,,,0,1,,,0,0,,,1,0,University of Tokyo,0,0,0
-0,Eugene,0,OR,44.044515,1,4,,-123.07398,4,2,97403,110 Johnson Hall,4,15,University of Oregon,4,15,2
-4,,3,,,0.167,4,,,3,4,,,3,140,Salk Institute for Biological Studies,4,157,3
-6,Newark,4,DE,39.679574,1,23,,-75.752917,11,8,19716,104 Hullihen Hall,20,113,University of Delaware,23,562,6
-0,,0,,,1,2,,,2,2,,,2,11,University of Calgary,2,11,2
-2,Durham,0,NC,36.00159,0.286,4,,-78.94226,2,2,27708,103 Allen Bldg,2,2,Duke University,4,58,1
-0,Medford,0,MA,42.406994,1,1,,-71.121689,1,1,02155-5555, ,1,7,Tufts University,1,7,1
-5,,1,,,0.538,16,,,8,7,,,11,52,SUNY at Stony Brook,16,531,4
-1,Athens,0,GA,33.956428,0.75,3,,-83.374049,2,3,30602,Administration Building,2,8,University of Georgia,3,21,2
-1,Dekalb,0,IL,41.933791,0.2,2,,-88.766065,1,1,60115-2828,1425 W. Lincoln Hwy.,1,1,Northern Illinois University,2,164,1
-2,,2,,,1,2,,,2,2,,,2,65,University of Sussex,2,65,2
-0,,0,,,1,1,,,1,1,,,1,8,University of Gdansk,1,8,1
-0,,0,,,1,1,,,1,1,,,1,3,University of Alberta,1,3,1
-6,,5,,,1.333,28,,,16,8,,,27,240,"University of Tennessee, Knoxville",19,350,7
-0,Worcester,0,MA,42.251064,1,1,,-71.823537,1,1,01610-1477,950 Main St,1,4,Clark University,1,4,1
-3,,2,,,0.556,15,,,9,5,,,13,78,Oak Ridge National Laboratory,15,241,4
-11,Houston,8,TX,29.716485,1.111,24,,-95.403625,15,10,77005-1827,6100 S Main,20,216,Rice University,19,338,9
-2,,2,,,1,3,,,3,2,,,3,88,University of Vienna,3,88,2
-1,,0,,,1,1,,,0,1,,,0,0,National Institutes of Health,1,67,0
-2,Stockton,0,CA,37.980624,0.333,5,,-121.307296,0,2,95211-0197,3601 Pacific Ave,2,0,University of the Pacific,5,201,0
-2,Pullman,2,WA,46.730448,0.286,6,,-117.158168,6,4,99164-5910,French Administration Building,6,66,Washington State University,6,66,4
-2,,1,,,0.333,4,,,3,2,,,3,62,"Office of Atomic Energy, Saclay",4,81,1
-1,Biddeford,1,ME,43.458172,1,2,,-70.385882,2,2,04005-9599,11 Hills Beach Rd,2,27,University of New England,2,27,2
-0,,0,,,1,1,,,1,1,,,1,2,Louisiana Optical Network Initiative,1,2,1
-1,Memphis,0,TN,35.118874,0.5,3,,-89.938062,0,2,38152,Southern Avenue,1,0,University of Memphis,3,28,0
-0,Albany,0,GA,31.571395,1,1,,-84.14306,1,1,31705,504 College Drive,1,1,Albany State University,1,1,1
-0,,0,,,0.25,3,,,2,1,,,3,2,Lester Ingber Research,2,2,1
-4,Indianapolis,2,IN,39.772948,0.5,7,,-86.172217,5,4,46202-5143,425 University Blvd,5,102,Indiana University-Purdue University Indianapolis,7,234,2
-48,Champaign,33,IL,40.108864,0.957,184,,-88.230309,28,22,61820-5711,601 E John Street,149,1142,University of Illinois at Urbana-Champaign,36,1807,17
-0,Ruston,0,LA,32.525518,0,1,,-92.64964,0,0,71272,305 Wisteria,1,0,Louisiana Tech University,0,0,0
-19,,15,,,2,65,,,27,14,,,61,779,University of Michigan,28,865,12
-1,,1,,,1,1,,,1,1,,,1,15,Smithsonian Astrophysical Observatory,1,15,1
-3,,1,,,0.571,5,,,3,4,,,3,19,US Geological Survey,5,70,2
-0,,0,,,0,1,,,0,0,,,1,0,NAGPUR UNIVERSITY,0,0,0
-2,,0,,,1,2,,,0,2,,,0,0,Cold Spring Harbor Laboratory,2,125,0
-0,Huntsville,0,AL,34.722818,1,1,,-86.63842,1,1,35899,301 Sparkman Dr,1,5,University of Alabama in Huntsville,1,5,1
-0,,0,,,0,1,,,0,0,,,1,0,Universite de Strasbourg,0,0,0
-4,Boston,1,MA,42.349581,0.714,9,,-71.09984,5,5,2215,One Silber Way,5,23,Boston University,9,113,2
-2,Atlanta,2,GA,33.798836,0.5,7,,-84.325782,6,2,30322,"408 Administration Building, 201 Dowman Drive",7,36,Emory University,6,36,2
-0,,0,,,1,1,,,0,1,,,0,0,University of Burgundy,1,3,0
-0,Baltimore,0,MD,39.344235,0,1,,-76.584238,0,0,21251-0001,1700 East Cold Spring Lane,1,0,Morgan State University,0,0,0
-2,,2,,,0.4,2,,,2,2,,,2,28,Space Science Institute,2,28,2
-2,Des Moines,1,IA,41.60381,0.3,8,,-93.654062,6,3,50311-4505,2507 University Avenue,7,33,Drake University,8,58,3
-0,,0,,,1,1,,,0,1,,,0,0,Institute of Bioorganic Chemistry Polish Academy of Sciences,1,4,0
-0,,0,,,1,1,,,1,1,,,1,3,Korea Institute for Advanced Study,1,3,1
-1,Vestal,1,NY,42.088049,0.4,8,,-75.971143,7,2,13850-6000,4400 Vestal Parkway East,8,46,SUNY at Binghamton,7,46,2
-2,Tallahassee,2,FL,30.4421,1.25,19,,-84.294801,9,5,32306-1037,222 S. Copeland Street,19,80,Florida State University,9,80,5
-4,Philadelphia,2,PA,39.954855,0.429,22,,-75.188745,10,6,19104,3141 Chestnut St,20,91,Drexel University,15,220,6
-0,,0,,,1,1,,,1,1,,,1,6,Macquarie University,1,6,1
-0,,0,,,1,1,,,0,1,,,0,0,National Cancer Institute,1,3,0
-0,Costa Mesa,0,CA,33.662686,0,1,,-117.900911,0,0,92626,55 Fair Dr,1,0,Vanguard University of Southern California,0,0,0
-1,Chicago,0,IL,41.78457,0.667,2,,-87.592521,1,2,60637,6045 S. Kenwood Avenue,1,2,Toyota Technological Institute at Chicago,2,26,1
-3,,3,,,0.75,4,,,4,3,,,4,72,"Pennsylvania State University Erie, The Behrend College",4,72,3
-1,,1,,,1,2,,,2,2,,,2,19,Japan Agency for Marine-Earth Science and Technology,2,19,2
-3,Chicago,0,IL,41.872651,0.667,8,,-87.651145,3,4,60607,601 S Morgan,5,5,University of Illinois at Chicago,8,181,1
-0,New York,0,NY,40.809137,1,1,,-73.964027,0,1,10027-6598,3009 Broadway,0,0,Barnard College,1,1,0
-5,,5,,,1.2,15,,,10,6,,,15,99,University of Minnesota,10,99,6
-0,Mount Pleasant,0,MI,43.591137,1,2,,-84.775275,2,1,48859,106 Warriner Hall,2,3,Central Michigan University,2,3,1
-0,,0,,,0.429,8,,,3,3,,,7,9,New Mexico State University,4,15,2
-0,Williamsburg,0,VA,37.271997,1,4,,-76.709417,4,2,23187-8795,200 Richmond Road,4,12,College of William and Mary,4,12,2
-0,,0,,,1,1,,,1,1,,,1,1,Pukyung National University,1,1,1
-1,Saint Paul,1,MN,44.965696,1,1,,-93.163983,1,1,55104-1284,1536 Hewitt Avenue,1,41,Hamline University,1,41,1
-0,Monterey,0,CA,36.597159,0.5,2,,-121.874248,2,1,93943,1 University Circle,2,2,Naval Postgraduate School,2,2,1
-4,Baltimore,4,MD,39.29151,1.25,7,,-76.625041,7,5,21201-1627,620 West Lexington St,7,92,"University of Maryland, Baltimore",7,92,5
-4,Ames,3,IA,42.026368,1.167,23,,-93.648353,9,7,50011-2030,3410 Beardshear Hall,22,95,Iowa State University,10,108,6
-0,Bozeman,0,MT,45.666829,0,1,,-111.049918,0,0,59717,Montana State University,1,0,Montana State University,0,0,0
-9,Baltimore,8,MD,39.32838,1.5,44,,-76.620799,17,9,21218-2688,3400 N Charles St,42,305,Johns Hopkins University,17,318,9
-1,Corvallis,1,OR,44.56274,0.4,6,,-123.274721,6,2,97331,1500 S.W. Jefferson Avenue,6,67,Oregon State University,6,67,2
-1,Pittsburgh,1,PA,40.437496,0.75,3,,-79.993046,3,3,15282,Administration Bldg 600 Forbes Ave,3,26,Duquesne University,3,26,3
-0,,0,,,0,1,,,0,0,,,1,0,IBM T.J. Watson Research Center,0,0,0
-0,,0,,,0,1,,,0,0,,,1,0,Hoover Institution,0,0,0
-2,,2,,,0.375,7,,,5,3,,,5,67,"University of North Carolina, Chapel Hill",7,72,2
-0,,0,,,1,1,,,1,1,,,1,1,Nicolaus Copernicus Astronomical Center Polish Academy of Sciences,1,1,1
-6,Bethlehem,3,PA,40.607158,0.857,13,,-75.378887,10,6,18015,27 Memorial Drive West,10,90,Lehigh University,13,165,5
-0,,0,,,1,1,,,1,1,,,1,1,US Pacific Basin Agricultural Research Center,1,1,1
-0,Potsdam,0,NY,44.663761,0,1,,-74.999947,0,0,13699,8 Clarkson Ave,1,0,Clarkson University,0,0,0
-2,San Francisco,2,CA,37.762736,0.5,6,,-122.458049,5,4,94143-0244,500 Parnassus Ave,5,31,"University of California, San Francisco",6,39,3
-0,,0,,,1,1,,,1,1,,,1,1,Harbin Institute of Technology,1,1,1
-0,Durham,0,NC,35.974237,0,2,,-78.898602,0,0,27707,1801 Fayetteville Street,2,0,North Carolina Central University,0,0,0
-0,,0,,,0.333,2,,,2,1,,,2,4,North Carolina A&T State University,2,4,1
-0,,0,,,1,1,,,1,1,,,1,2,SUNY Health Science Center at Syracuse,1,2,1
-0,,0,,,1,1,,,1,1,,,1,2,Nanjing University,1,2,1
-0,,0,,,0.333,3,,,0,1,,,2,0,University College London,2,4,0
-0,Hampton,0,VA,37.0199,0,2,,-76.331108,0,0,23668-0099,E Queen Street,1,0,Hampton University,0,0,0
-0,Springfield,0,IL,39.729862,1,1,,-89.614917,0,1,62703-5407,One University Plaza,0,0,University of Illinois at Springfield,1,3,0
-0,,0,,,1,1,,,0,1,,,0,0,Zhejiang University,1,3,0
-0,,0,,,0.25,3,,,2,1,,,3,3,University of Texas Health Science Center at San Antonio,2,3,1
-8,,6,,,1.333,27,,,17,8,,,25,283,University of Virginia,20,370,8
-0,,0,,,1,1,,,1,1,,,1,4,University Corporation for Atmospheric Research,1,4,1
-0,,0,,,1,1,,,1,1,,,1,1,Montpellier 2 University,1,1,1
-4,Amherst,2,MA,42.386162,0.625,10,,-72.52617,6,5,1003,374 Whitmore Building 181 Presidents Drive,8,34,"University of Massachusetts, Amherst",10,231,3
-0,Topeka,0,KS,39.034977,1,1,,-95.702325,0,1,66621-0001,1700 SW College Avenue,0,0,Washburn University,1,1,0
-0,,0,,,1,2,,,2,1,,,2,5,University of Siena,2,5,1
-2,Clemson,1,SC,34.677329,0.286,4,,-82.834463,3,2,29634,201 Sikes Hall,3,14,Clemson University,4,177,1
-8,New Haven,4,CT,41.311158,1,15,,-72.926688,10,9,6520,Woodbridge Hall,11,96,Yale University,15,545,5
-7,Boston,4,MA,42.339992,1,10,,-71.088782,6,7,02115-5005,360 Huntington Ave,6,154,Northeastern University,10,270,4
-0,,0,,,1,1,,,1,1,,,1,4,"University of Hawaii, Manoa",1,4,1
-12,Tucson,7,AZ,32.232071,1.5,25,,-110.950769,16,12,85721-0066,1401 E University,16,425,University of Arizona,25,842,9
-3,,1,,,0.429,3,,,1,3,,,1,21,Vienna University of Technology,3,163,1
-2,Houston,1,TX,29.7106,0.455,7,,-95.395743,5,5,77030-3498,One Baylor Plaza,5,29,Baylor College of Medicine,7,49,3
-11,,9,,,1.571,35,,,15,11,,,32,240,University of Oklahoma,17,311,9
-1,,0,,,1,1,,,0,1,,,0,0,National Institute of Standards and Technology,1,28,0
-0,,0,,,1,5,,,2,2,,,5,4,Individual Award/Unaffiliated,2,4,2
-1,,0,,,1,1,,,0,1,,,0,0,Jefferson Laboratory,1,13,0
-0,,0,,,1,1,,,0,1,,,0,0,"VorCat, Inc.",1,5,0
-3,,1,,,0.375,3,,,1,3,,,1,21,Autonomous University of Madrid,3,74,1
-0,,0,,,0.333,3,,,2,1,,,3,4,Albert Einstein College of Medicine,2,4,1
-0,,0,,,0,1,,,0,0,,,1,0,University of Zurich,0,0,0
-3,,2,,,1,7,,,6,6,,,6,123,Multidisciplinary Center for Astrophysics,7,135,5
-8,Davis,3,CA,38.539895,1,22,,-121.751958,9,8,95616-8678,One Shields Avenue,16,82,"University of California, Davis",22,576,5
-4,Storrs,4,CT,41.806261,1.667,8,,-72.247969,8,5,6269,352 Mansfield Road,8,82,University of Connecticut,8,82,5
-0,,0,,,1,3,,,3,1,,,3,7,National Renewable Energy Laboratory,3,7,1
-1,Mississippi State,1,MS,33.454809,0.2,3,,-88.788979,3,1,39762,Lee Boulevard,3,12,Mississippi State University,3,12,1
-1,,1,,,1,1,,,1,1,,,1,33,Institute of High Energy Physics,1,33,1
-1,Philadelphia,1,PA,39.949062,1,1,,-75.158147,1,1,19107,1020 Walnut Street,1,29,Thomas Jefferson University,1,29,1
-2,,1,,,0.6,3,,,2,3,,,2,22,Heidelberg Institute for Theoretical Studies,3,132,2
-1,Muncie,0,IN,40.198942,1,1,,-85.408863,0,1,47306,2000 University Ave,0,0,Ball State University,1,163,0
-22,Chicago,19,IL,41.78917,2,50,,-87.601196,28,18,60637,5801 S Ellis Ave,44,748,University of Chicago,31,959,16
-2,,1,,,0.6,4,,,3,3,,,3,19,Colorado State University,4,32,3
-0,Arlington,0,TX,32.728437,1,1,,-97.115087,1,1,76013,701 S. Nedderman Dr.,1,1,The University of Texas at Arlington,1,1,1
-0,,0,,,0,1,,,0,0,,,1,0,Trinity College Dublin,0,0,0
-1,,0,,,1,1,,,0,1,,,0,0,University of California at San Diego,1,94,0
-2,Northridge,2,CA,34.23671,0.75,6,,-118.526817,6,3,91330,18111 Nordhoff St,6,47,California State University-Northridge,6,47,3
-0,Fayetteville,0,NC,35.072485,0,1,,-78.894709,0,0,28301-4298,1200 Murchison Rd,0,0,Fayetteville State University,0,0,0
-0,Long Beach,0,CA,33.782752,0,2,,-118.1123,0,0,90840-0115,1250 Bellflower Blvd,1,0,California State University-Long Beach,0,0,0
-1,,1,,,1,3,,,3,2,,,3,32,Huntsman Cancer Institute,3,32,2
-1,Colorado Springs,0,CO,38.892735,1,1,,-104.800296,0,1,80918,1420 Austin Bluffs Parkway,0,0,"University of Colorado, Colorado Springs",1,67,0
-0,,0,,,0.6,9,,,5,3,,,9,25,University of New Mexico,5,25,3
-0,,0,,,0,1,,,0,0,,,1,0,Univeristy of California,0,0,0
-1,,1,,,1,2,,,2,2,,,2,65,University of Hong Kong,2,65,2
-0,Harrisonburg,0,VA,38.435332,0,2,,-78.871663,0,0,22807,800 South Main Street,2,0,James Madison University,0,0,0
-2,Jackson,2,MS,32.296781,0.8,9,,-90.20663,8,4,39217,1400 J R Lynch Street,9,52,Jackson State University,8,52,4
-4,Fayetteville,3,AR,36.06153,0.833,11,,-94.178214,8,5,72701,Administration Bldg 425,10,58,University of Arkansas,11,125,4
+i10-index,location_city,i10-index (recent),location_state,location_latitude,H-index (m),num_pubs,lon,location_longitude,G-index (recent),H-index,location_zip,location_street,# of Pubs (recent),Cited by (recent),lat,Organization,G-index,Cited by,H-index (recent)
+0,,0,,,0,1,,,0,0,,,0,0,,Space Telescope Science Institute,0,0,0
+7,Syracuse,1,NY,43.040005,0.875,23,,-76.136633,4,7,13244,900 South Crouse Ave.,16,50,,Syracuse University,21,427,4
+1,Houghton,1,MI,47.118300,1,4,,-88.546403,0,2,49931-1295,1400 Townsend Drive,4,26,,Michigan Technological University,4,26,2
+0,,0,,,0,1,,,,0,,,1,0,,National Oceanic and Atmospheric Administration,0,0,0
+4,Lewisburg,3,PA,40.954489,1,8,,-76.886275,7,4,17837,One Dent Drive,7,71,,Bucknell University,8,81,3
+0,,0,,,1,3,,,3,3,,,3,12,,University of Alabama,3,12,3
+1,,0,,,0.2,2,,,0,1,,,1,0,,Southwest Research Institute,2,10,0
+15,Los Angeles,11,CA,34.068892,1.625,59,,-118.443901,19,13,90095-1405,405 Hilgard Ave,53,409,,"University of California, Los Angeles",23,590,10
+14,Irvine,12,CA,33.648434,0.929,25,,-117.841248,22,13,92697,501 Aldrich Hall,22,611,,"University of California, Irvine",25,705,12
+1,,0,,,0.143,2,,,0,1,,,1,0,,Stockholm University,2,39,0
+0,Dahlonega,0,GA,34.530527,1,1,,-83.986574,1,1,30597,82 College Circle,1,4,,University of North Georgia,1,4,1
+0,Claremont,0,CA,34.106137,0.333,2,,-117.710594,1,1,91711,301 Platt Blvd.,2,1,,Harvey Mudd College,1,1,1
+1,Lincoln,1,NE,40.822272,0.5,12,,-96.702177,6,4,68588,14th and R St,11,33,,"University of Nebraska, Lincoln",7,40,4
+1,Cleveland,1,OH,41.500812,0.75,5,,-81.605769,4,3,44106,10900 Euclid Ave,4,16,,Case Western Reserve University,5,24,2
+0,,0,,,0,1,,,0,0,,,1,0,,Julich Supercomputing Centre,0,0,0
+0,,0,,,1,1,,,1,1,,,1,8,,University of Warmia and Mazury in Olsztyn,1,8,1
+0,,0,,,0,1,,,0,0,,,1,0,,COPRO,0,0,0
+8,,8,,,1.333,30,,,16,8,,,27,234,,University of South Florida,16,245,8
+13,,9,,,1.5,41,,,21,12,,,33,438,,University of Pittsburgh,32,969,9
+0,,0,,,2,2,,,2,2,,,2,13,,University of Maryland School of Medicine,2,13,2
+2,Rochester,0,NY,43.126437,0.364,6,,-77.631042,3,4,14627-0011,Wilson Blvd. - Wallis Hall,3,14,,University of Rochester,6,83,2
+1,,1,,,0.4,3,,,3,2,,,3,22,,Arkansas State University,3,22,2
+0,,0,,,0,1,,,0,0,,,1,0,,Paris Institue of Astrophysics,0,0,0
+5,,4,,,1.143,10,,,8,8,,,8,84,,Perimeter Institute for Theoretical Physics,10,114,7
+1,Rolla,1,MO,37.955853,1.667,9,,-91.775900,7,5,65409,1870 Miner Circle,9,38,,Missouri University of Science and Technology,7,38,5
+0,,0,,,1,2,,,1,1,,,2,1,,King Abdullah University of Science and Technology,1,1,1
+1,,1,,,1,1,,,1,1,,,1,41,,Freiberg University of Mining and Technology,1,41,1
+1,,0,,,1,1,,,0,1,,,0,0,,Max Planck Society,1,101,0
+2,Tulsa,1,OK,36.151887,0.429,7,,-95.945175,6,3,74104-3189,800 South Tucker Drive,6,39,,University of Tulsa,7,63,3
+0,Grand Forks,0,ND,47.919774,0.2,3,,-97.073451,2,1,58202-8193,"264 Centennial Drive, Stop 8193",2,2,,University of North Dakota,2,2,1
+0,Winston-Salem,0,NC,36.135301,0.333,2,,-80.279004,2,1,27106,1834 Wake Forest Road,2,5,,Wake Forest University,2,5,1
+0,Melbourne,0,FL,28.064503,1,1,,-80.624628,1,1,32901-6975,150 West University Boulevard,1,9,,Florida Institute of Technology,1,9,1
+4,New York,1,NY,40.729452,0.6,14,,-73.997264,7,6,10012-1091,70 Washington Sq South,11,47,,New York University,13,167,4
+1,,0,,,1,1,,,0,1,,,0,0,,Ohio Supercomputer Center,1,24,0
+0,,0,,,1,1,,,1,1,,,1,4,,Jefferson Medical College,1,4,1
+0,,0,,,1,1,,,1,1,,,1,2,,University of North Carolina System Office,1,2,1
+0,Atlanta,0,GA,33.748772,1,1,,-84.412818,1,1,30314-4391,"223 James P Brawley Drive, SW",1,2,,Clark Atlanta University,1,2,1
+1,,0,,,1,1,,,0,1,,,0,0,,Monash University,1,19,0
+0,,0,,,0,1,,,0,0,,,1,0,,Tel Aviv University,0,0,0
+0,,0,,,1,1,,,1,1,,,1,9,,The Chinese University of Hong Kong,1,9,1
+0,Chestnut Hill,0,MA,42.337688,0,1,,-71.171488,0,0,02467,140 Commonwealth Avenue,1,0,,Boston College,0,0,0
+0,Richardson,0,TX,32.989432,0,2,,-96.748371,0,0,75080-3021,800 West Campbell  Road,2,0,,The University of Texas at Dallas,0,0,0
+1,Detroit,0,MI,42.358610,0.333,3,,-83.072864,2,2,48202,656 West Kirby Street,2,9,,Wayne State University,3,34,1
+0,,0,,,0,1,,,0,0,,,0,0,,Naval Research Laboratory,0,0,0
+0,Rohnert Park,0,CA,38.341023,1,1,,-122.673261,1,1,94928-3609,1801 E Cotati Ave,1,4,,Sonoma State University,1,4,1
+1,,1,,,1,4,,,4,3,,,4,23,,"University of Colorado, Denver",4,23,3
+6,Waltham,5,MA,42.364947,0.75,13,,-71.254716,11,6,02454-9110,415 South St,11,120,,Brandeis University,12,135,5
+4,Nashville,4,TN,36.144430,0.714,15,,-86.804875,11,5,37240,2101 West End Avenue,13,120,,Vanderbilt University,11,120,5
+17,,13,,,0.812,53,,,26,13,,,48,671,,Georgia Institute of Technology,31,930,11
+0,,0,,,0.25,2,,,1,1,,,2,1,,Brigham Young University,1,1,1
+1,Houston,0,TX,29.763831,1,4,,-95.359530,3,2,77002-1014,1 Main Street,3,5,,University of Houston-Downtown,4,25,1
+0,,0,,,1,1,,,1,1,,,1,3,,Max Planck Institute for Solar System Research,1,3,1
+0,,0,,,0,1,,,0,0,,,1,0,,J Craig Venter Institute,0,0,0
+1,,0,,,1,1,,,0,1,,,0,0,,National Autonomous University of Mexico,1,36,0
+2,,1,,,0.375,6,,,4,3,,,4,16,,University of New Hampshire,6,39,2
+2,,1,,,0.5,2,,,1,2,,,1,25,,Nagoya University,2,127,1
+0,Albany,0,NY,42.686917,0,1,,-73.825014,0,0,12222,1400 Washington Avenue,1,0,,SUNY at Albany,0,0,0
+9,,5,,,0.391,26,,,20,9,,,20,653,,Washington University in St. Louis,26,956,7
+1,,1,,,0.5,3,,,3,2,,,3,22,,University of Liverpool,3,22,2
+0,,0,,,1,1,,,1,1,,,1,1,,Masaryk University,1,1,1
+0,Toledo,0,OH,41.657950,0.333,3,,-83.615225,2,1,43606-3390,2801 W Bancroft,3,4,,University of Toledo,2,4,1
+0,,0,,,1,1,,,1,1,,,1,2,,Rutgers University,1,2,1
+0,,0,,,0,2,,,0,0,,,2,0,,Julich Research Centre,0,0,0
+0,Saint Paul,0,MN,44.936709,1,1,,-93.169855,1,1,55105-1899,1600 Grand Ave,1,3,,Macalester College,1,3,1
+1,,1,,,0.667,13,,,7,4,,,12,38,,University of South Carolina,7,41,4
+0,,0,,,0.667,7,,,3,2,,,7,8,,SUNY at Buffalo,3,8,2
+1,,0,,,0.333,4,,,3,2,,,3,8,,Max Planck Institute for Astronomy,4,27,2
+0,Denton,0,TX,33.210958,0.5,2,,-97.151211,2,2,76203-1277,1501 W.Chestnut Ave.,2,5,,University of North Texas,2,5,2
+0,Chicago,0,IL,41.999161,0,2,,-87.657399,0,0,60660,1032 W. Sheridan Rd,2,0,,Loyola University Chicago,0,0,0
+0,,0,,,1,1,,,1,1,,,1,3,,Ponce Health Sciences University,1,3,1
+1,,1,,,0.667,2,,,2,2,,,2,30,,NASA Goddard Space Flight Center,2,30,2
+0,Columbia,0,MO,38.941015,0.333,2,,-92.326429,1,2,65211,105 Jesse Hall,1,3,,"University of Missouri, Columbia",2,6,1
+28,Pasadena,23,CA,34.139275,1.778,58,,-118.125740,31,16,91125,1200 E California Blvd,52,967,,California Institute of Technology,38,1398,15
+10,,3,,,0.769,26,,,8,10,,,14,54,,Argonne National Laboratory,24,540,4
+0,,0,,,1,1,,,0,1,,,0,0,,Virginia Institute of Marine Science,1,3,0
+1,,0,,,1,1,,,0,1,,,0,0,,University of Nebraska at Lincoln,1,32,0
+0,,0,,,0,1,,,0,0,,,1,0,,The Ohio State University,0,0,0
+6,New York,5,NY,40.764738,1,10,,-73.954839,9,6,10065,"1300 York Ave, C-118",9,126,,Weill Cornell Medical College,10,136,5
+2,Worcester,2,MA,42.275067,1,3,,-71.808792,3,2,01609-2280,100 Institute Road,3,78,,Worcester Polytechnic Institute,3,78,2
+0,,0,,,0,1,,,0,0,,,1,0,,Centers for Disease Control and Prevention,0,0,0
+0,,0,,,1,1,,,1,1,,,1,7,,North Carolina Museum of Natural Sciences,1,7,1
+9,Madison,7,WI,43.073858,1,34,,-89.405356,13,9,53706-1380,500 Lincoln Dr,31,198,,University of Wisconsin-Madison,20,417,8
+1,,0,,,0.333,2,,,1,2,,,1,2,,Jet Propulsion Laboratory,2,12,1
+10,,6,,,0.714,28,,,14,10,,,21,177,,Louisiana State University,20,367,7
+1,Chicago,1,IL,41.833801,0.286,5,,-87.628346,4,2,60616,3300 S Federal St,4,13,,Illinois Institute of Technology,5,17,2
+3,Washington,1,DC,38.898650,0.5,12,,-77.047871,5,4,20052,"2121 I Street, NW",9,23,,George Washington University,10,92,2
+0,North Dartmouth,0,MA,41.628861,1,1,,-71.005528,0,1,02747-2300,285 Old Westport Rd,0,0,,"University of Massachusetts, Dartmouth",1,2,0
+2,Fort Wayne,2,IN,41.115418,1.333,5,,-85.111747,5,4,46805-1499,2101 E Coliseum Blvd,5,37,,Indiana University-Purdue University Fort Wayne,5,37,4
+2,Meadville,1,PA,41.648068,0.222,2,,-80.146922,1,2,16335-3902,520 N Main St,1,14,,Allegheny College,2,57,1
+10,East Lansing,10,MI,42.732120,2,24,,-84.476111,21,10,48824-1046, ,24,435,,Michigan State University,21,435,10
+2,,1,,,0.667,2,,,1,2,,,1,87,,University of Cincinnati,2,97,1
+0,Utica,0,NY,43.095183,0.667,3,,-75.272407,2,2,13502-4892,1600 Burrstone Rd,2,2,,Utica College,3,5,1
+0,,0,,,0,1,,,0,0,,,1,0,,"Wadsworth Center, New York State Department of Health",0,0,0
+1,,1,,,0.333,2,,,2,1,,,2,10,,Armstrong Atlantic State University,2,10,1
+0,,0,,,1,1,,,1,1,,,1,1,,University of Science and Technology of China,1,1,1
+1,Manhattan,1,KS,39.188616,0.333,2,,-96.581077,2,1,66506,Anderson Hall,2,15,,Kansas State University,2,15,1
+1,,1,,,2,2,,,2,2,,,2,19,,Chosun University,2,19,2
+1,,0,,,0.167,2,,,1,1,,,1,1,,ETH Zurich,2,37,1
+2,San Juan,2,PR,18.403027,0.667,2,,-66.045875,2,2,00931-0000,39 Ponce de Leon  Ave,2,52,,"University of Puerto Rico, Rio Piedras",2,52,2
+0,,0,,,1,1,,,1,1,,,1,4,,Stanford University School of Medicine,1,4,1
+0,,0,,,1,1,,,1,1,,,1,2,,Center for Ocean-Land-Atmosphere Studies,1,2,1
+1,San Luis Obispo,1,CA,35.298890,1,1,,-120.658560,1,1,93407,1 Grand Ave.,1,13,,"California Polytechnic State University, San Luis Obispo",1,13,1
+8,Evanston,7,IL,42.058377,0.818,16,,-87.673653,14,9,60208,633 Clark St,15,194,,Northwestern University,16,237,8
+1,,0,,,1,1,,,0,1,,,0,0,,Ecole Normale Superieure De Lyon,1,101,0
+0,,0,,,1,3,,,3,2,,,3,13,,Bowling Green State University,3,13,2
+0,,0,,,1,1,,,1,1,,,1,1,,Nationwide Childrens Hospital Research Institute,1,1,1
+7,Riverside,7,CA,33.975880,1.75,16,,-117.331098,16,7,92521,900 University Ave,16,239,,"University of California, Riverside",16,239,7
+0,Ann Arbor,0,MI,42.276061,1,1,,-83.743121,1,1,48109,503 Thompson Street,1,5,,"University of Michigan, Ann Arbor",1,5,1
+2,San Francisco,0,CA,37.721345,2,2,,-122.477905,0,2,94132,1600 Holloway Ave,0,0,,San Francisco State University,2,35,0
+0,Murfreesboro,0,TN,35.849139,1,1,,-86.362094,1,1,37132,1301 East Main Street,1,9,,Middle Tennessee State University,1,9,1
+0,,0,,,0.333,6,,,2,1,,,6,4,,Wake Forest School of Medicine,2,4,1
+16,New York,16,NY,40.808286,2.333,49,,-73.961885,22,14,10027,West 116 St and Broadway,46,532,,Columbia University in the City of New York,22,537,14
+1,,0,,,0.375,5,,,3,3,,,3,11,,"University of Alabama, Huntsville",5,73,2
+2,,1,,,0.375,5,,,4,3,,,4,29,,Pacific Northwest National Laboratory,5,56,2
+1,,1,,,1,2,,,2,2,,,2,19,,Hebrew University of Jerusalem,2,19,2
+0,,0,,,0.25,3,,,2,1,,,3,4,,University of Texas at San Antonio,2,4,1
+1,,0,,,1,1,,,0,1,,,0,0,,SDSU,1,26,0
+0,,0,,,0.5,2,,,2,1,,,2,2,,Curtin University,2,2,1
+0,,0,,,1,1,,,1,1,,,1,6,,"Institute of Botany, CAS",1,6,1
+0,,0,,,1,2,,,2,1,,,2,2,,University of Texas at Arlington,2,2,1
+9,Providence,7,RI,41.827605,1.286,20,,-71.404467,12,9,02912,One Prospect Street,16,140,,Brown University,16,241,7
+0,Claremore,0,OK,36.319609,0,1,,-95.635739,0,0,74017-3252,1701 W Will Rogers Blvd,1,0,,Rogers State University,0,0,0
+1,,0,,,1,1,,,0,1,,,0,0,,Computational Science & Engineering,1,49,0
+1,Middletown,0,CT,41.556780,0.111,2,,-72.656755,0,1,06459,237 High St,1,0,,Wesleyan University,2,163,0
+2,,1,,,0.625,12,,,6,5,,,9,28,,None,8,61,3
+0,,0,,,0.5,3,,,3,1,,,3,6,,Southeastern Universities Research Association,3,6,1
+0,,0,,,0.001,4,,,2,3,,,2,14,,University of Waterloo,4,20,2
+0,,0,,,1,1,,,1,1,,,1,3,,US Army Corps of Engineers,1,3,1
+0,,0,,,1,1,,,1,1,,,1,2,,UTEP,1,2,1
+0,,0,,,1,1,,,1,1,,,1,3,,Joseph Fourier University,1,3,1
+0,Normal,0,IL,40.509724,1,1,,-88.992340,0,1,61790-1000,North and School Streets,0,0,,Illinois State University,1,6,0
+0,,0,,,1,1,,,1,1,,,1,1,,University of Goettingen,1,1,1
+3,,3,,,0.857,15,,,12,6,,,12,129,,Arizona State University,13,147,4
+0,Cambridge,0,MA,42.360095,1,2,,-71.092115,2,1,02139-4307,77 Massachusetts Avenue,2,2,,Massachusetts Institute of Technology,2,2,1
+7,Raleigh,4,NC,35.785111,0.471,32,,-78.674517,11,8,27695-7001,2101 Hillsborough Street,28,118,,North Carolina State University at Raleigh,15,218,7
+6,,5,,,0.667,13,,,11,6,,,11,101,,National Center for Atmospheric Research,13,266,6
+3,Philadelphia,3,PA,39.951002,0.714,20,,-75.193618,9,5,19104-6303,34th & Spruce Street,19,70,,University of Pennsylvania,9,77,4
+3,Richmond,2,VA,37.547631,0.833,11,,-77.453597,8,5,23284-2512,910 W Franklin St,10,55,,Virginia Commonwealth University,9,79,4
+4,Philadelphia,3,PA,39.980943,0.857,10,,-75.158267,8,6,19122-6096,1801 North Broad Street,8,80,,Temple University,10,98,5
+1,,1,,,1,1,,,1,1,,,1,251,,"Q-Chem, Inc.",1,251,1
+0,,0,,,0.667,2,,,2,2,,,2,9,,Goethe University Frankfurt,2,9,2
+2,Brooklyn,1,NY,40.631912,0.333,7,,-73.953120,6,4,11210,2900 Bedford Ave,6,32,,CUNY Brooklyn College,7,131,3
+0,Lubbock,0,TX,33.580309,0.333,3,,-101.876917,3,1,79409-5005,Broadway and University Avenue,3,6,,Texas Tech University,3,6,1
+0,,0,,,0,2,,,0,0,,,2,0,,University of Wuppertal,0,0,0
+0,New York,0,NY,40.850800,0,1,,-73.928541,0,0,10033-3299,500 W 185th St,1,0,,Yeshiva University,0,0,0
+0,,0,,,0,1,,,0,0,,,1,0,,Southern University and A&M College,0,0,0
+0,Eau Claire,0,WI,44.798431,0.667,2,,-91.500432,2,2,54702-4004,105 Garfield Avenue,2,12,,University of Wisconsin-Eau Claire,2,12,2
+0,Merced,0,CA,37.366237,0.8,8,,-120.424944,6,4,95343-5603,5200 North Lake Road,8,31,,"University of California, Merced",6,31,4
+1,,1,,,1,1,,,1,1,,,1,13,,Kwangwoon University,1,13,1
+0,,0,,,1,1,,,1,1,,,1,1,,Kasetsart University,1,1,1
+0,Socorro,0,NM,34.066035,0.25,2,,-106.907491,2,1,87801,801 Leroy Place,2,5,,New Mexico Institute of Mining and Technology,2,5,1
+0,,0,,,0,1,,,0,0,,,1,0,,"Pennsylvania State University, Mont Alto",0,0,0
+3,,1,,,0.444,20,,,5,4,,,18,22,,Ohio State University,14,182,2
+40,La Jolla,25,CA,32.876598,2,104,,-117.237793,33,24,92093,9500 Gilman Dr,83,1126,,"University of California, San Diego",44,2006,18
+0,Boise,0,ID,43.604403,1,1,,-116.205789,1,1,83725,1910 University Dr,1,6,,Boise State University,1,6,1
+0,,0,,,1,1,,,1,1,,,1,6,,University of Granada,1,6,1
+1,,0,,,1,1,,,0,1,,,0,0,,American Physical Society,1,416,0
+0,,0,,,0,1,,,0,0,,,1,0,,Johns Hopkins University School of Medicine,0,0,0
+2,,2,,,2,2,,,2,2,,,2,30,,Institute for Research in Computer Science and Automation,2,30,2
+4,,2,,,0.5,9,,,7,6,,,7,66,,American Museum of Natural History,9,139,4
+2,,2,,,1.333,5,,,5,4,,,5,54,,University of Akron,5,54,4
+1,Washington,1,DC,38.908809,1.5,5,,-77.073463,5,3,20057-0001,37th and O St NW,5,23,,Georgetown University,5,23,3
+0,,0,,,1,1,,,1,1,,,1,1,,University of Montana,1,1,1
+0,,0,,,0,1,,,0,0,,,1,0,,RIKEN,0,0,0
+2,,2,,,1,2,,,2,2,,,2,88,,University of the Balearic Islands,2,88,2
+0,,0,,,0,1,,,0,0,,,1,0,,Indian Institute of Science,0,0,0
+18,,15,,,1.625,52,,,18,13,,,49,369,,Pennsylvania State University,22,512,12
+2,Los Angeles,1,CA,34.066927,0.182,3,,-118.168965,2,2,90032,5151 State University Dr,2,12,,California State University-Los Angeles,3,106,1
+2,,1,,,0.5,10,,,6,4,,,8,30,,Scripps Institution of Oceanography,9,68,4
+0,Atlanta,0,GA,33.752700,0.25,7,,-84.386670,3,1,30303-3083,33 gilmer st,7,6,,Georgia State University,3,6,1
+3,Fullerton,3,CA,33.883627,0.6,5,,-117.885349,5,3,92831-3599,800 N State College Blvd,5,132,,California State University-Fullerton,5,132,3
+1,Houston,1,TX,29.705395,1,2,,-95.400790,2,2,77030-4009,1515 Holcombe Blvd.,2,12,,The University of Texas MD Anderson Cancer Center,2,12,2
+9,Rochester,5,NY,43.090325,1.5,21,,-77.675210,14,9,14623-5603,1 Lomb Memorial Dr,15,173,,Rochester Institute of Technology,18,308,6
+2,Las Vegas,2,NV,36.106994,1,2,,-115.141153,2,2,89154,4505 S Maryland Pky,2,74,,University of Nevada-Las Vegas,2,74,2
+0,,0,,,1,1,,,1,1,,,1,2,,University of Edinburgh,1,2,1
+0,Burlington,0,VT,44.479262,0.4,7,,-73.198128,4,2,05405-0160,85 S Prospect St,7,13,,University of Vermont,4,13,2
+1,,1,,,0.667,2,,,2,2,,,2,26,,UCSF,2,26,2
+0,,0,,,2,2,,,2,2,,,2,6,,University of Oxford,2,6,2
+0,,0,,,0,1,,,0,0,,,0,0,,Queen's University Belfast,0,0,0
+0,,0,,,0.333,4,,,2,1,,,4,2,,North Dakota State University,2,2,1
+1,New York,1,NY,40.762927,1,1,,-73.954912,1,1,10065-6399,1230 York Avenue,1,10,,Rockefeller University,1,10,1
+21,Stanford,12,CA,37.426967,1.364,52,,-122.168826,19,15,94305, ,41,377,,Stanford University,34,1111,11
+0,,0,,,1,1,,,1,1,,,1,2,,ISU,1,2,1
+0,Syracuse,0,NY,43.034355,0.5,2,,-76.139236,2,2,13210,One Forestry Dr.,2,10,,SUNY College of Environmental Science and Forestry,2,10,2
+0,,0,,,1,1,,,1,1,,,1,6,,Northwestern Polytechnical University,1,6,1
+26,Berkeley,22,CA,37.871969,2,67,,-122.260423,31,16,94720,200 California Hall,62,964,,"University of California, Berkeley",33,1107,15
+1,,1,,,1,1,,,1,1,,,1,10,,University of Texas at Dallas,1,10,1
+0,,0,,,1,1,,,1,1,,,1,4,,University of Utah School of Medicine,1,4,1
+1,,1,,,1,1,,,1,1,,,1,13,,"Institute for Research in Biomedicine, Barcelona",1,13,1
+1,Dearborn,0,MI,42.317287,0.231,7,,-83.231417,4,3,48128-1491,4901 Evergreen Rd,6,10,,"University of Michigan, Dearborn",7,255,2
+0,,0,,,0,1,,,0,0,,,1,0,,High Energy Accelerator Research Organization,0,0,0
+0,,0,,,1,2,,,2,1,,,2,4,,US Army,2,4,1
+0,,0,,,1,1,,,1,1,,,1,8,,University of Leoben,1,8,1
+0,Conway,0,SC,33.794722,0,2,,-79.012635,0,0,29526,103 Tom Trout Drive,2,0,,Coastal Carolina University,0,0,0
+0,Loudonville,0,NY,42.718586,1,1,,-73.751530,1,1,12211-1462,515 Loudon Rd,1,6,,Siena College,1,6,1
+5,,1,,,0.625,7,,,3,5,,,3,42,,Los Alamos National Laboratory,7,539,1
+0,Beaumont,0,TX,30.044274,0.667,4,,-94.073389,3,2,77705,4400 MLK Blvd,4,8,,Lamar University,3,8,2
+0,,0,,,1,1,,,1,1,,,1,3,,Memorial Sloan Kettering Cancer Center,1,3,1
+0,,0,,,1,1,,,1,1,,,1,1,,University of Exeter,1,1,1
+4,Los Angeles,1,CA,34.021058,0.625,19,,-118.283858,6,5,90089,University Park,14,34,,University of Southern California,12,125,2
+1,Dallas,1,TX,32.819539,1,2,,-96.842311,1,2,75390-9096,5323 Harry Hines Blvd,1,12,,University of Texas Southwestern Medical Center,2,15,1
+1,,1,,,1.5,3,,,3,3,,,3,23,,Cambridge University,3,23,3
+0,,0,,,1,2,,,2,1,,,2,5,,The George Washington University,2,5,1
+1,,0,,,1,1,,,0,1,,,0,0,,National Optical Astronomy Observatory,1,10,0
+1,,0,,,1,1,,,0,1,,,0,0,,Computation Institute,1,163,0
+0,Carbondale,0,IL,37.713239,0.333,4,,-89.218724,3,1,62901-4512,Lincoln Drive,4,6,,"Southern Illinois University, Carbondale",3,6,1
+4,,3,,,0.778,19,,,13,7,,,16,147,,Texas A&M University,19,571,6
+2,Morgantown,1,WV,39.634680,0.333,4,,-79.953926,3,2,26506-6201,"Stewart Hall, 1500 University Avenue",3,15,,West Virginia University,4,25,1
+2,Iowa City,1,IA,41.660695,0.375,6,,-91.535698,5,3,52242-1316,101 Jessup Hall,5,31,,University of Iowa,6,42,2
+0,Norfolk,0,VA,36.884919,0.25,5,,-76.309653,1,1,23529,5115 Hampton Blvd,5,1,,Old Dominion University,1,1,1
+4,San Diego,1,CA,32.775250,0.308,6,,-117.071228,3,4,92182,5500 Campanile Dr,3,16,,San Diego State University,6,94,2
+0,,0,,,1,1,,,1,1,,,1,8,,Indiana University at Bloomington,1,8,1
+4,,1,,,0.5,12,,,5,4,,,7,23,,Texas Advanced Computing Center,12,336,2
+15,Salt Lake City,7,UT,40.762484,1.625,36,,-111.846044,23,13,84112-9008,"201 Presidents Circle, ROOM 201",27,487,,University of Utah,36,1276,8
+0,,0,,,1,1,,,1,1,,,1,3,,"SC Solutions, Inc.",1,3,1
+0,,0,,,0.333,2,,,1,1,,,2,1,,Sri Sathya Sai Institute of Higher Learning,1,1,1
+0,,0,,,1,1,,,0,1,,,0,0,,Corning Incorporated,1,3,0
+0,,0,,,1,2,,,2,1,,,2,4,,Central University of the Caribbean,2,4,1
+0,Danville,0,KY,37.645102,0.5,2,,-84.779175,2,1,40422-1394,625 W Walnut St,2,2,,Centre College,2,2,1
+3,,1,,,0.5,7,,,3,4,,,3,152,,Pittsburgh Supercomputing Center,7,348,1
+9,Pittsburgh,4,PA,40.444616,1,46,,-79.942914,13,9,15213-3890,5000 Forbes Avenue,39,167,,Carnegie Mellon University,24,559,6
+0,Montgomery,0,AL,32.364317,1,1,,-86.295677,1,1,36104-0271,915 S Jackson Street,1,2,,Alabama State University,1,2,1
+1,Newark,1,NJ,40.741997,0.25,4,,-74.177113,4,1,07102,University Heights,4,26,,New Jersey Institute of Technology,4,26,1
+1,University,1,MS,34.362144,0.75,7,,-89.539377,7,3,38677-1848,"Oxford, Mississippi",7,95,,University of Mississippi,7,95,3
+0,,0,,,0.5,4,,,2,1,,,4,2,,The Methodist Hospital System,2,2,1
+13,,6,,,0.625,61,,,19,10,,,44,340,,University of Texas at Austin,28,754,6
+17,College Park,12,MD,38.985379,0.929,36,,-76.939494,20,13,20742, ,29,382,,"University of Maryland, College Park",28,785,11
+2,Troy,2,NY,42.728983,4,6,,-73.678768,6,4,12180-3590,110 8th St,6,175,,Rensselaer Polytechnic Institute,6,175,4
+0,Milwaukee,0,WI,43.076848,0.429,5,,-87.880488,4,3,53201-0413,2200 E Kenwood Blvd,4,20,,University of Wisconsin-Milwaukee,5,27,3
+1,,0,,,1,1,,,0,1,,,0,0,,Allegheny-Singer Research Institute,1,10,0
+4,,3,,,0.667,4,,,3,4,,,3,101,,National Science Foundation,4,264,3
+0,,0,,,1,1,,,1,1,,,1,3,,Kyoto University,1,3,1
+0,,0,,,0,1,,,0,0,,,1,0,,Univeristy of Michigan,0,0,0
+0,,0,,,1,1,,,1,1,,,1,5,,Cedars-Sinai Medical Center,1,5,1
+5,Boca Raton,4,FL,26.372536,0.833,6,,-80.102293,5,5,33431-0991,777 Glades Rd,5,118,,Florida Atlantic University,6,128,4
+22,Ithaca,14,NY,42.447199,1.455,50,,-76.483489,23,16,14853,300 Day Hall,42,498,,Cornell University,41,1604,12
+0,Villanova,0,PA,40.039388,1,1,,-75.345457,1,1,19085-1699,800 Lancaster Avenue,1,8,,Villanova University,1,8,1
+4,Blacksburg,2,VA,37.228572,0.714,10,,-80.423229,7,5,24061-0131,"210 Burruss Hall, 800 Drillfield Dr.",7,45,,Virginia Polytechnic Institute and State University,10,129,2
+0,Reno,0,NV,39.545052,0.333,3,,-119.818424,2,2,89557,North Virginia Street,2,2,,University of Nevada-Reno,3,5,1
+0,,0,,,0,1,,,0,0,,,1,0,,Ludwig Maximilian University of Munich,0,0,0
+1,,1,,,1,1,,,1,1,,,1,16,,Burnham Institute,1,16,1
+1,Fairfax,1,VA,38.830880,0.5,5,,-77.307940,5,2,22030-4444,4400 University Dr,5,171,,George Mason University,5,171,2
+0,,0,,,1,1,,,0,1,,,0,0,,University of Cordoba,1,9,0
+0,,0,,,0,1,,,0,0,,,1,0,,National Energy Technology Laboratory,0,0,0
+5,,5,,,1.4,9,,,9,7,,,9,231,,Max Planck Institute for Gravitational Physics Albert Einstein Institute,9,231,7
+13,,4,,,1,42,,,23,13,,,23,884,,Indiana University,42,2216,5
+6,,6,,,1.4,14,,,14,7,,,14,180,,University of Toronto,14,180,7
+0,Hanover,0,NH,43.704080,1,1,,-72.289951,1,1,03755-3529,207 Parkhurst Hall,1,3,,Dartmouth College,1,3,1
+0,Hoboken,0,NJ,40.744776,1,1,,-74.025334,1,1,07030-5991,Castle Point On Hudson,1,9,,Stevens Institute of Technology,1,9,1
+0,,0,,,1,1,,,1,1,,,1,6,,Stanford University/ University of Cambridge,1,6,1
+0,,0,,,1,3,,,3,2,,,3,8,,University of Texas Health Science Center at Houston,3,8,2
+1,,0,,,1,1,,,0,1,,,0,0,,iPlant Collaborative,1,110,0
+2,,2,,,1,4,,,4,2,,,4,137,,University of Trento,4,137,2
+0,Ypsilanti,0,MI,42.245751,0,1,,-83.624499,0,0,48197,202 Welch Hall,1,0,,Eastern Michigan University,0,0,0
+0,Houston,0,TX,29.582523,0,2,,-95.098129,0,0,77058-1002,2700 Bay Area Blvd,2,0,,University of Houston-Clear Lake,0,0,0
+0,,0,,,0.5,2,,,2,1,,,2,4,,"Predictive Science, Inc.",2,4,1
+2,Gainesville,2,FL,29.649428,0.571,15,,-82.339958,8,4,32611, ,14,56,,University of Florida,8,65,4
+0,,0,,,0,1,,,0,0,,,1,0,,University of Reims Champagne-Ardenne,0,0,0
+0,Princess Anne,0,MD,38.211188,1,1,,-75.687227,1,1,21853-1299,J.T. Williams Hall,1,3,,"University of Maryland, Eastern Shore",1,3,1
+1,,1,,,0.5,7,,,5,3,,,6,19,,University of Texas Medical Branch at Galveston,5,25,2
+0,Coral Gables,0,FL,25.720406,0.5,2,,-80.276450,2,1,33146,University of Miami,2,6,,Miami University,2,6,1
+0,North Andover,0,MA,42.668352,0.5,2,,-71.124216,2,1,01845,315 Turnpike St,2,2,,Merrimack College,2,2,1
+0,,0,,,1,1,,,1,1,,,1,5,,SUNY Health Science Center at Brooklyn,1,5,1
+7,,2,,,1,11,,,5,7,,,5,54,,Brookhaven National Laboratory,11,755,2
+0,,0,,,1,1,,,1,1,,,1,6,,Univerisity of the Virgin Islands,1,6,1
+0,University of Richmond,0,VA,37.577625,1,1,,-77.538702,1,1,23173,28 Westhampton Way,1,6,,University of Richmond,1,6,1
+0,San Jose,0,CA,37.335201,2,2,,-121.881214,2,2,95192-0001,One Washington Square,2,8,,San Jose State University,2,8,2
+11,,7,,,1,33,,,22,11,,,28,451,,University of Washington,24,564,8
+0,,0,,,0,1,,,0,0,,,1,0,,Fred Hutchinson Cancer Research Center,0,0,0
+0,,0,,,1,1,,,1,1,,,1,7,,University of Hamburg,1,7,1
+2,,0,,,0.273,3,,,1,3,,,1,6,,City University of New York,3,43,1
+6,Lexington,4,KY,38.035818,0.429,11,,-84.505653,9,6,40506-0032,South Limestone,9,75,,University of Kentucky,11,114,4
+1,Dallas,1,TX,32.845254,1,1,,-96.784855,1,1,75275-0221,6425 Boaz St,1,11,,Southern Methodist University,1,11,1
+0,,0,,,2,2,,,2,2,,,2,7,,Jan Evangelista Purkyne University,2,7,2
+2,,1,,,0.222,5,,,3,2,,,3,154,,National Institute for Computational Sciences,5,317,1
+0,,0,,,0,1,,,0,0,,,1,0,,University of Erlangen-Nuremberg,0,0,0
+0,,0,,,0,1,,,0,0,,,1,0,,Globus / University of chicago,0,0,0
+0,,0,,,0,1,,,0,0,,,1,0,,Konkuk University,0,0,0
+0,Allendale,0,MI,42.965208,1,1,,-85.887519,1,1,49401-9403,1 Campus Dr,1,2,,Grand Valley State University,1,2,1
+1,Orlando,1,FL,28.601060,0.75,10,,-81.198805,6,3,32816,4000 Central Florida Blvd,10,29,,University of Central Florida,6,29,3
+0,,0,,,0.5,2,,,2,1,,,2,2,,University of Texas MD Anderson Cancer Center,2,2,1
+1,,0,,,1,1,,,0,1,,,0,0,,Dalhousie University,1,30,0
+2,,2,,,1.5,3,,,3,3,,,3,123,,Oregon Health and Science University,3,123,3
+2,,1,,,0.286,2,,,1,2,,,1,152,,"Shodor Education Foundation, Inc.",2,315,1
+0,Seattle,0,WA,47.610138,0,1,,-122.319700,0,0,98122-4340,900 Broadway,1,0,,Seattle University,0,0,0
+1,,0,,,1,1,,,0,1,,,0,0,,Polish Academy of Sciences,1,48,0
+11,Cambridge,10,MA,42.374429,0.909,28,,-71.118177,21,10,02138,Massachusetts Hall,27,406,,Harvard University,21,417,10
+4,,1,,,0.19,9,,,4,4,,,4,21,,Lawrence Livermore National Laboratory,9,518,2
+1,Milwaukee,1,WI,43.039030,0.333,3,,-87.927961,3,1,53233,1250 W Wisconsin Avenue,3,19,,Marquette University,3,19,1
+2,,2,,,1,7,,,7,4,,,7,47,,University of Pittsburgh School of Medicine,7,47,4
+1,,1,,,1,1,,,1,1,,,1,715,,Jiangxi Agricultural University,1,715,1
+0,Tiffin,0,OH,41.114337,1,1,,-83.166581,1,1,44883-2462,310 E Market St,1,1,,University of Heidelberg,1,1,1
+9,Boulder,5,CO,40.004415,1.125,25,,-105.267061,18,9,80309-0017,Regent Drive at Broadway,19,321,,"University of Colorado, Boulder",21,403,6
+0,Wichita,0,KS,37.716484,0,1,,-97.296733,0,0,67260-0124,1845 N. Fairmount,1,0,,Wichita State University,0,0,0
+1,,0,,,1,1,,,0,1,,,0,0,,Renaissance Computing Institute,1,163,0
+0,,0,,,0.6,6,,,5,3,,,5,17,,CUNY The City College of New York,5,20,3
+0,Louisville,0,KY,38.215752,0,1,,-85.758843,0,0,40292-0001,2301 S 3rd St,1,0,,University of Louisville,0,0,0
+1,,0,,,2,2,,,0,2,,,0,0,,university of michigan Medical School,2,13,0
+0,,0,,,1,1,,,1,1,,,1,1,,National Center for Supercomputing Applications,1,1,1
+3,New York,2,NY,40.789801,0.75,12,,-73.953445,9,6,10029-6574,"One Gustave L Levy Place, Box 1217",11,77,,Icahn School of Medicine at Mount Sinai,11,112,5
+0,,0,,,1,1,,,1,1,,,1,1,,Chevron Corporation,1,1,1
+1,,0,,,1,1,,,0,1,,,0,0,,St. John's University,1,27,0
+0,,0,,,1,1,,,1,1,,,1,2,,The University of Melbourne,1,2,1
+2,,2,,,0.4,2,,,2,2,,,2,41,,"Pennsylvania State University, University Park",2,41,2
+1,,1,,,0.667,2,,,2,2,,,2,719,,USDA Agricultural Research Service,2,719,2
+4,Houston,4,TX,29.719988,1,11,,-95.344851,11,4,77204-2018,212 E. Cullen Building,11,104,,University of Houston,11,104,4
+6,Baltimore,5,MD,39.256686,1.4,12,,-76.711607,10,7,21250,1000 Hilltop Circle,10,914,,"University of Maryland, Baltimore County",12,1011,6
+1,,1,,,1,2,,,2,1,,,2,10,,Harvard Medical School,2,10,1
+0,Macon,0,GA,32.831709,0,1,,-83.650114,0,0,31207,1501 Mercer University Drive,1,0,,Mercer University,0,0,0
+1,,1,,,0.667,4,,,4,2,,,4,19,,University of Texas at El Paso,4,19,2
+4,,1,,,1.667,6,,,3,5,,,3,66,,Nvidia Corporation,6,165,2
+0,,0,,,1,1,,,0,1,,,0,0,,"University of Puerto Rico, Medical Sciences Campus",1,7,0
+0,,0,,,0.667,2,,,2,2,,,2,9,,Andritz Automation,2,9,2
+22,Santa Barbara,13,CA,34.416281,1.545,58,,-119.846404,26,17,93106,5221 Cheadle Hall,48,671,,"University of California, Santa Barbara",36,1273,13
+1,,1,,,1,1,,,1,1,,,1,12,,Idaho National Laboratory,1,12,1
+1,,0,,,0.2,2,,,1,2,,,1,3,,University of L'Aquila,2,41,1
+9,,8,,,1.286,48,,,15,9,,,45,249,,"Rutgers, the State University of New Jersey",16,289,9
+2,,2,,,0.75,5,,,5,3,,,5,50,,Lawrence Berkeley National Laboratory,5,50,3
+0,,0,,,0,1,,,0,0,,,1,0,,University of Tubingen,0,0,0
+2,Santa Cruz,2,CA,36.997258,1.5,3,,-122.067993,3,3,95064-1011,1156 High St,3,201,,"University of California, Santa Cruz",3,201,3
+1,,1,,,0.333,2,,,2,1,,,2,715,,Dresden University of Technology,2,715,1
+0,,0,,,1,1,,,1,1,,,1,1,,"Texas A&M University, Commerce",1,1,1
+0,,0,,,0,1,,,0,0,,,1,0,,"Institute of High Energy Physics, CAS",0,0,0
+1,Miami,1,FL,25.757111,1,1,,-80.377591,1,1,33199,11200 S. W. 8 Street,1,10,,Florida International University,1,10,1
+17,Princeton,17,NJ,40.348530,2.6,33,,-74.663603,25,13,08544-0070,1 Nassau Hall,33,587,,Princeton University,25,587,13
+3,,0,,,0.5,14,,,4,5,,,8,14,,San Diego Supercomputer Center,14,229,2
+0,Indianapolis,0,IN,39.815340,1,1,,-86.204599,1,1,46222-1997,3200 Cold Spring Rd,1,3,,Marian University,1,3,1
+0,,0,,,1,1,,,1,1,,,1,2,,"University of Alabama, Birmingham",1,2,1
+1,Swarthmore,0,PA,39.904081,0.667,3,,-75.356066,2,2,19081,500 College Ave,2,6,,Swarthmore College,3,30,1
+1,,1,,,1,1,,,1,1,,,1,257,,Harvard-Smithsonian Center for Astrophysics,1,257,1
+0,,0,,,0.5,2,,,2,1,,,2,2,,Long Island University,2,2,1
+0,Laramie,0,WY,41.311943,0,1,,-105.572040,0,0,82071,Corner of Ninth and Ivinson,1,0,,University of Wyoming,0,0,0
+8,,4,,,0.533,40,,,22,8,,,28,451,,Purdue University,28,765,6
+29,Cambridge,27,MA,42.360095,1.889,78,,-71.092115,30,17,02139-4307,77 Massachusetts Avenue,74,990,,Massachusetts Institute of Technology,34,1267,16
+1,Notre Dame,1,IN,41.703058,0.75,14,,-86.238959,6,3,46556,400 Main Building,14,37,,University of Notre Dame,6,37,3
+5,,0,,,0.625,11,,,2,5,,,4,3,,Fermi National Accelerator Laboratory,11,493,1
+2,,2,,,0.4,4,,,3,2,,,3,85,,University of Jena,4,87,2
+0,,0,,,0,1,,,0,0,,,1,0,,Florida A&M University,0,0,0
+0,Kansas City,0,MO,39.035366,0,2,,-94.578039,0,0,64110,5100 Rockhill Rd,2,0,,"University of Missouri, Kansas City",0,0,0
+5,Lawrence,4,KS,38.958551,1.167,23,,-95.247618,12,7,66045,"Strong Hall, 1450 Jayhawk Blvd, Room 230",22,148,,University of Kansas,13,158,7
+0,,0,,,0,1,,,0,0,,,1,0,,Swiss Federal Institute of Technology in Lausanne,0,0,0
+2,Haverford,2,PA,40.013368,0.75,3,,-75.302562,3,3,19041-1392,370  Lancaster Ave,3,159,,Haverford College,3,159,3
+1,,0,,,1,1,,,0,1,,,0,0,,Computational Infrastructure for Geodynamics,1,24,0
+0,,0,,,0,1,,,0,0,,,1,0,,University of Tokyo,0,0,0
+0,Eugene,0,OR,44.044515,1,4,,-123.073980,4,2,97403,110 Johnson Hall,4,15,,University of Oregon,4,15,2
+4,,3,,,0.167,4,,,3,4,,,3,140,,Salk Institute for Biological Studies,4,157,3
+6,Newark,4,DE,39.679574,1,23,,-75.752917,11,8,19716,104 Hullihen Hall,20,113,,University of Delaware,23,562,6
+0,,0,,,1,2,,,2,2,,,2,11,,University of Calgary,2,11,2
+2,Durham,0,NC,36.001590,0.286,4,,-78.942260,2,2,27708,103 Allen Bldg,2,2,,Duke University,4,58,1
+0,Medford,0,MA,42.406994,1,1,,-71.121689,1,1,02155-5555, ,1,7,,Tufts University,1,7,1
+5,,1,,,0.538,16,,,8,7,,,11,52,,SUNY at Stony Brook,16,531,4
+1,Athens,0,GA,33.956428,0.75,3,,-83.374049,2,3,30602,Administration Building,2,8,,University of Georgia,3,21,2
+1,Dekalb,0,IL,41.933791,0.2,2,,-88.766065,1,1,60115-2828,1425 W. Lincoln Hwy.,1,1,,Northern Illinois University,2,164,1
+2,,2,,,1,2,,,2,2,,,2,65,,University of Sussex,2,65,2
+0,,0,,,1,1,,,1,1,,,1,8,,University of Gdansk,1,8,1
+0,,0,,,1,1,,,1,1,,,1,3,,University of Alberta,1,3,1
+6,,5,,,1.333,28,,,16,8,,,27,240,,"University of Tennessee, Knoxville",19,350,7
+0,Worcester,0,MA,42.251064,1,1,,-71.823537,1,1,01610-1477,950 Main St,1,4,,Clark University,1,4,1
+3,,2,,,0.556,15,,,9,5,,,13,78,,Oak Ridge National Laboratory,15,241,4
+11,Houston,8,TX,29.716485,1.111,24,,-95.403625,15,10,77005-1827,6100 S Main,20,216,,Rice University,19,338,9
+2,,2,,,1,3,,,3,2,,,3,88,,University of Vienna,3,88,2
+1,,0,,,1,1,,,0,1,,,0,0,,National Institutes of Health,1,67,0
+2,Stockton,0,CA,37.980624,0.333,5,,-121.307296,0,2,95211-0197,3601 Pacific Ave,2,0,,University of the Pacific,5,201,0
+2,Pullman,2,WA,46.730448,0.286,6,,-117.158168,6,4,99164-5910,French Administration Building,6,66,,Washington State University,6,66,4
+2,,1,,,0.333,4,,,3,2,,,3,62,,"Office of Atomic Energy, Saclay",4,81,1
+1,Biddeford,1,ME,43.458172,1,2,,-70.385882,2,2,04005-9599,11 Hills Beach Rd,2,27,,University of New England,2,27,2
+0,,0,,,1,1,,,1,1,,,1,2,,Louisiana Optical Network Initiative,1,2,1
+1,Memphis,0,TN,35.118874,0.5,3,,-89.938062,0,2,38152,Southern Avenue,1,0,,University of Memphis,3,28,0
+0,Albany,0,GA,31.571395,1,1,,-84.143060,1,1,31705,504 College Drive,1,1,,Albany State University,1,1,1
+0,,0,,,0.25,3,,,2,1,,,3,2,,Lester Ingber Research,2,2,1
+4,Indianapolis,2,IN,39.772948,0.5,7,,-86.172217,5,4,46202-5143,425 University Blvd,5,102,,Indiana University-Purdue University Indianapolis,7,234,2
+48,Champaign,33,IL,40.108864,0.957,184,,-88.230309,28,22,61820-5711,601 E John Street,149,1142,,University of Illinois at Urbana-Champaign,36,1807,17
+0,Ruston,0,LA,32.525518,0,1,,-92.649640,0,0,71272,305 Wisteria,1,0,,Louisiana Tech University,0,0,0
+19,,15,,,2,65,,,27,14,,,61,779,,University of Michigan,28,865,12
+1,,1,,,1,1,,,1,1,,,1,15,,Smithsonian Astrophysical Observatory,1,15,1
+3,,1,,,0.571,5,,,3,4,,,3,19,,US Geological Survey,5,70,2
+0,,0,,,0,1,,,0,0,,,1,0,,NAGPUR UNIVERSITY,0,0,0
+2,,0,,,1,2,,,0,2,,,0,0,,Cold Spring Harbor Laboratory,2,125,0
+0,Huntsville,0,AL,34.722818,1,1,,-86.638420,1,1,35899,301 Sparkman Dr,1,5,,University of Alabama in Huntsville,1,5,1
+0,,0,,,0,1,,,0,0,,,1,0,,Universite de Strasbourg,0,0,0
+4,Boston,1,MA,42.349581,0.714,9,,-71.099840,5,5,02215,One Silber Way,5,23,,Boston University,9,113,2
+2,Atlanta,2,GA,33.798836,0.5,7,,-84.325782,6,2,30322,"408 Administration Building, 201 Dowman Drive",7,36,,Emory University,6,36,2
+0,,0,,,1,1,,,0,1,,,0,0,,University of Burgundy,1,3,0
+0,Baltimore,0,MD,39.344235,0,1,,-76.584238,0,0,21251-0001,1700 East Cold Spring Lane,1,0,,Morgan State University,0,0,0
+2,,2,,,0.4,2,,,2,2,,,2,28,,Space Science Institute,2,28,2
+2,Des Moines,1,IA,41.603810,0.3,8,,-93.654062,6,3,50311-4505,2507 University Avenue,7,33,,Drake University,8,58,3
+0,,0,,,1,1,,,0,1,,,0,0,,Institute of Bioorganic Chemistry Polish Academy of Sciences,1,4,0
+0,,0,,,1,1,,,1,1,,,1,3,,Korea Institute for Advanced Study,1,3,1
+1,Vestal,1,NY,42.088049,0.4,8,,-75.971143,7,2,13850-6000,4400 Vestal Parkway East,8,46,,SUNY at Binghamton,7,46,2
+2,Tallahassee,2,FL,30.442100,1.25,19,,-84.294801,9,5,32306-1037,222 S. Copeland Street,19,80,,Florida State University,9,80,5
+4,Philadelphia,2,PA,39.954855,0.429,22,,-75.188745,10,6,19104,3141 Chestnut St,20,91,,Drexel University,15,220,6
+0,,0,,,1,1,,,1,1,,,1,6,,Macquarie University,1,6,1
+0,,0,,,1,1,,,0,1,,,0,0,,National Cancer Institute,1,3,0
+0,Costa Mesa,0,CA,33.662686,0,1,,-117.900911,0,0,92626,55 Fair Dr,1,0,,Vanguard University of Southern California,0,0,0
+1,Chicago,0,IL,41.784570,0.667,2,,-87.592521,1,2,60637,6045 S. Kenwood Avenue,1,2,,Toyota Technological Institute at Chicago,2,26,1
+3,,3,,,0.75,4,,,4,3,,,4,72,,"Pennsylvania State University Erie, The Behrend College",4,72,3
+1,,1,,,1,2,,,2,2,,,2,19,,Japan Agency for Marine-Earth Science and Technology,2,19,2
+3,Chicago,0,IL,41.872651,0.667,8,,-87.651145,3,4,60607,601 S Morgan,5,5,,University of Illinois at Chicago,8,181,1
+0,New York,0,NY,40.809137,1,1,,-73.964027,0,1,10027-6598,3009 Broadway,0,0,,Barnard College,1,1,0
+5,,5,,,1.2,15,,,10,6,,,15,99,,University of Minnesota,10,99,6
+0,Mount Pleasant,0,MI,43.591137,1,2,,-84.775275,2,1,48859,106 Warriner Hall,2,3,,Central Michigan University,2,3,1
+0,,0,,,0.429,8,,,3,3,,,7,9,,New Mexico State University,4,15,2
+0,Williamsburg,0,VA,37.271997,1,4,,-76.709417,4,2,23187-8795,200 Richmond Road,4,12,,College of William and Mary,4,12,2
+0,,0,,,1,1,,,1,1,,,1,1,,Pukyung National University,1,1,1
+1,Saint Paul,1,MN,44.965696,1,1,,-93.163983,1,1,55104-1284,1536 Hewitt Avenue,1,41,,Hamline University,1,41,1
+0,Monterey,0,CA,36.597159,0.5,2,,-121.874248,2,1,93943,1 University Circle,2,2,,Naval Postgraduate School,2,2,1
+4,Baltimore,4,MD,39.291510,1.25,7,,-76.625041,7,5,21201-1627,620 West Lexington St,7,92,,"University of Maryland, Baltimore",7,92,5
+4,Ames,3,IA,42.026368,1.167,23,,-93.648353,9,7,50011-2030,3410 Beardshear Hall,22,95,,Iowa State University,10,108,6
+0,Bozeman,0,MT,45.666829,0,1,,-111.049918,0,0,59717,Montana State University,1,0,,Montana State University,0,0,0
+9,Baltimore,8,MD,39.328380,1.5,44,,-76.620799,17,9,21218-2688,3400 N Charles St,42,305,,Johns Hopkins University,17,318,9
+1,Corvallis,1,OR,44.562740,0.4,6,,-123.274721,6,2,97331,1500 S.W. Jefferson Avenue,6,67,,Oregon State University,6,67,2
+1,Pittsburgh,1,PA,40.437496,0.75,3,,-79.993046,3,3,15282,Administration Bldg 600 Forbes Ave,3,26,,Duquesne University,3,26,3
+0,,0,,,0,1,,,0,0,,,1,0,,IBM T.J. Watson Research Center,0,0,0
+0,,0,,,0,1,,,0,0,,,1,0,,Hoover Institution,0,0,0
+2,,2,,,0.375,7,,,5,3,,,5,67,,"University of North Carolina, Chapel Hill",7,72,2
+0,,0,,,1,1,,,1,1,,,1,1,,Nicolaus Copernicus Astronomical Center Polish Academy of Sciences,1,1,1
+6,Bethlehem,3,PA,40.607158,0.857,13,,-75.378887,10,6,18015,27 Memorial Drive West,10,90,,Lehigh University,13,165,5
+0,,0,,,1,1,,,1,1,,,1,1,,US Pacific Basin Agricultural Research Center,1,1,1
+0,Potsdam,0,NY,44.663761,0,1,,-74.999947,0,0,13699,8 Clarkson Ave,1,0,,Clarkson University,0,0,0
+2,San Francisco,2,CA,37.762736,0.5,6,,-122.458049,5,4,94143-0244,500 Parnassus Ave,5,31,,"University of California, San Francisco",6,39,3
+0,,0,,,1,1,,,1,1,,,1,1,,Harbin Institute of Technology,1,1,1
+0,Durham,0,NC,35.974237,0,2,,-78.898602,0,0,27707,1801 Fayetteville Street,2,0,,North Carolina Central University,0,0,0
+0,,0,,,0.333,2,,,2,1,,,2,4,,North Carolina A&T State University,2,4,1
+0,,0,,,1,1,,,1,1,,,1,2,,SUNY Health Science Center at Syracuse,1,2,1
+0,,0,,,1,1,,,1,1,,,1,2,,Nanjing University,1,2,1
+0,,0,,,0.333,3,,,0,1,,,2,0,,University College London,2,4,0
+0,Hampton,0,VA,37.019900,0,2,,-76.331108,0,0,23668-0099,E Queen Street,1,0,,Hampton University,0,0,0
+0,Springfield,0,IL,39.729862,1,1,,-89.614917,0,1,62703-5407,One University Plaza,0,0,,University of Illinois at Springfield,1,3,0
+0,,0,,,1,1,,,0,1,,,0,0,,Zhejiang University,1,3,0
+0,,0,,,0.25,3,,,2,1,,,3,3,,University of Texas Health Science Center at San Antonio,2,3,1
+8,,6,,,1.333,27,,,17,8,,,25,283,,University of Virginia,20,370,8
+0,,0,,,1,1,,,1,1,,,1,4,,University Corporation for Atmospheric Research,1,4,1
+0,,0,,,1,1,,,1,1,,,1,1,,Montpellier 2 University,1,1,1
+4,Amherst,2,MA,42.386162,0.625,10,,-72.526170,6,5,01003,374 Whitmore Building 181 Presidents Drive,8,34,,"University of Massachusetts, Amherst",10,231,3
+0,Topeka,0,KS,39.034977,1,1,,-95.702325,0,1,66621-0001,1700 SW College Avenue,0,0,,Washburn University,1,1,0
+0,,0,,,1,2,,,2,1,,,2,5,,University of Siena,2,5,1
+2,Clemson,1,SC,34.677329,0.286,4,,-82.834463,3,2,29634,201 Sikes Hall,3,14,,Clemson University,4,177,1
+8,New Haven,4,CT,41.311158,1,15,,-72.926688,10,9,06520,Woodbridge Hall,11,96,,Yale University,15,545,5
+7,Boston,4,MA,42.339992,1,10,,-71.088782,6,7,02115-5005,360 Huntington Ave,6,154,,Northeastern University,10,270,4
+0,,0,,,1,1,,,1,1,,,1,4,,"University of Hawaii, Manoa",1,4,1
+12,Tucson,7,AZ,32.232071,1.5,25,,-110.950769,16,12,85721-0066,1401 E University,16,425,,University of Arizona,25,842,9
+3,,1,,,0.429,3,,,1,3,,,1,21,,Vienna University of Technology,3,163,1
+2,Houston,1,TX,29.710600,0.455,7,,-95.395743,5,5,77030-3498,One Baylor Plaza,5,29,,Baylor College of Medicine,7,49,3
+11,,9,,,1.571,35,,,15,11,,,32,240,,University of Oklahoma,17,311,9
+1,,0,,,1,1,,,0,1,,,0,0,,National Institute of Standards and Technology,1,28,0
+0,,0,,,1,5,,,2,2,,,5,4,,Individual Award/Unaffiliated,2,4,2
+1,,0,,,1,1,,,0,1,,,0,0,,Jefferson Laboratory,1,13,0
+0,,0,,,1,1,,,0,1,,,0,0,,"VorCat, Inc.",1,5,0
+3,,1,,,0.375,3,,,1,3,,,1,21,,Autonomous University of Madrid,3,74,1
+0,,0,,,0.333,3,,,2,1,,,3,4,,Albert Einstein College of Medicine,2,4,1
+0,,0,,,0,1,,,0,0,,,1,0,,University of Zurich,0,0,0
+3,,2,,,1,7,,,6,6,,,6,123,,Multidisciplinary Center for Astrophysics,7,135,5
+8,Davis,3,CA,38.539895,1,22,,-121.751958,9,8,95616-8678,One Shields Avenue,16,82,,"University of California, Davis",22,576,5
+4,Storrs,4,CT,41.806261,1.667,8,,-72.247969,8,5,06269,352 Mansfield Road,8,82,,University of Connecticut,8,82,5
+0,,0,,,1,3,,,3,1,,,3,7,,National Renewable Energy Laboratory,3,7,1
+1,Mississippi State,1,MS,33.454809,0.2,3,,-88.788979,3,1,39762,Lee Boulevard,3,12,,Mississippi State University,3,12,1
+1,,1,,,1,1,,,1,1,,,1,33,,Institute of High Energy Physics,1,33,1
+1,Philadelphia,1,PA,39.949062,1,1,,-75.158147,1,1,19107,1020 Walnut Street,1,29,,Thomas Jefferson University,1,29,1
+2,,1,,,0.6,3,,,2,3,,,2,22,,Heidelberg Institute for Theoretical Studies,3,132,2
+1,Muncie,0,IN,40.198942,1,1,,-85.408863,0,1,47306,2000 University Ave,0,0,,Ball State University,1,163,0
+22,Chicago,19,IL,41.789170,2,50,,-87.601196,28,18,60637,5801 S Ellis Ave,44,748,,University of Chicago,31,959,16
+2,,1,,,0.6,4,,,3,3,,,3,19,,Colorado State University,4,32,3
+0,Arlington,0,TX,32.728437,1,1,,-97.115087,1,1,76013,701 S. Nedderman Dr.,1,1,,The University of Texas at Arlington,1,1,1
+0,,0,,,0,1,,,0,0,,,1,0,,Trinity College Dublin,0,0,0
+1,,0,,,1,1,,,0,1,,,0,0,,University of California at San Diego,1,94,0
+2,Northridge,2,CA,34.236710,0.75,6,,-118.526817,6,3,91330,18111 Nordhoff St,6,47,,California State University-Northridge,6,47,3
+0,Fayetteville,0,NC,35.072485,0,1,,-78.894709,0,0,28301-4298,1200 Murchison Rd,0,0,,Fayetteville State University,0,0,0
+0,Long Beach,0,CA,33.782752,0,2,,-118.112300,0,0,90840-0115,1250 Bellflower Blvd,1,0,,California State University-Long Beach,0,0,0
+1,,1,,,1,3,,,3,2,,,3,32,,Huntsman Cancer Institute,3,32,2
+1,Colorado Springs,0,CO,38.892735,1,1,,-104.800296,0,1,80918,1420 Austin Bluffs Parkway,0,0,,"University of Colorado, Colorado Springs",1,67,0
+0,,0,,,0.6,9,,,5,3,,,9,25,,University of New Mexico,5,25,3
+0,,0,,,0,1,,,0,0,,,1,0,,Univeristy of California,0,0,0
+1,,1,,,1,2,,,2,2,,,2,65,,University of Hong Kong,2,65,2
+0,Harrisonburg,0,VA,38.435332,0,2,,-78.871663,0,0,22807,800 South Main Street,2,0,,James Madison University,0,0,0
+2,Jackson,2,MS,32.296781,0.8,9,,-90.206630,8,4,39217,1400 J R Lynch Street,9,52,,Jackson State University,8,52,4
+4,Fayetteville,3,AR,36.061530,0.833,11,,-94.178214,8,5,72701,Administration Bldg 425,10,58,,University of Arkansas,11,125,4
