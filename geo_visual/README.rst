@@ -3,7 +3,7 @@ Visuals for Geographical Data
 
 * Tim Whitson @whitstd
 
-Project can be viewed live at: https://jsfiddle.net/whitstd/epL60myp/1/
+Project can be viewed live at: https://jsfiddle.net/whitstd/epL60myp
 
 Data
 ^^^^
