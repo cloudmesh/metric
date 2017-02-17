@@ -29,22 +29,22 @@ class AddLocation:
             new_csv = []
             update = 0
             fields = []
-            for b_row in biblio_rows:
-                for s_row in self.stats_rows:
-                    if(self.match_orgs(s_row['INSTNM'], b_row['Organization'])):
-                        update += 1
-                        b_row['location_street'] = s_row['ADDR']
-                        b_row['location_city'] = s_row['CITY']
-                        b_row['location_state'] = s_row['STABBR']
-                        b_row['location_zip'] = s_row['ZIP']
-                        b_row['location_longitude'] = s_row['LONGITUD']
-                        b_row['location_latitude'] = s_row['LATITUDE']
-                        
-                        if(len(fields) < b_row.keys()):
-                            fields = b_row.keys()
-                            
-                        break
-                new_csv.append(b_row)
+            for row in biblio_rows:
+                match = self.find_match(row['Organization'])
+                
+                if(match):
+                    update += 1
+                    row['location_street'] = match['ADDR']
+                    row['location_city'] = match['CITY']
+                    row['location_state'] = match['STABBR']
+                    row['location_zip'] = match['ZIP']
+                    row['location_longitude'] = match['LONGITUD']
+                    row['location_latitude'] = match['LATITUDE']
+                    
+                    if(len(fields) < row.keys()):
+                        fields = row.keys()
+   
+                new_csv.append(row)
                 
             print 'Updated ' + str(update) + ' rows, saving data-coords.csv ...'
                 
@@ -55,23 +55,66 @@ class AddLocation:
                 
             print 'Complete.'
             
-    def match_orgs(self, a, b):
+    def find_match(self, org):
         '''Check whether organizations name match, disregarding punctuation and word order
         Args:
-            a (string) -- first org
-            b (string) -- second org
+            org (string) -- organization name
         Returns:
-            (bool) -- whether or not they match
+            (dict) -- matching organization details
         '''
-        replace  = {',': '', 'of': '', '&': '', '-': ' '}
         
+        replace  = {',': '', ' of ': ' ', ' at ': ' ', '-': ' ', 'Main Campus': '', ' and ': ' ', ' in ': ' ', '.': '', ' the ': ' ', 'The ': '', ' for ': ' ', ' & ': '', '&': ''}
+        
+        ignore = ['state', 'university', 'school', 'medicine', 'science', 'technology', 'college', 'medical', 'institute', 'research', 'health', 'system', 'office', 'national', 'sciences', 'center', 'campus', 'city']
+        
+        org_name = org
         for k, v in replace.iteritems():
-            a = a.replace(k, v)
-            b = b.replace(k, v)
+            org_name = org_name.replace(k, v)
+            
+        org_list = org_name.lower().strip().split()
         
-        a_list = a.lower().split()
-        b_list = b.lower().split()
-        
-        return set(a_list) == set(b_list)
+        matches = []
+        for row in self.stats_rows: 
+            stat_org = row['INSTNM']
+            
+            if(org == stat_org):
+                return row
+            
+            for k, v in replace.iteritems():
+                stat_org = stat_org.replace(k, v)
+            
+            stat_list = stat_org.lower().strip().split()
+            
+            if(org_name == stat_org or set(org_list) == set(stat_list)):
+                return row
+            
+            match_words = []
+            for word in org_list:
+                if(word in stat_list):
+                    match_words.append(word)
+                  
+            if(len(match_words) >= 2):
+                for word in match_words:
+                    if word not in ignore:
+                        matches.append(row)
+                        break
+                             
+        if(len(matches) == 1):
+            return matches[0]
+        elif(len(matches) > 1):
+            print
+            print 'Organization: ' + org
+            count = 0
+            for match in sorted(matches, key = lambda k: k['INSTNM']):
+                print str(count) + ') ' + match['INSTNM']
+                count += 1
+            
+            selection = raw_input('Select the matching organization or None: ')
+            if(0 <= selection < len(matches)):
+                return matches[selection]
+            else:
+                return {}
+        else:
+            return {}
         
 AddLocation()       
