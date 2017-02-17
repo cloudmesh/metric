@@ -102,14 +102,17 @@ class AddLocation:
         if(len(matches) == 1):
             return matches[0]
         elif(len(matches) > 1):
+            matches = sorted(matches, key = lambda k: k['INSTNM'])
             print
             print 'Organization: ' + org
             count = 0
-            for match in sorted(matches, key = lambda k: k['INSTNM']):
+            for match in matches:
                 print str(count) + ') ' + match['INSTNM']
                 count += 1
             
             selection = raw_input('Select the matching organization or None: ')
+            selection = int(selection) if selection else -1
+            
             if(0 <= selection < len(matches)):
                 return matches[selection]
             else:
