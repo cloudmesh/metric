@@ -2,6 +2,156 @@ $(document).ready(function() {
     makeTables();
 });
 
+ $(function () {
+    $('#containerDistType').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'XD Related Publications By Publication Type'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.y}</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    color: '#000000',
+                    connectorColor: '#000000',
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Publication Type Percentage',
+            data: [
+                
+                {name:'Journal Paper', y:6321},
+                
+                {name:'None', y:3266},
+                
+                {name:'Conference Paper', y:492},
+                
+                {name:'Book Chapter', y:52},
+                
+                {name:'Book', y:6},
+                
+            ]
+        }],
+        credits: {
+            enabled: false
+        },
+    });
+});
+
+$(function () {
+    $('#containerDistYear').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'XD Related Publications By Year Published'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.y}</b>'
+        },
+        xAxis: {
+            categories: [
+                
+                '2005',
+                
+                '2006',
+                
+                '2007',
+                
+                '2008',
+                
+                '2009',
+                
+                '2010',
+                
+                '2011',
+                
+                '2012',
+                
+                '2013',
+                
+                '2014',
+                
+                '2015',
+                
+                '2016',
+                
+                '2017',
+                
+            ],
+            labels: {
+                rotation: -45,
+                align: 'right',
+                style: {
+                    fontSize: '10px'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '# of Publications'
+            }
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            type: 'column',
+            name: '# of XD related publications',
+            data: [
+                
+                {name:'2005', y:21},
+                
+                {name:'2006', y:237},
+                
+                {name:'2007', y:280},
+                
+                {name:'2008', y:289},
+                
+                {name:'2009', y:488},
+                
+                {name:'2010', y:670},
+                
+                {name:'2011', y:757},
+                
+                {name:'2012', y:1128},
+                
+                {name:'2013', y:1718},
+                
+                {name:'2014', y:1998},
+                
+                {name:'2015', y:1561},
+                
+                {name:'2016', y:872},
+                
+                {name:'2017', y:5},
+                
+            ]
+        }],
+        credits: {
+            enabled: false
+        },
+    });
+});
+
 function makeTables(){
     // fields table 
     $.get('https://raw.githubusercontent.com/cloudmesh/metric/master/report/data-fos.csv', function(csv) {
