@@ -98,6 +98,7 @@ $.get('https://raw.githubusercontent.com/cloudmesh/metric/master/report/data-org
         }]
     });
     
+    // org chart
     var chartData = CSV2JSON(csv.replace('Organization', 'name').replace('# of Pubs','data'));
     chartData = chartData.map(function(d){
         return {name: d['name'], data: [parseInt(d['data'])]};
@@ -107,9 +108,17 @@ $.get('https://raw.githubusercontent.com/cloudmesh/metric/master/report/data-org
         return b['data'] - a['data'];
     });
     
-    categories = chartData.map(function(d){
+    chartData = chartData.slice(0, 20);
+
+    var categories = chartData.map(function(d){
         return d['name'];
-    })
+    })   
+    
+    var newData = [];
+    for(var i = 0; i < chartData.length; i++){
+        newData.push(chartData[i]['data'][0]);
+    }
+    newData = [{name: 'Publications', data: newData}];
     
     Highcharts.chart('orgsChart', {
         chart: {
@@ -124,6 +133,14 @@ $.get('https://raw.githubusercontent.com/cloudmesh/metric/master/report/data-org
             text: 'Publications by Organization'
         },
         
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        
         xAxis: {
             categories: categories
         },
@@ -134,7 +151,7 @@ $.get('https://raw.githubusercontent.com/cloudmesh/metric/master/report/data-org
             }
         },
         
-        series: chartData
+        series: newData
     });
 });
 
