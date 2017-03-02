@@ -1,8 +1,4 @@
-$(document).ready(function() {
-    makeTables();
-});
-
- $(function () {
+$(function () {
     $('#containerDistType').highcharts({
         chart: {
             plotBackgroundColor: null,
@@ -152,156 +148,181 @@ $(function () {
     });
 });
 
-function makeTables(){
-    // fields table 
+$(function() {
     $.get('https://raw.githubusercontent.com/cloudmesh/metric/master/report/data-fos.csv', function(csv) {
-        populateTable('pubsByField-table', 'Pubs by Field', csv, ['fos', '# of Pubs']);
-    });
-}
+        var chartData = CSV2JSON(csv.replace('fos', 'name').replace('# of Pubs','data'));
+        chartData = chartData.map(function(d){
+            return {name: d['name'], data: [parseInt(d['data'])]};
+        });
+        
+        chartData.sort(function(a, b){
+            return b['data'] - a['data'];
+        });
+        
+        chartData = chartData.slice(0, 20);
 
-function populateTable(id, title, csv, fields){
-    var $div = $('#' + id);
-    var $table = $('<table>');
-    
-    var data = CSV2JSON(csv);
-    
-    //table title
-    if(title){
-        $div.append('<h3>' + title + '</h3>');
-    }
-    
-    //get table headers, indexes    
-    $row = $('<tr>');
-    var header;
-    for(var i = 0, max = fields.length; i < max; i++){
-        header = fields[i];
-        if(fields.indexOf(header) != -1){
-            $row.append('<th>' + header + '</th>');
+        var categories = chartData.map(function(d){
+            return d['name'];
+        })   
+        
+        var newData = [];
+        for(var i = 0; i < chartData.length; i++){
+            newData.push(chartData[i]['data'][0]);
         }
-    }
-    $table.append($row);
+        newData = [{name: 'Publications', data: newData}];
     
-    //sort by # of pubs
-    data.sort(function(a, b) {
-        return b['# of Pubs'] - a['# of Pubs'];
-    });
-    
-    //populate table
-    var row;
-    var field;
-    for(var i = 0, max = data.length; i < max; i++){
-        row = data[i];
-        $row = $('<tr>');
-        for(var j = 0, jmax = fields.length; j < jmax; j++){
-            field = fields[j];
-            $row.append('<td>' + row[field] + '</td>');
-        }
-        $table.append($row);
-    }
-    
-    $div.append($table);
-}
-
-// state map
-$.get('https://raw.githubusercontent.com/cloudmesh/metric/master/report/data-org.csv', function(csv) {
-    var json = CSV2JSON(csv.replace('location_state', 'code').replace('# of Pubs','value'));
-	var data = collapse_data(json);
-  
-    Highcharts.mapChart('container', {
-        chart: {
-            borderWidth: 1
-        },
-
-        title: {
-            text: 'Number of Publications by State'
-        },
-
-        mapNavigation: {
-            enabled: true
-        },
-
-        colorAxis: {
-            min: 1,
-            type: 'logarithmic',
-            minColor: '#EEEEFF',
-            maxColor: '#000022',
-            stops: [
-                [0, '#EFEFFF'],
-                [0.67, '#4444FF'],
-                [1, '#000022']
-            ]
-        },
-
-        series: [{
-            data: data,
-            mapData: Highcharts.maps['countries/us/us-all'],
-            joinBy: ['postal-code', 'code'],
-            dataLabels: {
-                enabled: true,
-                color: '#FFFFFF',
-                format: '{point.code}'
+        Highcharts.chart('fosChart', {
+            chart: {
+                type: 'bar'
             },
-            name: 'Scientific Impact',
-            tooltip: {
-                pointFormat: '{point.code}: {point.value} publication(s)'
-            }
-        }]
-    });
-    
-    // org chart
-    var chartData = CSV2JSON(csv.replace('Organization', 'name').replace('# of Pubs','data'));
-    chartData = chartData.map(function(d){
-        return {name: d['name'], data: [parseInt(d['data'])]};
-    });
-    
-    chartData.sort(function(a, b){
-        return b['data'] - a['data'];
-    });
-    
-    chartData = chartData.slice(0, 20);
-
-    var categories = chartData.map(function(d){
-        return d['name'];
-    })   
-    
-    var newData = [];
-    for(var i = 0; i < chartData.length; i++){
-        newData.push(chartData[i]['data'][0]);
-    }
-    newData = [{name: 'Publications', data: newData}];
-    
-    Highcharts.chart('orgsChart', {
-        chart: {
-            type: 'bar'
-        },
-        
-        legend: {
-            enabled: false
-        },
-        
-        title: {
-            text: 'Publications by Organization'
-        },
-        
-        plotOptions: {
-            bar: {
-                dataLabels: {
-                    enabled: true
-                }
-            }
-        },
-        
-        xAxis: {
-            categories: categories
-        },
-        
-        yAxis: {
+            
+            legend: {
+                enabled: false
+            },
+            
             title: {
-                text: 'Publications'
-            }
-        },
+                text: 'Publications by Field'
+            },
+            
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            
+            xAxis: {
+                categories: categories
+            },
+            
+            yAxis: {
+                title: {
+                    text: 'Publications'
+                }
+            },
+            
+            series: newData
+        }); 
+    });
+});
+
+$(function() {
+    $.get('https://raw.githubusercontent.com/cloudmesh/metric/master/report/data-org.csv', function(csv) {
+        // org map
+        var json = CSV2JSON(csv.replace('location_state', 'code').replace('# of Pubs','value'));
+	    var data = collapse_data(json);
+	
+	    // ensure each state is represented
+	    var states = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY'];
+	
+	    var inData, state;
+	    for(var s = 0; s < states.length; s++){
+	        inData = false;
+	        for(var d = 0; d < data.length; d++){
+	            if(states[s] == data[d]['code']){
+	                inData = true;
+	                break;
+	            }
+	        }
+	        
+	        if(!inData){
+	            data.push({code: states[s], value: .0000001});
+	        }
+	    }
+      
+        Highcharts.mapChart('orgsStateMap', {
+            title: {
+                text: 'Number of Publications by State'
+            },
+
+            mapNavigation: {
+                enabled: true
+            },
+
+            colorAxis: {
+                min: 1,
+                type: 'logarithmic',
+                minColor: '#EEEEFF',
+                maxColor: '#000022',
+                stops: [
+                    [0, '#EFEFFF'],
+                    [0.67, '#4444FF'],
+                    [1, '#000022']
+                ],
+            },
+
+            series: [{
+                data: data,
+                mapData: Highcharts.maps['countries/us/us-all'],
+                joinBy: ['postal-code', 'code'],
+                dataLabels: {
+                    enabled: true,
+                    color: '#FFFFFF',
+                    format: '{point.code}'
+                },
+                name: 'Scientific Impact',
+                tooltip: {
+                    pointFormat: '{point.name}: {point.value} publication(s)'
+                }
+            }]
+        });
         
-        series: newData
+        // org chart
+        var chartData = CSV2JSON(csv.replace('Organization', 'name').replace('# of Pubs','data'));
+        chartData = chartData.map(function(d){
+            return {name: d['name'], data: [parseInt(d['data'])]};
+        });
+        
+        chartData.sort(function(a, b){
+            return b['data'] - a['data'];
+        });
+        
+        chartData = chartData.slice(0, 20);
+
+        var categories = chartData.map(function(d){
+            return d['name'];
+        })   
+        
+        var newData = [];
+        for(var i = 0; i < chartData.length; i++){
+            newData.push(chartData[i]['data'][0]);
+        }
+        newData = [{name: 'Publications', data: newData}];
+        
+        Highcharts.chart('orgsChart', {
+            chart: {
+                type: 'bar'
+            },
+            
+            legend: {
+                enabled: false
+            },
+            
+            title: {
+                text: 'Publications by Organization'
+            },
+            
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            
+            xAxis: {
+                categories: categories
+            },
+            
+            yAxis: {
+                title: {
+                    text: 'Publications'
+                }
+            },
+            
+            series: newData
+        });
     });
 });
 
@@ -407,3 +428,51 @@ function collapse_data(json){
     
     return data;
 }
+
+/*
+    Legacy
+*/
+
+function populateTable(id, title, csv, fields){
+    var $div = $('#' + id);
+    var $table = $('<table>');
+    
+    var data = CSV2JSON(csv);
+    
+    //table title
+    if(title){
+        $div.append('<h3>' + title + '</h3>');
+    }
+    
+    //get table headers, indexes    
+    $row = $('<tr>');
+    var header;
+    for(var i = 0, max = fields.length; i < max; i++){
+        header = fields[i];
+        if(fields.indexOf(header) != -1){
+            $row.append('<th>' + header + '</th>');
+        }
+    }
+    $table.append($row);
+    
+    //sort by # of pubs
+    data.sort(function(a, b) {
+        return b['# of Pubs'] - a['# of Pubs'];
+    });
+    
+    //populate table
+    var row;
+    var field;
+    for(var i = 0, max = data.length; i < max; i++){
+        row = data[i];
+        $row = $('<tr>');
+        for(var j = 0, jmax = fields.length; j < jmax; j++){
+            field = fields[j];
+            $row.append('<td>' + row[field] + '</td>');
+        }
+        $table.append($row);
+    }
+    
+    $div.append($table);
+}
+
