@@ -1,4 +1,4 @@
-import csv
+import csv, datetime
 import requests
 import jinja2
 
@@ -23,7 +23,7 @@ env = jinja2.Environment(loader = loader)
 
 template = env.get_template('report.html')
 
-out = template.render(fos = fos, org = org)
+out = template.render(fos = fos, org = org, now = datetime.datetime.now())
 
 with open(html_file, 'w+') as f:
     f.write(out)

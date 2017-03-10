@@ -244,8 +244,12 @@ function BarChart(container, data, title, paginated = true){
     this.maxItems = 10;
     this.container = container;
     
-    chartData = data.map(function(d){
-        return {name: (d['name'] ? d['name'] : 'Not Specified'), data: parseInt(d['data'])};
+    var chartData = data.map(function(d){
+        if(d['name']){
+            return {name: d['name'], data: parseInt(d['data'])};
+        }
+    }).filter(function(d){
+        return typeof d != 'undefined';  
     });
     
     chartData.sort(function(a, b){
