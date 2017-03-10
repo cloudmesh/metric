@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+    
+    <script>
+        var fos = {{ fos }};
+        var org = {{ org }};
+    </script>
+    
+    <script src='report.js'></script>
+    
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <h1>Analysis of XSEDE Publications</h1>
+    <div id='containerDistType'></div>
+    <div id='containerDistYear'></div>
+    <div id='fosChart'></div>
+    <div id="orgsChart"></div>
+    <div id="orgsStateMap"></div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
     var series = [{
         name: 'Publication Type Percentage',
         data: [
@@ -43,7 +43,7 @@ $(function () {
     chart.create();    
 });
 
-$(function () {
+$(function() {
     var series = [{
         name: '# of XD related publications',
         data: [               
@@ -121,167 +121,99 @@ $(function () {
 });
 
 $(function() {
-    $.get('https://raw.githubusercontent.com/cloudmesh/metric/master/report/data-fos.csv', function(csv) {
-        var chartData = CSV2JSON(csv.replace('fos', 'name').replace('# of Pubs','data'));
-        var chart = new BarChart('fosChart', chartData, 'XD-Related Publications by Field');
-        chart.draw();
+    var chartData = fos.map(function(f){
+        f['name'] = f['fos'];
+        f['data'] = f['# of Pubs'];
+        return f
     });
+    var chart = new BarChart('fosChart', chartData, 'XD-Related Publications by Field');
+    chart.draw();
 });
 
 $(function() {
-    $.get('https://raw.githubusercontent.com/cloudmesh/metric/master/report/data-org.csv', function(csv) {
-        // org map
-        var json = CSV2JSON(csv.replace('location_state', 'code').replace('# of Pubs','value'));
-	    var data = collapse_data(json);
-	
-	    // ensure each state is represented
-	    var states = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY'];
-	
-	    var inData, state;
-	    for(var s = 0; s < states.length; s++){
-	        inData = false;
-	        for(var d = 0; d < data.length; d++){
-	            if(states[s] == data[d]['code']){
-	                inData = true;
-	                break;
-	            }
-	        }
-	        
-	        if(!inData){
-	            data.push({code: states[s], value: .0000001});
-	        }
-	    }
-      
-        Highcharts.mapChart('orgsStateMap', {
-            chart: {
-                animation: false
-            },
-            
-            title: {
-                text: 'XD-Related Publications by State'
-            },
-
-            mapNavigation: {
-                enabled: true
-            },
-
-            colorAxis: {
-                min: 1,
-                type: 'logarithmic',
-                minColor: '#EEEEFF',
-                maxColor: '#000022',
-                stops: [
-                    [0, '#EFEFFF'],
-                    [0.67, '#4444FF'],
-                    [1, '#000022']
-                ],
-            },
-            
-            plotOptions: {
-                series: {
-                    animation: false
-                }
-            },
-
-            series: [{
-                data: data,
-                mapData: Highcharts.maps['countries/us/us-all'],
-                joinBy: ['postal-code', 'code'],
-                dataLabels: {
-                    enabled: true,
-                    color: '#FFFFFF',
-                    format: '{point.code}'
-                },
-                name: 'Scientific Impact',
-                tooltip: {
-                    pointFormat: '{point.name}: {point.value} publication(s)'
-                }
-            }]
-        });
-        
-        // org chart
-        var chartData = CSV2JSON(csv.replace('Organization', 'name').replace('# of Pubs','data'));
-        var chart = new BarChart('orgsChart', chartData, 'XD-Related Publications by Organization');
-        chart.draw();
+    // org map
+    var json = org.map(function(o){
+        o['code'] = o['location_state'];
+        o['value'] = o['# of Pubs'];
+        return o;
     });
+    var data = collapse_data(json);
+
+    // ensure each state is represented
+    var states = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY'];
+
+    var inData, state;
+    for(var s = 0; s < states.length; s++){
+        inData = false;
+        for(var d = 0; d < data.length; d++){
+            if(states[s] == data[d]['code']){
+                inData = true;
+                break;
+            }
+        }
+        
+        if(!inData){
+            data.push({code: states[s], value: .0000001});
+        }
+    }
+  
+    Highcharts.mapChart('orgsStateMap', {
+        chart: {
+            animation: false
+        },
+        
+        title: {
+            text: 'XD-Related Publications by State'
+        },
+
+        mapNavigation: {
+            enabled: true
+        },
+
+        colorAxis: {
+            min: 1,
+            type: 'logarithmic',
+            minColor: '#EEEEFF',
+            maxColor: '#000022',
+            stops: [
+                [0, '#EFEFFF'],
+                [0.67, '#4444FF'],
+                [1, '#000022']
+            ],
+        },
+        
+        plotOptions: {
+            series: {
+                animation: false
+            }
+        },
+
+        series: [{
+            data: data,
+            mapData: Highcharts.maps['countries/us/us-all'],
+            joinBy: ['postal-code', 'code'],
+            dataLabels: {
+                enabled: true,
+                color: '#FFFFFF',
+                format: '{point.code}'
+            },
+            name: 'Scientific Impact',
+            tooltip: {
+                pointFormat: '{point.name}: {point.value} publication(s)'
+            }
+        }]
+    });
+    
+    // org chart
+    var chartData = org.map(function(o){
+        o['name'] = o['Organization'];
+        o['data'] = o['# of Pubs'];
+        return o;
+    });
+    
+    var chart = new BarChart('orgsChart', chartData, 'XD-Related Publications by Organization');
+    chart.draw();
 });
-
-/* 
-    CSVToArray and CSV2JSON functions from
-    user: sturtevant
-    url: https://jsfiddle.net/sturtevant/AZFvQ/
-    (with minor corrections)
-*/
-
-function CSVToArray(strData, strDelimiter) {
-    // Check to see if the delimiter is defined. If not,
-    // then default to comma.
-    strDelimiter = (strDelimiter || ",");
-    // Create a regular expression to parse the CSV values.
-    var objPattern = new RegExp((
-    // Delimiters.
-    "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
-    // Quoted fields.
-    "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
-    // Standard fields.
-    "([^\"\\" + strDelimiter + "\\r\\n]*))"), "gi");
-    // Create an array to hold our data. Give the array
-    // a default empty first row.
-    var arrData = [[]];
-    // Create an array to hold our individual pattern
-    // matching groups.
-    var arrMatches = null;
-    // Keep looping over the regular expression matches
-    // until we can no longer find a match.
-    while (arrMatches = objPattern.exec(strData)) {
-        // Get the delimiter that was found.
-        var strMatchedDelimiter = arrMatches[1];
-        // Check to see if the given delimiter has a length
-        // (is not the start of string) and if it matches
-        // field delimiter. If id does not, then we know
-        // that this delimiter is a row delimiter.
-        if (strMatchedDelimiter.length && (strMatchedDelimiter != strDelimiter)) {
-            // Since we have reached a new row of data,
-            // add an empty row to our data array.
-            arrData.push([]);
-        }
-        // Now that we have our delimiter out of the way,
-        // let's check to see which kind of value we
-        // captured (quoted or unquoted).
-        if (arrMatches[2]) {
-            // We found a quoted value. When we capture
-            // this value, unescape any double quotes.
-            var strMatchedValue = arrMatches[2].replace(
-            new RegExp("\"\"", "g"), "\"");
-        } else {
-            // We found a non-quoted value.
-            var strMatchedValue = arrMatches[3];
-        }
-        // Now that we have our value string, let's add
-        // it to the data array.
-        arrData[arrData.length - 1].push(strMatchedValue);
-    }
-    // Return the parsed data.
-    return (arrData);
-}
-
-function CSV2JSON(csv) {
-    var array = CSVToArray(csv);
-    var objArray = [];
-    for (var i = 1; i < array.length - 1; i++) {
-        objArray[i - 1] = {};
-        for (var k = 0; k < array[0].length && k < array[i].length; k++) {
-            var key = array[0][k];
-            objArray[i - 1][key] = array[i][k]
-        }
-    }
-
-    /*var json = JSON.stringify(objArray);
-    var str = json.replace(/},/g, "},\r\n");
-
-    return str;*/
-    return objArray; // need js object, not json
-}
 
 function collapse_data(json){
 	obj = {};
