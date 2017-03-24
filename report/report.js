@@ -317,6 +317,8 @@ function BarChart(container, data, title, paginated = true){
             this.options.series[0].data = this.series[0].data.slice(0, this.maxItems);
             
             Highcharts.chart(this.container, this.options, function(chart) {
+            
+                // add chart buttons for scrolling
                 var left = chart.renderer.button('\u25B2', chart.plotLeft + chart.plotWidth, chart.plotHeight + chart.plotTop, function(){
                     var mi = chartObj.maxItems;
                     var cp = chartObj.currentPage;
@@ -337,6 +339,15 @@ function BarChart(container, data, title, paginated = true){
                     } 
                 }).addClass('right').add();
                 right.attr({'x': right.x - right.width - 5, 'y': right.y - right.height});
+                
+                console.log(chart);
+                
+                chart.hcEvents.redraw = [function(evt){
+                    newX = evt.target.plotWidth + evt.target.plotLeft;
+                    left.attr({'x': newX - (left.width + 5)});
+                    right.attr({'x': newX - (right.width + 5)});
+                }];
+                
             });
         }
     }
