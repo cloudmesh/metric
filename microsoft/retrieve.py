@@ -2,14 +2,24 @@ import requests
 
 class AK_API:
     def get_credentials(self):
+        '''Get API key
+        Returns:
+            (string) -- API Key
+        '''
         key = raw_input('What is your API key? ')
         return key
         
     def get_author(self):
+        '''Get author name for query
+        Returns:
+            (string) -- author name, lowercase
+        '''
         author = raw_input('What is the name of the author to search for? ')
         return author.lower()
         
     def evaluate(self):
+        '''Perform GET request to API "evaluate" command
+        '''
         query = {}
         
         key = self.get_credentials()
@@ -28,7 +38,7 @@ class AK_API:
         with open('result.json', 'w+') as f:
             f.write(r.content)
             
-        print 'Compelete.'
+        print 'Complete.'
         
 if(__name__ == '__main__'):
     a = AK_API()
