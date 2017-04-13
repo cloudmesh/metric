@@ -25,7 +25,7 @@ class AK_API:
         key = self.get_credentials()
         query['author'] = self.get_author()
         
-        url = "https://westus.api.cognitive.microsoft.com/academic/v1.0/evaluate?expr=Composite(AA.AuN=='{author}')&attributes=Ti,Y,CC,AA.AuN,AA.AuId".format(**query)
+        url = "https://westus.api.cognitive.microsoft.com/academic/v1.0/evaluate?expr=Composite(AA.AuN=='{author}')&attributes=Ti,Y,CC,AA.AuN,AA.AuId,AA.AfN,F.FN,J.JN".format(**query)
         
         headers = {
             'Ocp-Apim-Subscription-Key': key,
