@@ -9,7 +9,7 @@ Options:
 '''
 
 import time, os.path, ConfigParser
-import requests, pymongo
+import requests, pymongo, numpy
 from docopt import docopt
 from doc_parse import DocParser
 
@@ -114,10 +114,10 @@ class AK_API:
     def citations(self):
         '''Get citation count by FOS
         '''
-        print 'Retrieving citation count'
+        print 'Retrieving citation count ...'
         
         collection = self.db[self.collection_name]       
-        result = collection.find({}, {'_id': 0, 'CC': 1, 'F.FN': 1, 'Ti': 1})
+        result = collection.find({}, {'_id': 0, 'CC': 1, 'F.FN': 1})
         
         citations = {}
         
@@ -126,10 +126,14 @@ class AK_API:
                 for f in pub['F']:
                     field = f['FN']
                     if field in citations:
-                        citations[field] += pub['CC']
+                        citations[field].append(pub['CC'])
                     else:
-                        citations[field] = pub['CC']
-                    
+                        citations[field] = [pub['CC']]
+        
+        print 'Computing averages ...'
+        # get averages       
+        citations = {k: numpy.mean(v) for k, v in citations.iteritems()}
+        
         return citations
         
 if(__name__ == '__main__'):
