@@ -1,7 +1,8 @@
 '''Retrieval/handler for Microsoft Knowledge API
 
 Usage:
-  ak_api.py evaluate --year=<year>
+  ak_api.py evaluate <year>
+  ak_api.py citations
 
 Options:
   year:   year to retrieve publications for
@@ -18,6 +19,7 @@ class AK_API:
     collection_name = 'publications'
     
     def __init__(self):
+        self.mongo_connect()
         DocParser(__doc__).parse_doc(self)
     
     def mongo_connect(self):
@@ -55,10 +57,9 @@ class AK_API:
         author = raw_input('What is the name of the author to search for? ')
         return author.lower()
         
-    def evaluate(self, year = 2011):
+    def evaluate(self, year):
         '''Perform GET request to API "evaluate" command
         '''
-        self.mongo_connect()
         key = self.get_credentials()       
         current_year = time.strftime("%Y")
         count = 0
@@ -106,9 +107,30 @@ class AK_API:
         print 'Saving current result in MongoDB...'
         
         try:
-            collection = self.db[self.collection_name].insert_many(pubs, ordered = False)
+            self.db[self.collection_name].insert_many(pubs, ordered = False)
         except pymongo.errors.BulkWriteError:
             print 'Ignoring duplicate entries.'
+            
+    def citations(self):
+        '''Get citation count by FOS
+        '''
+        print 'Retrieving citation count'
+        
+        collection = self.db[self.collection_name]       
+        result = collection.find({}, {'_id': 0, 'CC': 1, 'F.FN': 1, 'Ti': 1})
+        
+        citations = {}
+        
+        for pub in result:
+            if('CC' in pub and 'F' in pub):
+                for f in pub['F']:
+                    field = f['FN']
+                    if field in citations:
+                        citations[field] += pub['CC']
+                    else:
+                        citations[field] = pub['CC']
+                    
+        return citations
         
 if(__name__ == '__main__'):
     a = AK_API()
