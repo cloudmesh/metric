@@ -1,16 +1,37 @@
-import time
-import requests
+import time, os.path, ConfigParser
+import requests, pymongo
 
 class AK_API:
-    starting_year = 2005
-    offset = 20000
+    starting_year = 2017
+    offset = 100000
+    db_name = 'metric'
+    collection_name = 'publications'
+    
+    def mongo_connect(self):
+        '''Connect to MongoDB
+        '''
+        print 'Connecting to MongoDB ...'
+        self.client = pymongo.MongoClient()
+        self.db = self.client[self.db_name]
+        
+        # create index
+        if(self.collection_name not in self.db.collection_names()):
+            self.db[self.collection_name].create_index('Id', unique = True)
 
     def get_credentials(self):
         '''Get API key
         Returns:
             (string) -- API Key
         '''
-        key = raw_input('What is your API key? ')
+        print 'Getting API key ...'
+        
+        if(os.path.isfile('retrieve.cfg')):
+            config = ConfigParser.SafeConfigParser()
+            config.readfp(open('retrieve.cfg'))
+            key = config.get('api', 'key')
+        else:   
+            key = raw_input('What is your API key? ')
+            
         return key
         
     def get_author(self):
@@ -23,7 +44,8 @@ class AK_API:
         
     def evaluate(self):
         '''Perform GET request to API "evaluate" command
-        '''        
+        '''
+        self.mongo_connect()
         key = self.get_credentials()       
         current_year = time.strftime("%Y")
         count = 0
@@ -33,7 +55,7 @@ class AK_API:
             
             data = {}
             data['expr'] = 'Y=[{starting_year},{current_year}]'.format(starting_year = self.starting_year, current_year = current_year)
-            data['attributes'] = 'Ti,Y,CC,AA.AuN,AA.AuId,AA.AfN,F.FN,J.JN'
+            data['attributes'] = 'Id,Ti,Y,CC,AA.AuN,AA.AuId,AA.AfN,F.FN,J.JN'
             data['count'] = self.offset
             data['offset'] = count * self.offset
             
@@ -48,17 +70,32 @@ class AK_API:
             print 'Getting items at {number} ...'.format(number = count * self.offset)
             r = requests.get(url, headers = headers)
             
-            if('error' in r.json()):
-                print r.json()['error']
+            result = r.json()
+            
+            if('error' in result):
+                print result['error']
                 return
             
-            print 'Saving current result ...'
-            with open('result' + str(count) + '.json', 'w+') as f:
-                f.write(r.content)
+            self.add_pubs(result['entities'])
                 
             count += 1
             
+            if(len(result['entities']) < self.offset):
+                return
+            
         print 'Complete.'
+        
+    def add_pubs(self, pubs):
+        '''Add publication data to MongoDB
+        Args:
+            pubs (dict) -- of publications, from json
+        '''
+        print 'Saving current result in MongoDB...'
+        
+        try:
+            collection = self.db[self.collection_name].insert_many(pubs, ordered = False)
+        except pymongo.errors.BulkWriteError:
+            print 'Ignoring duplicate entries.'
         
 if(__name__ == '__main__'):
     a = AK_API()
