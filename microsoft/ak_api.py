@@ -1,11 +1,24 @@
+'''Retrieval/handler for Microsoft Knowledge API
+
+Usage:
+  ak_api.py evaluate --year=<year>
+
+Options:
+  year:   year to retrieve publications for
+'''
+
 import time, os.path, ConfigParser
 import requests, pymongo
+from docopt import docopt
+from doc_parse import DocParser
 
 class AK_API:
-    starting_year = 2017
     offset = 100000
     db_name = 'metric'
     collection_name = 'publications'
+    
+    def __init__(self):
+        DocParser(__doc__).parse_doc(self)
     
     def mongo_connect(self):
         '''Connect to MongoDB
@@ -25,9 +38,9 @@ class AK_API:
         '''
         print 'Getting API key ...'
         
-        if(os.path.isfile('retrieve.cfg')):
+        if(os.path.isfile('ak_api.cfg')):
             config = ConfigParser.SafeConfigParser()
-            config.readfp(open('retrieve.cfg'))
+            config.readfp(open('ak_api.cfg'))
             key = config.get('api', 'key')
         else:   
             key = raw_input('What is your API key? ')
@@ -42,7 +55,7 @@ class AK_API:
         author = raw_input('What is the name of the author to search for? ')
         return author.lower()
         
-    def evaluate(self):
+    def evaluate(self, year = 2011):
         '''Perform GET request to API "evaluate" command
         '''
         self.mongo_connect()
@@ -54,7 +67,7 @@ class AK_API:
             url = 'https://westus.api.cognitive.microsoft.com/academic/v1.0/evaluate?'
             
             data = {}
-            data['expr'] = 'Y=[{starting_year},{current_year}]'.format(starting_year = self.starting_year, current_year = current_year)
+            data['expr'] = 'Y={year}'.format(year = year)
             data['attributes'] = 'Id,Ti,Y,CC,AA.AuN,AA.AuId,AA.AfN,F.FN,J.JN'
             data['count'] = self.offset
             data['offset'] = count * self.offset
@@ -99,4 +112,3 @@ class AK_API:
         
 if(__name__ == '__main__'):
     a = AK_API()
-    a.evaluate()
