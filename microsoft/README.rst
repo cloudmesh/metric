@@ -9,13 +9,13 @@ The intent of this script is to retrieve the entire Microsoft Knowledge API data
 Usage
 ^^^^^
 
-to retrieve database (by year)::
+To retrieve database (by year)::
 
     ak_api.py evaluate <year>
     
-This currently takes ~2 mins per 100,000 entries.
+This currently takes ~2 mins per 100,000 entries. MongoDB should be installed and running before attempting evaluate.
     
-to retrieve average citation count by fos (after evaluate)::
+To retrieve average citation count by fos (after evaluate)::
 
     ak_api.py citations
     
