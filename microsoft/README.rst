@@ -1,5 +1,5 @@
-Retrieval/Analysis for Microsoft Knowledge API
-==============================================
+Retrieval/Analysis for Microsoft Academic Knowledge API
+=======================================================
 
 Introduction
 ^^^^^^^^^^^^
