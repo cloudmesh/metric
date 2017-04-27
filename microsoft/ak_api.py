@@ -1,7 +1,7 @@
 '''Retrieval/handler for Microsoft Knowledge API
 
 Usage:
-  ak_api.py evaluate <year>
+  ak_api.py evaluate <year> [--offset=<offset>]
   ak_api.py citations
 
 Options:
@@ -14,7 +14,6 @@ from docopt import docopt
 from doc_parse import DocParser
 
 class AK_API:
-    offset = 100000
     db_name = 'metric'
     collection_name = 'publications'
     
@@ -57,9 +56,10 @@ class AK_API:
         author = raw_input('What is the name of the author to search for? ')
         return author.lower()
         
-    def evaluate(self, year):
+    def evaluate(self, year, offset = 100000):
         '''Perform GET request to API "evaluate" command
         '''
+        offset = int(offset)
         key = self.get_credentials()       
         current_year = time.strftime("%Y")
         count = 0
@@ -70,8 +70,8 @@ class AK_API:
             data = {}
             data['expr'] = 'Y={year}'.format(year = year)
             data['attributes'] = 'Id,Ti,Y,CC,AA.AuN,AA.AuId,AA.AfN,F.FN,J.JN'
-            data['count'] = self.offset
-            data['offset'] = count * self.offset
+            data['count'] = offset
+            data['offset'] = count * offset
             
             # add parameters to url
             for k, v in data.iteritems():
@@ -81,7 +81,7 @@ class AK_API:
                 'Ocp-Apim-Subscription-Key': key,
             }       
             
-            print 'Getting items at {number} ...'.format(number = count * self.offset)
+            print 'Getting items at {number} ...'.format(number = count * offset)
             r = requests.get(url, headers = headers)
             
             result = r.json()
@@ -94,8 +94,8 @@ class AK_API:
                 
             count += 1
             
-            if(len(result['entities']) < self.offset):
-                return
+            if(len(result['entities']) < offset):
+                break
             
         print 'Complete.'
         
