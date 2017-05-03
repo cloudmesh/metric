@@ -24,8 +24,12 @@ class AK_API:
     def mongo_connect(self):
         '''Connect to MongoDB
         '''
-        print 'Connecting to MongoDB ...'
-        self.client = pymongo.MongoClient()
+        opts = {}
+        opts['port'] = int(self.get_config_option('mongo', 'port'))
+        
+        print 'Connecting to MongoDB on port {port}...'.format(**opts)
+        
+        self.client = pymongo.MongoClient(**opts)
         self.db = self.client[self.db_name]
         
         # create index
@@ -39,14 +43,29 @@ class AK_API:
         '''
         print 'Getting API key ...'
         
-        if(os.path.isfile('ak_api.cfg')):
-            config = ConfigParser.SafeConfigParser()
-            config.readfp(open('ak_api.cfg'))
-            key = config.get('api', 'key')
-        else:   
+        key = self.get_config_option('api', 'key')
+
+        if(not key):   
             key = raw_input('What is your API key? ')
             
         return key
+        
+    def get_config_option(self, section, option):
+        '''Get configuration item
+        Args:
+            section (str): config section
+            option (str): item in section
+        Return:
+            str: config item
+        '''
+        if(os.path.isfile('ak_api.cfg')):
+            config = ConfigParser.SafeConfigParser()
+            config.readfp(open('ak_api.cfg'))
+            option = config.get(section, option)
+            return option
+        else:
+            print 'Unable to locate configuration file.'
+            return None
         
     def get_author(self):
         '''Get author name for query
