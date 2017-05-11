@@ -1,4 +1,3 @@
-id	name
 00002357	Point groups in three dimensions
 0002C08D	Partial application
 0002E1E1	Economic impact analysis

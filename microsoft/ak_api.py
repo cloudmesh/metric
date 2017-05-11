@@ -9,7 +9,7 @@ Options:
   year:   year to retrieve publications for
 '''
 
-import time, os.path, ConfigParser, csv
+import time, os.path, ConfigParser
 import requests, pymongo, numpy
 from docopt import docopt
 from doc_parse import DocParser
@@ -174,63 +174,61 @@ class AK_API:
         records = self.db[self.collection_name].find()
         
         with open('FieldsOfStudy.txt') as f:
-            reader = csv.DictReader(f, delimiter='\t')
-            fields = {f['id']: f['name'].lower() for f in reader}
+            fields = {r.split()[0]: r.split()[1].lower() for r in f.readlines()}
+            # reverse fields dict
             ids = dict(zip(fields.values(), fields.keys()))
         
+        # cache tree
         with open('FieldOfStudyHierarchy.txt') as f:
-            reader = csv.DictReader(f, delimiter='\t')
-            
-            parents = {}
             children = {}
-            
-            for row in reader:
-                parent_id = row['parent_id']
-                if(row['parent_level'] == 'L0' and parent_id not in parents):
-                    parents[parent_id] = parent_id
-                    children[parent_id] = {'level': 'L0'}
-          
-                child = children.get(row['child_id'])
-                if(child):
-                    child['parents'][row['parent_id']] = row['prob']
-                else:
-                    children[row['child_id']] = {'parents': {row['parent_id']: row['prob']}, 'level': row['child_level']}
-                    
-                    
-            def get_prob(parent, prob, level = 1):
-                c_parents = children[parent].get('parents')
-                if(not c_parents):
-                    print prob
-                    return prob
-                for c_parent, c_prob in c_parents.items():
-                    get_prob(c_parent, float(c_prob) * float(prob), level + 1)
-
-            for child, info in children.iteritems():
-                if('parents' in info):
-                    for parent, prob in info['parents'].items():
-                        print get_prob(parent, prob)
-                    exit()
-                        
-            '''parents = {}
-            for row in reader:
-                child = parents.get(row['child_id']) or {}
+            for row in f.readlines():
+                ci, cl, pi, pl, p = row.split()
                 
+                if(pl == 'L0' and pi not in children):
+                    children[pi] = {'parents': [], 'level': 'L0'}
+                
+                child = children.get(ci)
                 if(child):
-                    if(row['parent_level'] == 'L0' and row['prob'] > child['prob']):
-                        child['parent_id'] = row['parent_id']
-                        child['level'] = row['parent_level']
-                        child['prob'] = row['prob']
+                    child['parents'].append({'id': pi, 'prob': float(p)})
                 else:
-                    if(row['parent_level'] == 'L0'):
-                        child['parent_id'] = row['parent_id']
-                        child['level'] = row['parent_level']
-                        child['prob'] = row['prob']
-                        parents[row['child_id']] = child'''
-                        
+                    children[ci] = {'parents': [{'id': pi, 'prob': float(p)}], 'level': cl}
+                
+        # build branches
+        for child, branch in children.iteritems(): 
+            for parent in branch['parents']:
+                if(parent['id'] in children):
+                    parent['pointer'] = children[parent['id']]
+                    
+            # remove parents with no pointer
+            branch['parents'] = [p for p in branch['parents'] if 'pointer' in p]
+        
+        # get probabilities            
+        def get_prob(parent, probs = []):
+            '''recursive function for tree traversal through fields of study hierarchy
+            '''
+            for parent in parent['pointer']['parents']:
+                new_prob = parent['prob'] * probs[-1][1] if probs else float(parent['prob'])
+                probs.append((parent['id'], new_prob))
+                get_prob(parent, probs)
+                
+            return probs
             
-                        
-                # if not child: try again with one of its parents
+        parents = {}
+        for child, branch in children.iteritems():
+            probs = []
+            for parent in branch['parents']:
+                probs.extend(get_prob(parent, [(parent['id'], parent['prob'])]))
             
+            # determine best probability
+            top = (None, 0)
+            for prob in probs:
+                pid, probability = prob
+                if(children[pid]['level'] == 'L0' and probability > top[1]):
+                    top = prob
+            
+            parents[child] = fields.get(top[0])
+                      
+        print "Updating records in database ..."
         for record in records:
             if('F' in record):
                 for field in record['F']:
@@ -240,7 +238,7 @@ class AK_API:
                     if(field_id):
                         parent = parents.get(field_id)
                         if(parent):
-                            field['parent'] = fields.get(parent)
+                            field['parent'] = parent
                             
                 self.db[self.collection_name].update(
                     {'_id': record['_id']},
