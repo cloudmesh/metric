@@ -9,13 +9,13 @@ Options:
   year:   year to retrieve publications for
 '''
 
-import time, os.path, ConfigParser
+import time, re, os.path, ConfigParser
 import requests, pymongo, numpy
 from docopt import docopt
 from doc_parse import DocParser
 
 class AK_API:
-    db_name = 'metric'
+    db_name = 'microsoft'
     collection_name = 'publications'
     
     def __init__(self):
@@ -174,8 +174,13 @@ class AK_API:
         records = self.db[self.collection_name].find()
         
         with open('FieldsOfStudy.txt') as f:
-            # TODO: clean this up
-            fields = {r.split('\t')[0].strip(): r.split('\t')[1].strip().lower() for r in f.readlines()}
+            fields = {}
+            for row in f.readlines():
+                fid, fname = row.split('\t')
+                # replace em dash with minus
+                fname = re.sub('\xe2\x80\x93', '-', fname)
+                fields[fid] = fname.strip().lower()
+            
             # reverse fields dict
             ids = dict(zip(fields.values(), fields.keys()))
 
@@ -216,16 +221,20 @@ class AK_API:
             
         parents = {}
         for child, branch in children.iteritems():
-            probs = []
-            for parent in branch['parents']:
-                probs.extend(get_prob(parent, [(parent['id'], parent['prob'])]))
-            
-            # determine best probability
-            top = (None, 0)
-            for prob in probs:
-                pid, probability = prob
-                if(children[pid]['level'] == 'L0' and probability > top[1]):
-                    top = prob
+            # check if the "child" is a top-level parent
+            if(children[child]['level'] == 'L0'):
+                top = (child,)
+            else:
+                probs = []
+                for parent in branch['parents']:
+                    probs.extend(get_prob(parent, [(parent['id'], parent['prob'])]))
+                
+                # determine best probability
+                top = (None, 0)
+                for prob in probs:
+                    pid, probability = prob
+                    if(children[pid]['level'] == 'L0' and probability > top[1]):
+                        top = prob
             
             parents[child] = fields.get(top[0])
                       
