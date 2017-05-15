@@ -174,10 +174,11 @@ class AK_API:
         records = self.db[self.collection_name].find()
         
         with open('FieldsOfStudy.txt') as f:
-            fields = {r.split()[0]: r.split()[1].lower() for r in f.readlines()}
+            # TODO: clean this up
+            fields = {r.split('\t')[0].strip(): r.split('\t')[1].strip().lower() for r in f.readlines()}
             # reverse fields dict
             ids = dict(zip(fields.values(), fields.keys()))
-        
+
         # cache tree
         with open('FieldOfStudyHierarchy.txt') as f:
             children = {}
@@ -229,16 +230,22 @@ class AK_API:
             parents[child] = fields.get(top[0])
                       
         print "Updating records in database ..."
+        current = 0
+        total = records.count()
         for record in records:
+            current += 1
+            print "\r{}/{}".format(current, total),
+            
             if('F' in record):
                 for field in record['F']:
-                    field_name = field['FN']                            
-                    field_id = ids.get(field_name)
-                            
-                    if(field_id):
-                        parent = parents.get(field_id)
-                        if(parent):
-                            field['parent'] = parent
+                    if('parent' not in field):
+                        field_name = field['FN']                            
+                        field_id = ids.get(field_name)
+                                
+                        if(field_id):
+                            parent = parents.get(field_id)
+                            if(parent):
+                                field['parent'] = parent
                             
                 self.db[self.collection_name].update(
                     {'_id': record['_id']},
