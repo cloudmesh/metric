@@ -1,12 +1,15 @@
 '''Retrieval/handler for Microsoft Knowledge API
 
 Usage:
-  ak_api.py evaluate <year> [--offset=<offset>]
+  ak_api.py evaluate <year> [--count=<count> --offset=<offset> --skip=<skip>]
   ak_api.py parents
   ak_api.py citations
 
 Options:
-  year:   year to retrieve publications for
+  year:     year to retrieve publications for
+  count:    number of entities to retrieve per call
+  offset:   starting index
+  skip:     number of entities to skip (skip * count)
 '''
 
 import time, re, os.path, ConfigParser
@@ -76,22 +79,24 @@ class AK_API:
         author = raw_input('What is the name of the author to search for? ')
         return author.lower()
         
-    def evaluate(self, year, offset = 100000):
+    def evaluate(self, year, count = 100000, offset = 0, skip = 0):
         '''Perform GET request to API "evaluate" command
         '''
         offset = int(offset)
+        count = int(count)
         key = self.get_credentials()       
         current_year = time.strftime("%Y")
-        count = 0
+        counter = int(skip)
         
         while(True):
             url = 'https://westus.api.cognitive.microsoft.com/academic/v1.0/evaluate?'
             
             data = {}
-            data['expr'] = 'Y={year}'.format(year = year)
+            data['expr'] = "Or(Y={year}, D='{year}'".format(year = year)
             data['attributes'] = 'Id,Ti,Y,L,D,CC,ECC,AA.AuN,AA.AuId,AA.AfN,AA.AfId,AA.S,F.FId,F.FN,J.JId,J.JN,C.Cid,C.CN,RId'
-            data['count'] = offset
-            data['offset'] = count * offset
+            data['count'] = count
+            data['offset'] = counter * count
+            data['orderby'] = 'Id:asc'
             
             # add parameters to url
             for k, v in data.iteritems():
@@ -101,20 +106,22 @@ class AK_API:
                 'Ocp-Apim-Subscription-Key': key,
             }       
             
-            print 'Getting items from {start} to {finish} ...'.format(start = count * offset + 1, finish = (count + 1) * offset)
+            print 'Getting items from {start} to {finish} ...'.format(start = counter * count + 1, finish = (counter + 1) * count)
             r = requests.get(url, headers = headers)
             
             result = r.json()
+            entities = [e for e in result['entities'] if e]
+            
+            print "{} results retrieved".format(len(entities))
             
             if('error' in result):
                 print result['error']
-                return
+                break
             
-            self.add_pubs(result['entities'])
-                
-            count += 1
-            
-            if(len(result['entities']) < offset):
+            if(len(entities) >= offset):
+                self.add_pubs(result['entities'])
+                counter += 1
+            else:
                 break
             
         print 'Complete.'
@@ -238,30 +245,30 @@ class AK_API:
             
             parents[child] = fields.get(top[0])
                       
-        print "Updating records in database ..."
-        current = 0
-        total = records.count()
-        for record in records:
-            current += 1
-            print "\r{}/{}".format(current, total),
-            
+        print "Updating records ..."       
+        bulk = self.db[self.collection_name].initialize_unordered_bulk_op()
+        
+        for record in records:            
             if('F' in record):
                 for field in record['F']:
                     if('parent' not in field):
-                        field_name = field['FN']                            
+                        field_name = field['FN']                   
                         field_id = ids.get(field_name)
                                 
                         if(field_id):
                             parent = parents.get(field_id)
                             if(parent):
                                 field['parent'] = parent
-                            
-                self.db[self.collection_name].update(
-                    {'_id': record['_id']},
-                    {'$set': {'F': record['F']}}
-                )
                                          
-        return records
+                bulk.find({'_id': record['_id']}).update({'$set': {'F': record['F']}})
+        
+        print "Executing MongoDB bulk update ..."
+        try:        
+            bulk.execute()
+        except pymongo.errors.BulkWriteError as err:
+            print "Write error: " + err
+            
+        print 'Complete.'
         
 if(__name__ == '__main__'):
     a = AK_API()
