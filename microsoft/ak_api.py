@@ -1,18 +1,18 @@
 '''Retrieval/handler for Microsoft Knowledge API
 
 Usage:
-  ak_api.py evaluate <year> [--count=<count> --offset=<offset> --skip=<skip>]
+  ak_api.py evaluate <year> [--count=<count> --start=<start>]
+  ak_api.py extended <year> [--count=<count> --start=<start>]
   ak_api.py parents
   ak_api.py citations
 
 Options:
   year:     year to retrieve publications for
   count:    number of entities to retrieve per call
-  offset:   starting index
-  skip:     number of entities to skip (skip * count)
+  start:    month to begin on
 '''
 
-import time, re, os.path, ConfigParser
+import time, re, calendar, os.path, ConfigParser
 import requests, pymongo, numpy
 from docopt import docopt
 from doc_parse import DocParser
@@ -79,50 +79,88 @@ class AK_API:
         author = raw_input('What is the name of the author to search for? ')
         return author.lower()
         
-    def evaluate(self, year, count = 100000, offset = 0, skip = 0):
+    def evaluate(self, year, count = 100000, start = 0):
         '''Perform GET request to API "evaluate" command
         '''
-        offset = int(offset)
-        count = int(count)
-        key = self.get_credentials()       
-        current_year = time.strftime("%Y")
-        counter = int(skip)
+        self.retrieve_pubs(year, count = count, start = start, attributes = 'Id,Ti,L,Y,D,CC,ECC,AA.AuN,AA.AuId,AA.AfN,AA.AfId,AA.S,F.FId,F.FN,J.JId,J.JN,C.CId,C.CN,RId', callback = self.add_pubs)
         
-        while(True):
-            url = 'https://westus.api.cognitive.microsoft.com/academic/v1.0/evaluate?'
+    def extended(self, year, count = 100000, start = 0):
+        '''Get extended metadata
+        Args:
+            year (str) -- year to update
+        '''
+        self.retrieve_pubs(year, count = count, start = start, attributes = 'Id,E', callback = self.add_extended)
+        
+    def retrieve_pubs(self, year, count = 100000, attributes = '', start = 0, callback = None):
+        '''Get publications from via API
+        Args:
+            year (str) -- year
+            attributes (str) -- paper entity attributes to retrieve
+            start (int) -- month to start on
+            callback (function) -- function to handle results 
+        '''
+        
+        count = int(count)
+        key = self.get_credentials()
+        
+        for m in xrange(int(start), 12):
+            date = {}
+            date['year'] = year
+            date['month'] = str(m + 1) if m > 8 else '0' + str(m+ 1)
+            date['day'] = calendar.monthrange(int(year), m + 1)[1]
             
-            data = {}
-            data['expr'] = "Or(Y={year}, D='{year}'".format(year = year)
-            data['attributes'] = 'Id,Ti,Y,L,D,CC,ECC,AA.AuN,AA.AuId,AA.AfN,AA.AfId,AA.S,F.FId,F.FN,J.JId,J.JN,C.Cid,C.CN,RId'
-            data['count'] = count
-            data['offset'] = counter * count
-            data['orderby'] = 'Id:asc'
-            
-            # add parameters to url
-            for k, v in data.iteritems():
-                url += k + '=' + str(v) + '&'
-            
-            headers = {
-                'Ocp-Apim-Subscription-Key': key,
-            }       
-            
-            print 'Getting items from {start} to {finish} ...'.format(start = counter * count + 1, finish = (counter + 1) * count)
-            r = requests.get(url, headers = headers)
-            
-            result = r.json()
-            entities = [e for e in result['entities'] if e]
-            
-            print "{} results retrieved".format(len(entities))
-            
-            if('error' in result):
-                print result['error']
-                break
-            
-            if(len(entities) >= offset):
-                self.add_pubs(result['entities'])
-                counter += 1
-            else:
-                break
+            offset = 0
+        
+            while(True):        
+                data = {}
+                
+                print "Getting results for {year}-{month} ...".format(**date)            
+                data['expr'] = "D=['{year}-{month}-01','{year}-{month}-{day}']".format(**date)   
+                data['attributes'] = attributes
+                data['count'] = count
+                data['offset'] = offset
+                
+                # add parameters to url
+                url = 'https://westus.api.cognitive.microsoft.com/academic/v1.0/evaluate?'
+                for k, v in data.iteritems():
+                    url += k + '=' + str(v) + '&'
+                
+                headers = {
+                    'Ocp-Apim-Subscription-Key': key,
+                }       
+                
+                print "Getting items from {} to {} ...".format(offset + 1, offset + count)
+                
+                try:
+                    r = requests.get(url, headers = headers)              
+                except requests.exceptions.ChunkedEncodingError:
+                    print "Connection reset. Trying again ..."
+                    continue
+                
+                result = r.json()
+                
+                print "Status: " + str(r.status_code)
+                
+                if(r.status_code == 500):
+                    print "Server error. Exiting."
+                    return
+                
+                if('error' in result):
+                    print result['error']
+                    return
+                
+                entities = [e for e in result['entities'] if e]
+                
+                print "{} results retrieved".format(len(entities))
+                
+                if(len(entities)):
+                    callback(entities)
+                    offset += count
+                    
+                    if(len(entities) < count):
+                        break
+                else:
+                    break
             
         print 'Complete.'
         
@@ -137,6 +175,25 @@ class AK_API:
             self.db[self.collection_name].insert_many(pubs, ordered = False)
         except pymongo.errors.BulkWriteError:
             print 'Ignoring duplicate entries.'
+            
+    def add_extended(self, pubs):
+        '''Add extended metadata to MongoDB
+        Args:
+            pubs (dict) -- of publications, from json
+        '''
+        print 'Updating MongoDB records...'
+        
+        bulk = self.db[self.collection_name].initialize_unordered_bulk_op()
+        
+        for pub in pubs:       
+            print pub
+            exit()                                        
+            bulk.find({'Id': pub['Id']}).update({'$set': {'E': pub['E']}})
+        
+        try:        
+            bulk.execute()
+        except pymongo.errors.BulkWriteError as err:
+            print "Write error: " + err
             
     def citations(self):
         '''Get citation count by FOS
