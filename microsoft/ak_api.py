@@ -3,6 +3,8 @@
 Usage:
   ak_api.py evaluate <year> [--count=<count> --start=<start>]
   ak_api.py extended <year> [--count=<count> --start=<start>]
+  ak_api.py january <year> [--count=<count>]
+  ak_api.py compare [--count=<count>]
   ak_api.py parents
   ak_api.py citations
 
@@ -12,14 +14,13 @@ Options:
   start:    month to begin on
 '''
 
-import time, re, calendar, os.path, ConfigParser
+import time, json, re, calendar, string, os.path, ConfigParser
 import requests, pymongo, numpy
 from docopt import docopt
 from doc_parse import DocParser
 
 class AK_API:
     db_name = 'microsoft'
-    collection_name = 'publications'
     
     def __init__(self):
         self.mongo_connect()
@@ -36,9 +37,15 @@ class AK_API:
         self.client = pymongo.MongoClient(**opts)
         self.db = self.client[self.db_name]
         
-        # create index
-        if(self.collection_name not in self.db.collection_names()):
-            self.db[self.collection_name].create_index('Id', unique = True)
+        # create indexes
+        if('publications' not in self.db.collection_names()):
+            self.db.publications.create_index('Id', unique = True)
+            
+        if('extended' not in self.db.collection_names()):
+            self.db.extended.create_index('Id', unique = True)
+            
+        if('fields' not in self.db.collection_names()):
+            self.db.fields.create_index('Id', unique = True)
 
     def get_credentials(self):
         '''Get API key
@@ -62,6 +69,7 @@ class AK_API:
         Return:
             str: config item
         '''
+        
         if(os.path.isfile('ak_api.cfg')):
             config = ConfigParser.SafeConfigParser()
             config.readfp(open('ak_api.cfg'))
@@ -71,27 +79,112 @@ class AK_API:
             print 'Unable to locate configuration file.'
             return None
         
-    def get_author(self):
-        '''Get author name for query
-        Returns:
-            (string) -- author name, lowercase
-        '''
-        author = raw_input('What is the name of the author to search for? ')
-        return author.lower()
-        
     def evaluate(self, year, count = 100000, start = 0):
         '''Perform GET request to API "evaluate" command
+        Args:
+            year (str) -- year to update
+            count (int) -- results per call
+            start (int) -- month to start on (0 being January)
         '''
-        self.retrieve_pubs(year, count = count, start = start, attributes = 'Id,Ti,L,Y,D,CC,ECC,AA.AuN,AA.AuId,AA.AfN,AA.AfId,AA.S,F.FId,F.FN,J.JId,J.JN,C.CId,C.CN,RId', callback = self.add_pubs)
+        count = int(count)
+        key = self.get_credentials()
+        attributes = 'Id,Ti,L,Y,D,CC,ECC,AA.AuN,AA.AuId,AA.AfN,AA.AfId,AA.S,F.FId,F.FN,J.JId,J.JN,C.CId,C.CN,RId'
+        
+        for m in xrange(int(start), 12):
+            date = {}
+            date['year'] = year
+            date['month'] = str(m + 1) if m > 8 else '0' + str(m + 1)
+            date['day'] = calendar.monthrange(int(year), m + 1)[1]
+            print "Getting results for {year}-{month} ...".format(**date)
+            expr = "D=['{year}-{month}-01','{year}-{month}-{day}']".format(**date)         
+            self.retrieve_pubs(year, count, key, attributes, self.add_pubs, expr = expr)
         
     def extended(self, year, count = 100000, start = 0):
         '''Get extended metadata
         Args:
             year (str) -- year to update
+            count (int) -- results per call
+            start (int) -- month to start on (0 being January)
         '''
-        self.retrieve_pubs(year, count = count, start = start, attributes = 'Id,E', callback = self.add_extended)
+        count = int(count)
+        key = self.get_credentials()
         
-    def retrieve_pubs(self, year, count = 100000, attributes = '', start = 0, callback = None):
+        for m in xrange(int(start), 12):
+            date = {}
+            date['year'] = year
+            date['month'] = str(m + 1) if m > 8 else '0' + str(m + 1)
+            date['day'] = calendar.monthrange(int(year), m + 1)[1]
+            expr = "D=['{year}-{month}-01','{year}-{month}-{day}']".format(**date)
+            print "Getting results for {year}-{month} ...".format(**date)            
+            self.retrieve_pubs(year, count, key, 'E', self.add_extended, expr = expr)
+            
+    def january(self, year, count = 100000):
+        '''Get publications for January of given year, by title
+        Args:
+            year (str) -- year to retrieve
+            count (int) -- number of results per call
+        '''
+        count = int(count)
+        key = self.get_credentials()
+        attributes = 'Id,Ti,L,Y,D,CC,ECC,AA.AuN,AA.AuId,AA.AfN,AA.AfId,AA.S,F.FId,F.FN,J.JId,J.JN,C.CId,C.CN,RId'
+        
+        for l in string.lowercase:
+            print "Retrieve January publications for {year} starting with {letter} ...".format(letter = l, year = year)
+            expr = "And(Ti='{letter}'...,D=['{year}-01-01','{year}-01-31'])".format(letter = l, year = year)
+            self.retrieve_pubs(year, count, key, attributes, self.add_pubs, expr = expr)
+            
+    def compare(self, count = 100):
+        print "Matching records ..."
+        
+        import time
+        
+        start = time.time()
+        
+        with open('pubs_xup.txt') as f:       
+            ids = []
+            counter = 0
+            for row in f.readlines():
+                if('|' not in row):
+                    continue
+                    
+                pid, title = row.strip().split('|', 1)
+                
+                
+                title = title.lower().decode('ISO-8859-1').encode('utf-8')
+                title = title.replace('-', ' ')
+                title = title.replace('/', ' ')
+                title = title.replace('+', ' ')
+                title = title.translate(None, string.punctuation)
+                
+                
+                record = self.dd.publications.find_one({'Ti': title})
+                
+                '''# match without first word
+                if(not record):
+                    title = title.split(' ', 1)[1] if ' ' in title else title
+                    record = self.db.publications.find_one({'Ti': title})'''
+                
+                if(record):
+                    ids.append(str(pid) + '|' + str(record['Id']) + '\n')
+                
+                counter += 1
+                
+                if(counter >= int(count)):
+                    break
+                    
+        print "Accuracy: " + str(float(len(ids))/int(counter))
+                
+        print "Time elapsed for {} items with {} matches: {}".format(counter, len(ids), time.time()-start)
+        print "Amount of time per match: {} seconds".format(str((time.time()-start) / int(counter)))
+        
+        print "Saving file ..."
+        
+        with open('xsede_ms.txt', 'w+') as f:
+            f.writelines(ids)
+        
+        print "Complete."
+        
+    def retrieve_pubs(self, year, count, key, attributes, hook, expr = ''):
         '''Get publications from via API
         Args:
             year (str) -- year
@@ -99,70 +192,54 @@ class AK_API:
             start (int) -- month to start on
             callback (function) -- function to handle results 
         '''
-        
-        count = int(count)
-        key = self.get_credentials()
-        
-        for m in xrange(int(start), 12):
-            date = {}
-            date['year'] = year
-            date['month'] = str(m + 1) if m > 8 else '0' + str(m+ 1)
-            date['day'] = calendar.monthrange(int(year), m + 1)[1]
+        offset = 0
+        data = {}
+        data['expr'] = expr
+        data['attributes'] = attributes
+        data['count'] = count
+    
+        while(True):
+            data['offset'] = offset
             
-            offset = 0
-        
-            while(True):        
-                data = {}
+            # add parameters to url
+            url = 'https://westus.api.cognitive.microsoft.com/academic/v1.0/evaluate?'
+            for k, v in data.iteritems():
+                url += k + '=' + str(v) + '&'
+            
+            headers = {
+                'Ocp-Apim-Subscription-Key': key,
+            }       
+            
+            print "Getting items from {} to {} ...".format(offset + 1, offset + count)
+            
+            try:
+                r = requests.get(url, headers = headers)              
+            except requests.exceptions.ChunkedEncodingError:
+                print "Connection reset. Trying again ..."
+                continue
+            
+            result = r.json()
+
+            if('error' in result):
+                print result['error']
+                return
                 
-                print "Getting results for {year}-{month} ...".format(**date)            
-                data['expr'] = "D=['{year}-{month}-01','{year}-{month}-{day}']".format(**date)   
-                data['attributes'] = attributes
-                data['count'] = count
-                data['offset'] = offset
+            if(r.status_code == 500):
+                print "Server error. Exiting."
+                return
+            
+            entities = [e for e in result['entities'] if e]
+            
+            print "{} results retrieved".format(len(entities))
+            
+            if(len(entities)):
+                hook(entities)
+                offset += count
                 
-                # add parameters to url
-                url = 'https://westus.api.cognitive.microsoft.com/academic/v1.0/evaluate?'
-                for k, v in data.iteritems():
-                    url += k + '=' + str(v) + '&'
-                
-                headers = {
-                    'Ocp-Apim-Subscription-Key': key,
-                }       
-                
-                print "Getting items from {} to {} ...".format(offset + 1, offset + count)
-                
-                try:
-                    r = requests.get(url, headers = headers)              
-                except requests.exceptions.ChunkedEncodingError:
-                    print "Connection reset. Trying again ..."
-                    continue
-                
-                result = r.json()
-                
-                print "Status: " + str(r.status_code)
-                
-                if(r.status_code == 500):
-                    print "Server error. Exiting."
-                    return
-                
-                if('error' in result):
-                    print result['error']
-                    return
-                
-                entities = [e for e in result['entities'] if e]
-                
-                print "{} results retrieved".format(len(entities))
-                
-                if(len(entities)):
-                    callback(entities)
-                    offset += count
-                    
-                    if(len(entities) < count):
-                        break
-                else:
+                if(len(entities) < count):
                     break
-            
-        print 'Complete.'
+            else:
+                break
         
     def add_pubs(self, pubs):
         '''Add publication data to MongoDB
@@ -172,7 +249,7 @@ class AK_API:
         print 'Saving current result in MongoDB...'
         
         try:
-            self.db[self.collection_name].insert_many(pubs, ordered = False)
+            self.db.publications.insert_many(pubs, ordered = False)
         except pymongo.errors.BulkWriteError:
             print 'Ignoring duplicate entries.'
             
@@ -181,26 +258,19 @@ class AK_API:
         Args:
             pubs (dict) -- of publications, from json
         '''
-        print 'Updating MongoDB records...'
+        print 'Saving current result in MongoDB...'
         
-        bulk = self.db[self.collection_name].initialize_unordered_bulk_op()
-        
-        for pub in pubs:       
-            print pub
-            exit()                                        
-            bulk.find({'Id': pub['Id']}).update({'$set': {'E': pub['E']}})
-        
-        try:        
-            bulk.execute()
-        except pymongo.errors.BulkWriteError as err:
-            print "Write error: " + err
+        try:
+            self.db.extended.insert_many(pubs, ordered = False)
+        except pymongo.errors.BulkWriteError:
+            print 'Ignoring duplicate entries.'
             
     def citations(self):
         '''Get citation count by FOS
         '''
         print 'Retrieving citation count ...'  
         
-        collection = self.db[self.collection_name]       
+        collection = self.db.publications      
         result = collection.find({}, {'_id': 0, 'CC': 1, 'F.parent': 1})
         
         citations = {}
@@ -233,9 +303,9 @@ class AK_API:
         Warning:
             Microsoft has duplicate entries for any given field name, field names from FieldsOfStudy.txt do not match current field names retrieved from API
         '''
-        print 'Adding parents to fields ...'
+        print 'Getting parent fields ...'
         
-        records = self.db[self.collection_name].find()
+        records = self.db.publications.find()
         
         with open('FieldsOfStudy.txt') as f:
             fields = {}
@@ -302,28 +372,28 @@ class AK_API:
             
             parents[child] = fields.get(top[0])
                       
-        print "Updating records ..."       
-        bulk = self.db[self.collection_name].initialize_unordered_bulk_op()
+        print "Adding parents to records ..."       
+        bulk = self.db.fields.initialize_unordered_bulk_op()
         
         for record in records:            
             if('F' in record):
+                top_fields = []
                 for field in record['F']:
-                    if('parent' not in field):
-                        field_name = field['FN']                   
-                        field_id = ids.get(field_name)
-                                
-                        if(field_id):
-                            parent = parents.get(field_id)
-                            if(parent):
-                                field['parent'] = parent
+                    field_name = field['FN']                   
+                    field_id = ids.get(field_name)
+                            
+                    if(field_id):
+                        parent = parents.get(field_id)
+                        if(parent and parent not in top_fields):
+                            top_fields.append(parent)
                                          
-                bulk.find({'_id': record['_id']}).update({'$set': {'F': record['F']}})
+                bulk.insert({'Id': record['Id'], 'fields': top_fields})
         
-        print "Executing MongoDB bulk update ..."
-        try:        
+        print "Executing MongoDB bulk insert ..."
+        try:
             bulk.execute()
-        except pymongo.errors.BulkWriteError as err:
-            print "Write error: " + err
+        except pymongo.errors.BulkWriteError:
+            print "Ignoring Duplicates."
             
         print 'Complete.'
         
