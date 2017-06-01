@@ -9,11 +9,11 @@ The intent of this script is to retrieve the entire Microsoft Knowledge API data
 Usage
 ^^^^^
 
-To retrieve database (by year)::
+To retrieve publications (by year)::
 
-    ak_api.py evaluate <year> [--count=<count> --offset=<offset> --skip=<skip>]
+    ak_api.py evaluate <year> [--count=<count> --start=<start>]
     
-This currently takes ~2 mins per 100,000 entries. MongoDB should be installed and running before attempting evaluate. Count is the number of entries per retrieval, offset is the index to begin at and skip is the number of calls to skip from the beginning (count * offset).
+MongoDB should be installed and running before attempting evaluate. Count is the number of results per call (default is 100000). Use start to begin at a certain month (by index, so January = 0).
 
 To retrieve parent information for each field of study::
 
