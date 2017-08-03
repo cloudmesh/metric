@@ -2,6 +2,7 @@
 
 Usage:
   ak_api.py evaluate <year> [--count=<count> --start=<start>]
+  ak_api.py range <start> <end>
   ak_api.py extended <year> [--count=<count> --start=<start>]
   ak_api.py january <year> [--count=<count>]
   ak_api.py compare [--count=<count>]
@@ -13,7 +14,8 @@ Usage:
 Options:
   year:     year to retrieve publications for
   count:    number of entities to retrieve per call
-  start:    month to begin on
+  start:    month/year to begin on
+  end:      month/year to end on
 '''
 
 import time, json, re, calendar, string, os.path, ConfigParser
@@ -105,6 +107,16 @@ class AK_API:
             print "Getting results for {year}-{month} ...".format(**date)
             expr = "D=['{year}-{month}-01','{year}-{month}-{day}']".format(**date)         
             self.retrieve_pubs(year, count, key, attributes, self.add_pubs, expr = expr)
+            
+    def range(self, start, end, count = 100000):
+        '''Wrapper for evaluate, by year
+        Args:
+            start (int) -- year to start
+            end (int) -- year to end
+            count (int) -- results per call
+        '''
+        for year in xrange(int(start), int(end) + 1):
+            self.evaluate(year, count = count)
         
     def extended(self, year, count = 999, start = 0):
         '''Get extended metadata
@@ -278,10 +290,14 @@ class AK_API:
         '''
         print 'Saving current result in MongoDB ...'
         
+        bulk = self.db.publications.initialize_unordered_bulk_op()
+        for pub in pubs:
+            bulk.find({'Id': pub['Id']}).upsert().replace_one(pub)
+        
         try:
-            self.db.publications.insert_many(pubs, ordered = False)
-        except pymongo.errors.BulkWriteError:
-            print 'Ignoring duplicate entries.'
+            bulk.execute()
+        except pymongo.errors.BulkWriteError as err:
+            print err.details
             
     def add_extended(self, pubs):
         '''Add extended metadata to MongoDB
@@ -290,10 +306,14 @@ class AK_API:
         '''
         print 'Saving current result in MongoDB ...'
         
+        bulk = self.db.extended.initialize_unordered_bulk_op()
+        for pub in pubs:
+            bulk.find({'Id': pub['Id']}).upsert().replace_one(pub)
+        
         try:
-            self.db.extended.insert_many(pubs, ordered = False)
-        except pymongo.errors.BulkWriteError:
-            print 'Ignoring duplicate entries.'
+            bulk.execute()
+        except pymongo.errors.BulkWriteError as err:
+            print err.details
             
     def citations(self, update = False):
         '''Get citation counts
