@@ -48,7 +48,7 @@ For example:
 
     ak_api.py match xsede.txt 
     
-Will create the file xsede_ms.txt with the rows formatted as "<xsede id> | <microsoft id>".
+Will create the file xsede_ms.txt with the rows formatted as "(xsede id) | (microsoft id)".
 
 ### XSEDE collection creation
 
