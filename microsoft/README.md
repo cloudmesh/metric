@@ -8,6 +8,10 @@ The intent of this script is to retrieve the entire Microsoft Knowledge API data
 
 This project requires both MongoDB and ElasticSearch to be installed and running (together, so MongoDB needs a replica set plugged into Elastic).
 
+## Setup
+
+You will need a configuration file calle "ak_api.cfg" in place with your Microsoft API key to run the script. See [example.cfg](example.cfg) for an example.
+
 ## Usage
 
 This project is a work in progress.
