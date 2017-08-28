@@ -1,6 +1,7 @@
 '''Retrieval/handler for Microsoft Knowledge API
 
 Usage:
+  ak_api.py monthly [--start=<start> --end=<end> --month=<month> --resume]
   ak_api.py evaluate <year> [--count=<count> --start=<start>]
   ak_api.py range <start> <end>
   ak_api.py extended <year> [--count=<count> --start=<start> --offset=<offset>]
@@ -26,6 +27,7 @@ from doc_parse import DocParser
 
 class AK_API:
     db_name = 'microsoft'
+    call_limit = 1000
     
     def __init__(self):
         self.mongo_connect()
@@ -65,7 +67,7 @@ class AK_API:
         Returns:
             (string) -- API Key
         '''
-        print 'Getting API key ...'
+        #print 'Getting API key ...' FIXME: this is called more than once
         
         key = self.get_config_option('api', 'key')
 
@@ -117,15 +119,36 @@ class AK_API:
             self.retrieve_pubs(year, count, offset, key, attributes, self.add_pubs, expr = expr)
             offset = 0
             
-    def range(self, start, end, count = 100000):
+    def range(self, start, end, count = 100000, month = 0):
         '''Wrapper for evaluate, by year
         Args:
             start (int) -- year to start
             end (int) -- year to end
             count (int) -- results per call
+            month (int) -- month to start on (0 being January)
         '''
-        for year in xrange(int(start), int(end) + 1):
+        years = range(int(start), int(end) + 1)
+        
+        self.evaluate(years[0], count = count, start = month)
+        
+        for year in years[1:]:
             self.evaluate(year, count = count)
+            
+    def monthly(self, start = 2005, end = 2017, resume = False):
+        try:
+            if(not resume):
+                self.range(start, end)
+        except APIError as err:
+            print
+            print "Error. Saving log file ak_api.log ..."
+            
+            with open('ak_api.log', 'a+') as f:
+                f.write('time: ' + time.strftime('%a %H:%M:%S') + '\n')
+                f.write('error: ' + err.msg + '\n')
+                f.write('resume: ' + str(err.month) + ',' + str(err.year) + '\n')
+                f.write('\n')
+            
+            print "Complete."
         
     def extended(self, year, count = 999, start = 0, offset = 0):
         '''Get extended metadata
@@ -195,6 +218,9 @@ class AK_API:
             callback (function) -- function to handle results 
         '''
         offset = int(offset)
+        count = int(count)
+        count = count if count <= self.call_limit else self.call_limit
+        
         data = {}
         data['expr'] = expr
         data['attributes'] = attributes
@@ -205,7 +231,7 @@ class AK_API:
     
         while(True):
             if(retries >= max_retries):
-                sys.exit("Retry limit exceed. Exiting.")
+                raise APIError(year, offset, msg = 'Retry limit exceeded')
                 
             data['offset'] = offset
             
@@ -218,7 +244,7 @@ class AK_API:
                 'Ocp-Apim-Subscription-Key': key,
             }       
             
-            print "Getting items from {} to {} ...".format(offset + 1, offset + count)
+            #print "Getting items from {} to {} ...".format(offset + 1, offset + count)
             
             try:
                 r = requests.get(url, headers = headers)              
@@ -249,7 +275,7 @@ class AK_API:
             
             entities = [e for e in result['entities'] if e]
             
-            print "{} results retrieved".format(len(entities))
+            #print "{} results retrieved".format(len(entities))
             
             if(len(entities) == 0):
                 print "0 found. Retrying ..."
@@ -271,7 +297,7 @@ class AK_API:
         Args:
             pubs (dict) -- of publications, from json
         '''
-        print 'Saving current result in MongoDB ...'
+        #print 'Saving current result in MongoDB ...'
         
         bulk = self.db.publications.initialize_unordered_bulk_op()
         
@@ -626,7 +652,13 @@ class MSString:
         return self.ms_string
         
     def to_string(self):
-        return self.ms_string            
+        return self.ms_string
+        
+class APIError(Exception):
+    def __init__(self, year, month, msg = "API Error"):
+        self.year = year
+        self.month = month
+        self.msg = msg 
 
 if(__name__ == '__main__'):
     a = AK_API()
