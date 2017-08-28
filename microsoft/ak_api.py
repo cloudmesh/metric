@@ -5,12 +5,11 @@ Usage:
   ak_api.py range <start> <end>
   ak_api.py extended <year> [--count=<count> --start=<start> --offset=<offset>]
   ak_api.py january <year> [--count=<count>]
-  ak_api.py compare <filename> [--count=<count>, --start=<start>]
+  ak_api.py match <filename> [--count=<count>, --start=<start>]
   ak_api.py journals
   ak_api.py xsede
   ak_api.py bridges
-  ak_api.py elastic
-  ak_api.py parents [--count=<count> --start=<start>]
+  ak_api.py fields [--count=<count> --start=<start>]
   ak_api.py citations <filename>
 
 Options:
@@ -274,10 +273,14 @@ class AK_API:
         '''
         print 'Saving current result in MongoDB ...'
         
+        bulk = self.db.publications.initialize_unordered_bulk_op()
+        
+        for pub in pubs:
+            bulk.find({'Id': pub['Id']}).upsert().replace_one(pub)
         try:
-            self.db.publications.insert_many(pubs, ordered = False)
-        except pymongo.errors.BulkWriteError:
-            print 'Ignoring duplicate entries.'
+            bulk.execute()
+        except pymongo.errors.BulkWriteError as bwe:
+            print bwe.details
             
     def add_extended(self, pubs):
         '''Add extended metadata to MongoDB
@@ -286,12 +289,16 @@ class AK_API:
         '''
         print 'Saving current result in MongoDB ...'
         
-        try:
-            self.db.extended.insert_many(pubs, ordered = False)
-        except pymongo.errors.BulkWriteError:
-            print 'Ignoring duplicate entries.'
+        bulk = self.db.extended.initialize_unordered_bulk_op()
         
-    def parents(self, count = 100000, start = 0):
+        for pub in pubs:
+            bulk.find({'Id': pub['Id']}).upsert().replace_one(pub)
+        try:
+            bulk.execute()
+        except pymongo.errors.BulkWriteError as bwe:
+            print bwe.details
+        
+    def fields(self, count = 100000, start = 0):
         '''Add field of study parents
         Warning:
             Microsoft has duplicate entries for any given field name, field names from FieldsOfStudy.txt do not match current field names retrieved from API
@@ -458,8 +465,7 @@ class AK_API:
         new_file = '{0}_citations.{1}'.format(*filename.split('.'))
         print "Saving file {}".format(new_file)
         with open(new_file, 'w+') as f:
-            f.writelines(citations)
-                
+            f.writelines(citations)       
         
     def xsede(self):    
         print "Gathering XD publications ..."
@@ -509,13 +515,8 @@ class AK_API:
             print "Ignoring duplicate entries."
         
         print "Complete."
-                
-            
-            
-            
         
-        
-    def compare(self, filename, count = 100, start = 0):
+    def match(self, filename, count = 100, start = 0):
         count = int(count)
         start = int(start)
         
@@ -526,25 +527,7 @@ class AK_API:
                     continue
                     
                 pid, title = row.strip().split('|', 1)
-                pubs.append((pid, title))
-                               
-                
-        
-        '''# print comparison FOR TESTING
-        pub_dict = {}
-        for pub in pubs:
-            pub_dict[pub[0]] = pub[1]
-            
-        with open('bridges_ms.txt') as f: change file
-            for row in f.readlines():
-                xid, mid = row.strip().split('|', 1)
-                print pub_dict[xid]
-                print self.db.publications.find_one({'Id': int(mid)})['Ti']
-                print
-        
-        exit()'''
-                
-                
+                pubs.append((pid, title))    
                 
         pubs_iter = map(None, *(iter(pubs),) * count)
         pubs_iter = pubs_iter[start:]
