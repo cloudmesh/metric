@@ -52,7 +52,7 @@ Will create the file xsede_ms.txt with the rows formatted as "XD_ID | MS_ID".
 
 ###XSEDE collection creation
 
-The XSEDE collection can be created after pubs_report_ms.txt and pubs_xup_ms.txt have been created using <i>match</i>.
+The XSEDE collection can be created after pubs_report_ms.txt and pubs_xup_ms.txt have been created using *match*.
 
     ak_api.py xsede
     
@@ -84,11 +84,11 @@ This collection stores all of the extended metadata retrieved from Microsoft for
 
 ###fields
 
-This collection stores the top-level fields of each publication in the <i>publications</i> collection. The information is gathered from FieldsOfStudy.txt and FieldsOfStudyHierarchy.txt.
+This collection stores the top-level fields of each publication in the *publications* collection. The information is gathered from FieldsOfStudy.txt and FieldsOfStudyHierarchy.txt.
 
 ###journals
 
-This collection is an aggregation of the <i>publications</i> and <i>extended</i> collections. It stores citation count for each journal (by journal Id) for each volume and issue.
+This collection is an aggregation of the *publications* and *extended* collections. It stores citation count for each journal (by journal Id) for each volume and issue.
 
 ###xsede
     
