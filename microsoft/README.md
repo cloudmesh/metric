@@ -167,3 +167,9 @@ This collection is created using the text files for pubs_report and pubs_xup (XI
     PCC: peer citation count (from journal volume and issue)
 }
 ```
+
+# TODO
+
+- [ ] improve documentation (optional variables, API limits, etc)
+- [ ] create new command for monthly retrieval, use log file to pick up where left off if there was an issue
+- [ ] use new database for each monthly retrieval
