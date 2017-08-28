@@ -32,7 +32,7 @@ Extended metadata retrieval is trickier. Microsoft's servers are picky about the
 
 To retrieve the top-level field for each publications use:
 
-    ak_api.py fields fields [--count=<count> --start=<start>]
+    ak_api.py fields [--count=<count> --start=<start>]
     
 Count is the number per loop to run and start allows you to begin at a specified index. This command requires both FieldsOfStudy.txt and FieldOfStudyHierarchy.txt to be present.
 
@@ -48,7 +48,7 @@ For example:
 
     ak_api.py match xsede.txt 
     
-Will create the file xsede_ms.txt with the rows formatted as "XD_ID | MS_ID".
+Will create the file xsede_ms.txt with the rows formatted as "<xsede id> | <microsoft id>".
 
 ### XSEDE collection creation
 
